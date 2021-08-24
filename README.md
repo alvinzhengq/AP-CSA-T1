@@ -1,4 +1,11 @@
 ## Team Pokemon Trainers [Spring Portfolio Starter](https://nighthawkcodingsociety.com/projectsearch/details/Spring%20Portfolio%20Starter)
+# Team Members:
+- Akshay R.
+- Alvin Z.
+- Nolan P.
+- Sami D.
+- Prisha M.
+
 Runtime link: TBD https://jportfolio.nighthawkcodingsociety.com/
 
 
