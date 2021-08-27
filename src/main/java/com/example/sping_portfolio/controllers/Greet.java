@@ -8,12 +8,31 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class Greet {
-    @GetMapping("/greet")    // CONTROLLER handles GET request for /greeting, maps it to greeting() and does variable bindings
-    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name, Model model) {
-        // @RequestParam handles required and default values, name and model are class variables, model looking like JSON
-        model.addAttribute("name", name); // MODEL is passed to html
+    private static Map<String, String> ourBios = Map.of(
+        "Alvin", "Lorem ipsum",
+        "Akshay", "Lorem ipsum",
+        "Nolan", "Lorem ipsum",
+        "Sami", "Lorem ipsum",
+        "Prisha", "Lorem ipsum"
+    );
+
+    @GetMapping("/greet")
+    public String greeting(@RequestParam(name="name", required=false, defaultValue="World") String name,
+                           @RequestParam(name="data", required = false, defaultValue = "") String data,
+                           Model model) {
+
+        model.addAttribute("name", name);
+        if(ourBios.containsKey(name)) {
+            model.addAttribute("data", ourBios.get(name));
+        } else {
+            model.addAttribute("data", "No Bio Found.");
+        }
+
         return "greet"; // returns HTML VIEW (greeting)
     }
 }
