@@ -16,7 +16,7 @@ public class Greet {
     private static Map<String, String> ourBios = Map.of(
         "Alvin", "Lorem ipsum",
         "Akshay", "Hi! I'm Akshay and I'm a junior at Del Norte! My Interests include playing with computers, music, biking, and watching anime.",
-        "Nolan", "Hi, I'm a junior at Del Norte High School and I am intersted in CS, aerospace, and mathematics. I've been programming for almost six years and it's one of my biggest hobbies.",
+        "Nolan", "Hi, I'm a junior at Del Norte High School and I am interested in CS, aerospace, and mathematics. I've been programming for almost six years and it's one of my biggest hobbies.",
         "Sami", "Lorem ipsum",
         "Prisha", "I'm a junior at Del Norte High School taking APCSA. I enjoy spending my free time hanging out with friends, listening to music, and playing video games."
     );
