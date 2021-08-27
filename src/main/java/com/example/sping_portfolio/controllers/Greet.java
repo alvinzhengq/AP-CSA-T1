@@ -14,7 +14,7 @@ import java.util.Map;
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class Greet {
     private static Map<String, String> ourBios = Map.of(
-        "Alvin", "Lorem ipsum",
+        "Alvin", "Hello, my name is Alvin and I am a junior at Del Norte. Outside of school, I enjoy working with computers, biking, and video games.",
         "Akshay", "Hi! I'm Akshay and I'm a junior at Del Norte! My Interests include playing with computers, music, biking, and watching anime.",
         "Nolan", "Hi, I'm a junior at Del Norte High School and I am interested in CS, aerospace, and mathematics. I've been programming for almost six years and it's one of my biggest hobbies.",
         "Sami", "Hey! I'm a junior at Del Norte High School. I enjoy dancing and listening to music in my free time.  My favorite subject at school is Science and I'm interested in genonimcal sciences.",
