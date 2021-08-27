@@ -16,7 +16,7 @@ public class Greet {
     private static Map<String, String> ourBios = Map.of(
         "Alvin", "Lorem ipsum",
         "Akshay", "Lorem ipsum",
-        "Nolan", "Lorem ipsum",
+        "Nolan", "Hi, I'm a junior at Del Norte High School and I am intersted in CS, aerospace, and mathematics. I've been programming for almost six years and it's one of my biggest hobbies.",
         "Sami", "Lorem ipsum",
         "Prisha", "Lorem ipsum"
     );
