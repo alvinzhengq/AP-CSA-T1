@@ -15,7 +15,7 @@
     <div class="row justify-content-left" style="margin: 2%;">
       <form action="/greet" method="GET" id="greetForm">
         <div>
-          <label for="greetField">Type a greeting name?</label>
+          <label for="greetField">Enter in a greeting name and receive their BIO if available.</label>
           <input name="name" id="greetField">
           <button>Greetings!</button>
           <b><p th:text="'Greetings, my name is ' + ${name} + '!'" style="margin-top: 0.5rem;"></p></b>
