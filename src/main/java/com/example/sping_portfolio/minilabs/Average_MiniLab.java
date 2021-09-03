@@ -18,12 +18,9 @@ public class Average_MiniLab {
         double weightFour = 0.2;
         double weightFive = 0.4;
 
-
         double averageOne = ((weight)*(scoreOne) + (weightTwo)*(scoreTwo))/2;
         double averageTwo = ((weightThree)*(scoreThree) + (weightFour)*(scoreFour))/2;
         double averageThree = (averageOne + averageTwo + (weightFive)*(scoreFive))/3;
-
-
 
         System.out.println("Score One is " +scoreOne);
         System.out.println("Score Two is " +scoreTwo);

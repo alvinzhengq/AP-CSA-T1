@@ -1,4 +1,4 @@
-# Team Pokemon Trainers - AP CSA Trimester 1 Project
+# Team Pokemon Trainers - Unit 1-2 PBL
 ## Team Members:
 - Akshay R.
 - Alvin Z.
