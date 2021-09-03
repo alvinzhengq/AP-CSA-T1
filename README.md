@@ -13,4 +13,5 @@ We decided to make a full-stack application showing the latest upcoming music an
 
 **Runtime link**: TBD
 
-## Project Features:
+## Scrum Board:
+The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA/projects/1).
