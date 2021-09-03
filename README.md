@@ -5,7 +5,7 @@
 | Akshay R. | [Journal](https://docs.google.com/document/d/1ukhc3TYFyQycQntN6MXiD803b-iatn8rK7GAcw4ClwI/edit?usp=sharing) |
 | Alvin Z. | Text | 
 | Nolan P. | Text |
-| Sami D. | Text |
+| Sami D. | [Journal](https://padlet.com/samantadanvers/fje6b94iwjnjwg7y1630177436)|
 | Prisha M. | [Journal] (https://padlet.com/prishamaiti/v5cwhihorrhhgnp5) |
 
 ## Project Idea: Distraction
