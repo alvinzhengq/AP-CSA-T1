@@ -13,5 +13,7 @@ We decided to make a full-stack application showing the latest upcoming music an
 
 **Runtime link**: TBD
 
+## Team Minilabs
+All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-CSA/tree/master/src/main/java/com/example/sping_portfolio/minilabs).
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA/projects/1).
