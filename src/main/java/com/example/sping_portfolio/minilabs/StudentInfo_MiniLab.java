@@ -1,6 +1,6 @@
 package com.example.sping_portfolio.minilabs;
 
-public class samiStudentInfoML {
+public class StudentInfo_MiniLab {
     public static void main(String[] args){
 
         String name = "Sami";
