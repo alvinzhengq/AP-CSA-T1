@@ -33,3 +33,6 @@ Runtime link: TBD https://jportfolio.nighthawkcodingsociety.com/
 ## IDE management
 #### * A ".gitignore" can teach a Developer a lot about Java runtime.  A target directory is created when you press play button, byte code is generated and files are moved into this location.
 #### * A "pom.xml" file can teach you a lot about Java dependencies.  This is similar to "requirements.txt" file in Python.  It manages packages and dependencies.
+
+## Project Idea
+#### * We decided to make a full-stack application showing the latest upcoming music and movies. Users can select a variety of different preferences for genres and they can find the songs and movies that match those preferences; that way, they can find the movies and songs that are best suited for their own interests in a short amount of time. Our app will use APIs such as IMDB, Spotify, and Apple Music to fetch the latest upcoming movies and songs.
