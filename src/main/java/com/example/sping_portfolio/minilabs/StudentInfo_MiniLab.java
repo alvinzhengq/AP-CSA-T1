@@ -11,9 +11,6 @@ public class StudentInfo_MiniLab {
         final int numClass;
         numClass = 5;
 
-        int classAP;
-        classAP = 3;
-
         boolean atDelNorte;
         atDelNorte = true;
 
