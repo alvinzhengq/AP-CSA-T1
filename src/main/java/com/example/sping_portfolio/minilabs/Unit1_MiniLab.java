@@ -1,6 +1,6 @@
 package com.example.sping_portfolio.minilabs;
 
-public class Unit1 {
+public class Unit1_MiniLab {
     public static void main(String[] args) {
         int i1 = 7, i2 = 2;
         System.out.println("Integer Division");

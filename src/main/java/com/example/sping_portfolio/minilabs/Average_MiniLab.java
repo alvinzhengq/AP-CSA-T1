@@ -1,6 +1,6 @@
 package com.example.sping_portfolio.minilabs;
 
-public class samiAverageMiniLab {
+public class Average_MiniLab {
     public static void main(String[] args){
         int scoreOne = 90;
 
