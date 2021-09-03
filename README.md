@@ -1,5 +1,5 @@
-## Team Pokemon Trainers - AP CSA Trimester 1 Project
-# Team Members:
+# Team Pokemon Trainers - AP CSA Trimester 1 Project
+## Team Members:
 - Akshay R.
 - Alvin Z.
 - Nolan P.
