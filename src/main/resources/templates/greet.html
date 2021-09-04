@@ -12,17 +12,19 @@
 <body><div layout:fragment="content" th:remove="tag">
   <!-- Start of body content specific to page -->
   <div class="contact" style="height: 35vh;">
-    <div class="row justify-content-left" style="margin: 2%;">
-      <form action="/greet" method="GET" id="greetForm">
-        <div>
-          <label for="greetField">Enter in a greeting name and receive their BIO if available.</label>
+    <div class="row justify-content-center" style="margin: 2%;">
+      <label for="greetField" style="text-align: center; width: 100%">
+        Enter in a greeting name and receive their BIO if available.
+
+        <br>
+        <div style="text-align: center; margin-top: 10px">
           <input name="name" id="greetField">
-          <button>Greetings!</button>
-          <b><p th:text="'Greetings, my name is ' + ${name} + '!'" style="margin-top: 0.5rem;"></p></b>
-          <p th:text="'Here is a little bit more about: ' + ${name}"></p>
-          <p th:text="${data}"></p>
+          <button onclick="getBio()"> Greetings!</button>
         </div>
-      </form>
+      </label>
+
+      <br>
+      <div id="bioData" style="width: 50vw; margin-top: 20px; text-align: center"></div>
     </div>
   </div>
   <!-- End of body content specific to page -->
@@ -32,6 +34,7 @@
   <!-- Start of custom script specific to page -->
   <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
   <script src="/static/vanta/vanta.birds.min.js" th:src="@{/vanta/vanta.birds.min.js}"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     VANTA.BIRDS({
       el: "body",
@@ -43,6 +46,16 @@
       scale: 1.00,
       scaleMobile: 1.00
     })
+
+    function getBio() {
+      let curName = document.getElementById("greetField").value
+      axios({
+        method: "get",
+        url: "/greet-api?name=" + curName,
+      }).then(resp => {
+        document.getElementById("bioData").innerHTML = resp.data
+      });
+    }
   </script>
   <!-- End of custom script specific to page -->
 </div>
