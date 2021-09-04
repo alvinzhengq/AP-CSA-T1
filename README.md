@@ -11,8 +11,9 @@
 ## Project Idea: Distraction
 We decided to make a full-stack application showing the latest upcoming music and movies. Users can select a variety of different preferences for genres and they can find the songs and movies that match those preferences; that way, they can find the movies and songs that are best suited for their own interests in a short amount of time. Our app will use APIs such as IMDB, Spotify, and Apple Music to fetch the latest upcoming movies and songs.
 
+**Design Document**: [Link](https://docs.google.com/document/d/1t3b-dTNCqT75uGsQIaGnzfyZC241PK1lPWHXTy1kiRI/edit?usp=sharing)  
+  
 **Runtime Link**: TBD
-**Design Document**: [Link](https://docs.google.com/document/d/1t3b-dTNCqT75uGsQIaGnzfyZC241PK1lPWHXTy1kiRI/edit?usp=sharing)
 
 ## Team Minilabs
 All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-CSA/tree/master/src/main/java/com/example/sping_portfolio/minilabs).
