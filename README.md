@@ -20,3 +20,11 @@ We decided to make a full-stack application showing the latest upcoming music an
 All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-CSA/tree/master/src/main/java/com/example/sping_portfolio/minilabs).
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA/projects/1).
+
+## Week 2 Updates
+
+An example of the new placeholder pages we added to the navbar:
+![Navbar Edit](public/navbar_new.png)
+
+Here's what one of the placeholder pages looks like:
+![Placeholder Example](public/placeholder_examples.png)
