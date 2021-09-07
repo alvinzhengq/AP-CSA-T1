@@ -12,7 +12,7 @@
 We decided to make a full-stack application showing the latest upcoming music and movies. Users can select a variety of different preferences for genres and they can find the songs and movies that match those preferences; that way, they can find the movies and songs that are best suited for their own interests in a short amount of time. Our app will use APIs such as IMDB, Spotify, and Apple Music to fetch the latest upcoming movies and songs.
 
 **Design Document**: [Link](https://docs.google.com/document/d/1t3b-dTNCqT75uGsQIaGnzfyZC241PK1lPWHXTy1kiRI/edit?usp=sharing)  
- **Wireframe Link & Video Rundown**: [Link](https://docs.google.com/document/d/1h_dEQ-1mSzrU0sedDk2ZqpaEzYqHhMFw0WhOK0DxvYg/edit?usp=sharing) 
+ Note: All applicable designs (such as Wireframe screenshots and links) are available in the document above.
 
 **Runtime Link**: TBD
 
@@ -20,3 +20,11 @@ We decided to make a full-stack application showing the latest upcoming music an
 All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-CSA/tree/master/src/main/java/com/example/sping_portfolio/minilabs).
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA/projects/1).
+
+## Week 2 Updates
+
+An example of the new placeholder pages we added to the navbar:
+![Navbar Edit](public/navbar_new.png)
+
+Here's what one of the placeholder pages looks like:
+![Placeholder Example](public/placeholder_examples.png)
