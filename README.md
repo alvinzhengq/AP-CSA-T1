@@ -26,7 +26,7 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 Our new mini labs page with the Greeting/Bird integration, and Math lab.
 ![Mini Lab Page](public/minilab_page.png)
 
-An example of the new placeholder pages we added to the navbar:
+An example of the new placeholder pages we added to the navbar:  
 ![Navbar Edit](public/new_navbar.png)
 
 Here's what one of the placeholder pages looks like:
