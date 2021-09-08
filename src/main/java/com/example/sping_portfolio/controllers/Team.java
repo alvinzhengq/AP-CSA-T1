@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Team {
-    @GetMapping("/team")
+    @GetMapping("/mvfetch/team")
     public String team() {
-        return "team"; // returns HTML VIEW (greeting)
+        return "mvfetch/team"; // returns HTML VIEW (greeting)
     }
 }

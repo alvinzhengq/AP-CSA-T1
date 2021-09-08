@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Music {
-    @GetMapping("/music")
+    @GetMapping("/mvfetch/music")
     public String music() {
-        return "music";
+        return "mvfetch/music";
     }
 }

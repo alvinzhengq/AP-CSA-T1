@@ -5,8 +5,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class Movies {
-    @GetMapping("/movies")
+    @GetMapping("/mvfetch/movies")
     public String movies() {
-        return "movies";
+        return "mvfetch/movies";
     }
 }

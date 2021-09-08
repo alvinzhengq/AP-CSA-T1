@@ -5,8 +5,8 @@ import org.springframework.stereotype.Controller;
 
 @Controller
 public class Login {
-    @GetMapping("/login")
+    @GetMapping("/mvfetch/login")
     public String login() {
-        return "login";
+        return "mvfetch/login";
     }
 }

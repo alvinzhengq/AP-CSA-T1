@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+  <!-- Start of head content specific to page -->
+  <title>Greet</title>
+  <!-- End of head content specific to page -->
+
+  <style>
+    .lab-container {
+      margin-top: 4vh;
+      width: 50vw;
+      border: 1px solid #E3DDF4;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #313131;
+
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .quadInputs input{
+      margin: 8px;
+    }
+    .quadInputs button{
+      margin: 8px;
+    }
+  </style>
+</div></head>
+
+<body><div layout:fragment="content" th:remove="tag">
+  <!-- Start of body content specific to page -->
+  <div class="contact" style="height: 35vh;">
+    <div class="row justify-content-center lab-container">
+      <h4>Enter in a Name and Receive their Bio if Available.</h4><br>
+
+      <div style="display: flex; flex-direction: row;">
+        <input name="name" id="greetField">
+        <button onclick="getBio()" style="margin-left: 1em"> Greetings!</button>
+      </div>
+
+      <br>
+      <div id="bioData" style="margin-top: 20px; text-align: center"></div>
+    </div>
+
+    <div class="row justify-content-center lab-container">
+      <h4>Quadratic Formula Calculator</h4><br>
+
+      <div style="text-align: center;" class="quadInputs">
+        <input placeholder="a" id="quadA"><br>
+        <input placeholder="b" id="quadB"><br>
+        <input placeholder="c" id="quadC"><br>
+
+        <button onclick="getQuad()">Get Answer</button><br>
+      </div>
+
+      <p id="quadAns"></p>
+    </div>
+  </div>
+  <!-- End of body content specific to page -->
+</div></body>
+
+<div layout:fragment="script" th:remove="tag">
+  <!-- Start of custom script specific to page -->
+  <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    VANTA.NET({
+      el: "body",
+      color: "#E3DDF4",
+      backgroundColor: "#1E1F1F",
+      points: 10,
+      maxDistance: 20,
+      spacing: 15,
+      showDots: true
+    })
+
+    function getBio() {
+      let curName = document.getElementById("greetField").value
+      axios({
+        method: "get",
+        url: "/minilab-bio-api?name=" + curName,
+      }).then(resp => {
+        document.getElementById("bioData").innerHTML = resp.data
+      });
+    }
+
+    function getQuad() {
+      let quadA = "a=" + document.getElementById("quadA").value;
+      let quadB = "b=" + document.getElementById("quadB").value;
+      let quadC = "c=" + document.getElementById("quadC").value;
+
+      axios({
+        method: "get",
+        url: "/minilab-quadform-api?" + quadA + "&" + quadB + "&" + quadC,
+      }).then(resp => {
+        document.getElementById("quadAns").innerText = resp.data
+      });
+    }
+  </script>
+  <!-- End of custom script specific to page -->
+</div>
+
+</html>
