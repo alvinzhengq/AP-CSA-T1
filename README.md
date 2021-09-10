@@ -10,7 +10,7 @@
 | Alvin Z. | alvinzhengq | [Alvin's Profile](https://github.com/alvinzhengq) | [Alvin's Journal](https://docs.google.com/document/d/1FoO8QKsZUOCzHh7b27waq3N_TLW-fYjU-do8X5dhx_c/edit?usp=sharing) | [Alvin's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=alvinzhengq) | 
 | Nolan P. | nolanplatt | [Nolan's Profile](https://github.com/nolanplatt) | [Nolan's Journal](https://docs.google.com/document/d/1Y6ZQuGgpZF3kwam8YsPOEtXlX7DfSDX-jLqJXDqh1u0/edit?usp=sharing) | [Nolan's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=nolanplatt) |
 | Sami D. | SamiDeshatty | [Sami's Profile](https://github.com/SamiDeshatty) | [Sami's Journal](https://padlet.com/samantadanvers/fje6b94iwjnjwg7y1630177436) | [Sami's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=SamiDeshatty) |
-| Prisha M. | | | [Prisha's Journal](https://padlet.com/prishamaiti/v5cwhihorrhhgnp5) | [Prisha's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=PrishaMaiti) |
+| Prisha M. | PrishaMaiti | [Prisha's Profile](https://github.com/PrishaMaiti) | [Prisha's Journal](https://padlet.com/prishamaiti/v5cwhihorrhhgnp5) | [Prisha's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=PrishaMaiti) |
 
 ## Project Idea: Distraction
 We decided to make a full-stack application showing the latest upcoming music and movies. Users can select a variety of different preferences for genres and they can find the songs and movies that match those preferences; that way, they can find the movies and songs that are best suited for their own interests in a short amount of time. Our app will use APIs such as IMDB, Spotify, and Apple Music to fetch the latest upcoming movies and songs.
