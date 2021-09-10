@@ -1,12 +1,13 @@
 # Team Pokemon Trainers - Unit 1-2 PBL
 
-- [Scrum Board](https://github.com/alvinzhengq/AP-CSA/projects/1)
-- [All Contributions](https://github.com/alvinzhengq/AP-CSA/commits/master)
+- [Team Scrum Board](https://github.com/alvinzhengq/AP-CSA/projects/1)
+- [All Team Commits](https://github.com/alvinzhengq/AP-CSA/commits/master)
+- [Team Insight Graphs](https://github.com/alvinzhengq/AP-CSA/graphs/contributors)
 
 ## Team Members:
-| Team Member | Github Username | Github Profile | Journal Link | Github Contributions | Issues | Scrum Board Tasks |
+| Team Member | Github Username | Github Profile | Journal Link | Github Contributions | Issues | Scrum Board Tasks | 
 | ----------- | --------------- | -------------- | ------------ | -------------------- | ------ | ----------------- |
-| Akshay R. | Akshay-Rohatgi | [Akshay's Profile](https://github.com/Akshay-Rohatgi) | [Akshay's Journal](https://docs.google.com/document/d/1ukhc3TYFyQycQntN6MXiD803b-iatn8rK7GAcw4ClwI/edit?usp=sharing) | [Akshay's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=Akshay-Rohatgi) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/Akshay-Rohatgi) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aakshay-rohatgi) |
+| Akshay R. | Akshay-Rohatgi | [Akshay's Profile](https://github.com/Akshay-Rohatgi) | [Akshay's Journal](https://docs.google.com/document/d/1ukhc3TYFyQycQntN6MXiD803b-iatn8rK7GAcw4ClwI/edit?usp=sharing) | [Akshay's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=Akshay-Rohatgi) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/Akshay-Rohatgi) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aakshay-rohatgi) | 
 | Alvin Z. | alvinzhengq | [Alvin's Profile](https://github.com/alvinzhengq) | [Alvin's Journal](https://docs.google.com/document/d/1FoO8QKsZUOCzHh7b27waq3N_TLW-fYjU-do8X5dhx_c/edit?usp=sharing) | [Alvin's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=alvinzhengq) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/alvinzhengq) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aalvinzhengq) |
 | Nolan P. | nolanplatt | [Nolan's Profile](https://github.com/nolanplatt) | [Nolan's Journal](https://docs.google.com/document/d/1Y6ZQuGgpZF3kwam8YsPOEtXlX7DfSDX-jLqJXDqh1u0/edit?usp=sharing) | [Nolan's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=nolanplatt) |  [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/nolanplatt) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Anolanplatt) |
 | Sami D. | SamiDeshatty | [Sami's Profile](https://github.com/SamiDeshatty) | [Sami's Journal](https://padlet.com/samantadanvers/fje6b94iwjnjwg7y1630177436) | [Sami's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=SamiDeshatty) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/SamiDeshatty) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Asamideshatty) |
