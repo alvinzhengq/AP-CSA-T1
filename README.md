@@ -1,4 +1,8 @@
 # Team Pokemon Trainers - Unit 1-2 PBL
+
+- [Scrum Board](https://github.com/alvinzhengq/AP-CSA/projects/1)
+- [All Contributions](https://github.com/alvinzhengq/AP-CSA/commits/master)
+
 ## Team Members:
 | Team Member | Journal Link | Github Contributions |
 | --- | ----------- | ----------- |
