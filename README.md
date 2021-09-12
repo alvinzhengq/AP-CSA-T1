@@ -26,6 +26,13 @@ All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA/projects/1).
 
+## Week 3 Updates
+
+We started working on the login page for our project idea:
+<br>
+[Link to commit](https://github.com/alvinzhengq/AP-CSA/commit/774576c87d2f15c76f8395c6d5149b3c7054bb5f)
+![Mini Lab Page](public/loginpage_iteration1.png)
+
 ## Week 2 Updates
 
 Our new mini labs page with the Greeting/Bird integration, and Math lab.
