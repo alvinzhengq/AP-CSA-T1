@@ -1,0 +1,13 @@
+:root {
+    --orange: #FB6E52;
+    --grey: #4E5B69;
+}
+
+h1 {
+    color: var(--orange);
+}
+body {
+    background-color: lightblue;
+}
+
+

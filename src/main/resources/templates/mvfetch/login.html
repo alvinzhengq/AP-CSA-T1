@@ -2,17 +2,39 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
+
 <head><div layout:fragment="metadata" th:remove="tag">
-
-        <title>Team</title>
-
+    <!-- Start of head content specific to page -->
+    <title>Birds</title>
+    <!-- End of head content specific to page -->
 </div></head>
+
 
 <body><div layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
-    <div style="text-align: center; margin: 10px">
-        <h1>Placeholder for login page</h1>
+    <div class="container d-flex h-100">
+        <div class="row align-self-center w-100">
+            <div class="col-6 mx-auto">
+                <div class="jumbotron">
+                    <h1 class="row justify-content-center align-self-center display-4">Sign Up</h1>
+                    <div class="row justify-content-center align-self-center">
+                        <label style="color: var(--orange)" for="username">Username:</label>
+                        <br>
+                        <input type="text" id="username" name="username">
+                    </div>
+                    <div class="row justify-content-center align-self-center">
+                        <label style="color: var(--orange)" for="pass">Password</label>
+                        <br>
+                        <input type="password" id="pass" name="password" required>
+                    </div>
+                    <div class="row justify-content-center align-self-center">
+                        <input type="submit" value="Sign in">
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <!-- End of body content specific to page -->
 </div></body>
 
