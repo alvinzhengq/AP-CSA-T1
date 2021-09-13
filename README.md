@@ -33,6 +33,12 @@ We started working on the login page for our project idea:
 [Link to commit](https://github.com/alvinzhengq/AP-CSA/commit/774576c87d2f15c76f8395c6d5149b3c7054bb5f)
 ![Mini Lab Page](public/loginpage_iteration1.png)
 
+We created a 4x4 Bootstrap Cards, showing four different logos, names, and short descriptions of some PUSD schools:
+<br>
+[Link to commit](https://github.com/alvinzhengq/AP-CSA/commit/fc8625f6b170bddaa52cbb1525f3bf5c34913542)
+![Bootstrap Cards](public/bootstrapCards.png)
+
+
 ## Week 2 Updates
 
 Our new mini labs page with the Greeting/Bird integration, and Math lab.
