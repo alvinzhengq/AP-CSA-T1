@@ -39,6 +39,12 @@ We created a minilab with 4x4 Bootstrap Cards. This shows four different logos, 
 <br>
 ![Bootstrap Cards](public/bootstrapCards.png)
 
+We created a minilab that generates a string given the length of the string by the user. Includes frontend, backend, and API development.
+<br>
+[Link to commit](https://github.com/alvinzhengq/AP-CSA/commit/effa0427a0faf984ebb7a9b81a4d978f6ad6870e)
+<br>
+![Bootstrap Cards](public/stringGenerator.png)
+
 
 ## Week 2 Updates
 
