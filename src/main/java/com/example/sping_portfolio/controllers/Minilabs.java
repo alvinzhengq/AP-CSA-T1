@@ -7,8 +7,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-
+import java.util.Random;
 import java.util.Map;
+import java.nio.charset.Charset;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class Minilabs {
@@ -50,5 +51,21 @@ public class Minilabs {
         } else {
             return "Answer: " + x1 + " and " + x2;
         }
+    }
+    @GetMapping("/minilab-string-api")
+    @ResponseBody
+    public String stringAPI(@RequestParam(name="stringLength", required=false, defaultValue="5") int stringLength) {
+        String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        int availableLetters = 26;
+        String generatedString = "";
+        for(int i = 0; i <= stringLength - 1; i++) {
+            Random random = new Random();
+            int randomNumber = random.nextInt(26);
+            generatedString += alphabet.charAt(randomNumber);
+        }
+            return generatedString;
+
+
     }
 }

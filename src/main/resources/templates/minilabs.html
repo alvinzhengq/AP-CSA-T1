@@ -6,9 +6,8 @@
 <head><div layout:fragment="metadata" th:remove="tag">
   <!-- Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
   <!-- Start of head content specific to page -->
-  <title>Greet</title>
+  <title>Minilabs</title>
   <!-- End of head content specific to page -->
 
   <style>
@@ -30,7 +29,7 @@
       margin: 8px;
     }
 
-    .topCornerLab{
+    .topRightCornerLab{
       position:absolute;
       top:55px;
       right:0px;
@@ -89,7 +88,7 @@
   </div>
 
 
-  <div class="row justify-content-center topCornerLab">
+  <div class="row justify-content-center topRightCornerLab">
 
     <h5>Pair Prototyping / Thymeleaf</h5><br>
 
@@ -127,9 +126,19 @@
         <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/RBHS/HOME">Rancho Bernardo High School </h6></a>
         <p class="card-text">Third PUSD high school ever opened. located in Rancho Bernardo, California</p>
       </div>
+        <div class="card">
+          <div class="card-body">
+            <h6 class="card-title">Thymeleaf String/Number Methods </h6>
+              <input name="stringLength" id="stringLengthInput">
+            <button onclick="getString()">Generate String</button>
+            <p id="stringResult"></p>
+
+          </div>
 </div>
 
-    </div>
+        </div>
+
+
 
   <!-- End of body content specific to page -->
 </div></body>
@@ -171,6 +180,17 @@
         url: "/minilab-quadform-api?" + quadA + "&" + quadB + "&" + quadC,
       }).then(resp => {
         document.getElementById("quadAns").innerText = resp.data
+      });
+    }
+
+    function getString() {
+      let stringLength = document.getElementById("stringLengthInput").value;
+
+      axios({
+        method: "get",
+        url: "/minilab-string-api?stringLength=" + stringLength,
+      }).then(resp => {
+        document.getElementById("stringResult").innerText = "Generated String:" + (resp.data);
       });
     }
   </script>
