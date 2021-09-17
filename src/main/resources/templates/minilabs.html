@@ -12,7 +12,6 @@
 
   <style>
     .lab-container {
-      margin-top: 4vh;
       width: 50vw;
       border: 1px solid #E3DDF4;
       padding: 15px;
@@ -21,6 +20,9 @@
 
       flex-direction: column;
       align-items: center;
+      overflow: hidden;
+      margin: auto !important;
+      margin-top: 4vh !important;
     }
     .quadInputs input{
       margin: 8px;
@@ -29,22 +31,8 @@
       margin: 8px;
     }
 
-    .topRightCornerLab{
-      position:absolute;
-      top:55px;
-      right:0px;
-      margin-top: 4vh;
-      width: 50vw;
-      border: 1px solid #E3DDF4;
-      padding: 15px;
-      border-radius: 8px;
-      background-color: #313131;
-      flex-direction: column;
-      align-items: center;
-    }
-
     .card {
-      width: 10vw;
+      width: 95%;
       display: flex;
 
     }
@@ -53,19 +41,22 @@
     }
     .wrapper {
       display: grid;
-      grid-template-columns: 200px 200px 200px;
-      grid-gap: 10px;
+      grid-template-columns: 33% 33% 33%;
+      grid-gap: 4px;
       background-color: #fff;
       color: #444;
     }
 
+    h4 {
+      color: white;
+    }
 
   </style>
 </div></head>
 
 <body><div layout:fragment="content" th:remove="tag">
   <!-- Start of body content specific to page -->
-  <div class="contact" style="height: 35vh;">
+  <div class="contact" style="min-height: 100vh;">
     <div class="row justify-content-center lab-container">
       <h4>Enter in a Name and Receive their Bio if Available.</h4><br>
 
@@ -92,51 +83,49 @@
 
       <p id="quadAns"></p>
     </div>
-  </div>
 
+    <div class="row justify-content-center lab-container">
 
-  <div class="row justify-content-center topRightCornerLab">
+      <h4>Pair Prototyping / Thymeleaf</h4><br>
 
-    <h5>Pair Prototyping / Thymeleaf</h5><br>
+      <div class="wrapper">
 
-    <div class="wrapper">
-
-    <div class="card">
+        <div class="card">
           <img class="card-img-top" src="https://dw3jhbqsbya58.cloudfront.net/fit-in/1024x1024/school-mascot/d/d/f/ddf384b8-3189-4276-8703-71106d47a4d5.gif?version=636803799000000000" alt="DNHS Logo">
           <div class="card-body">
             <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/DNHS/Home">Del Norte High School </h6></a>
             <p class="card-text">Premier top-scoring high school located in 4S Ranch, California. </p>
           </div>
-      </div>
-
-      <div class="card">
-      <img class="card-img-top" src="https://www.nicepng.com/png/detail/609-6095789_poway-high-school-p.png" alt="PHS Logo">
-      <div class="card-body">
-        <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/PHS/Home">Poway High School </h6></a>
-
-        <p class="card-text">First high school established by PUSD (1961). Located in Poway, California</p>
-      </div>
         </div>
 
-      <div class="card">
-      <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/WVHS/images/Logos/logo_standards/westvieww2clrreversed.gif" alt="WVHS Logo">
-      <div class="card-body">
-        <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/WVHS/HOME">Westview High School </h6></a>
+        <div class="card">
+          <img class="card-img-top" src="https://www.nicepng.com/png/detail/609-6095789_poway-high-school-p.png" alt="PHS Logo">
+          <div class="card-body">
+            <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/PHS/Home">Poway High School </h6></a>
 
-        <p class="card-text">Top-sport high school located in Carmel Valley, California</p>
-      </div>
+            <p class="card-text">First high school established by PUSD (1961). Located in Poway, California</p>
+          </div>
         </div>
 
-      <div class="card">
-      <img class="card-img-top" src="data:image/png;base64,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" alt="RBHS Logo">
-      <div class="card-body">
-        <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/RBHS/HOME">Rancho Bernardo High School </h6></a>
-        <p class="card-text">Third PUSD high school ever opened. located in Rancho Bernardo, California</p>
-      </div>
-      </div>
+        <div class="card">
+          <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/WVHS/images/Logos/logo_standards/westvieww2clrreversed.gif" alt="WVHS Logo">
+          <div class="card-body">
+            <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/WVHS/HOME">Westview High School </h6></a>
+
+            <p class="card-text">Top-sport high school located in Carmel Valley, California</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <img class="card-img-top" src="data:image/png;base64,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" alt="RBHS Logo">
+          <div class="card-body">
+            <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/RBHS/HOME">Rancho Bernardo High School </h6></a>
+            <p class="card-text">Third PUSD high school ever opened. located in Rancho Bernardo, California</p>
+          </div>
+        </div>
 
 
-      <div class="card">
+        <div class="card">
           <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/MCHS/img/MCHS_logo_small.png?ext=.png" alt="MCHS Logo">
 
           <div class="card-body">
@@ -145,58 +134,57 @@
           </div>
         </div>
 
-          <div class="card">
+        <div class="card">
           <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/AHS/AbraxasLogo.png?ext=.png" alt="ABRAX Logo">
 
-            <div class="card-body">
-              <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/AHS/Home">Abraxas High School </h6></a>
-              <p class="card-text">Continuation school for students in San Diego. Located in Poway, California.</p>
-            </div>
-</div>
+          <div class="card-body">
+            <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/HS/AHS/Home">Abraxas High School </h6></a>
+            <p class="card-text">Continuation school for students in San Diego. Located in Poway, California.</p>
+          </div>
+        </div>
 
         <div class="card">
 
-              <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/BHMS/images/bhmsLogo3.png?ext=.png" alt="BHMS Logo">
+          <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/BHMS/images/bhmsLogo3.png?ext=.png" alt="BHMS Logo">
 
-              <div class="card-body">
-                <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/MS/BHMS/Home">Bernardo Heights Middle School </h6></a>
-                <p class="card-text">Primary middle school for students in San Diego. Located in San Diego, California.</p>
-              </div>
+          <div class="card-body">
+            <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/MS/BHMS/Home">Bernardo Heights Middle School </h6></a>
+            <p class="card-text">Primary middle school for students in San Diego. Located in San Diego, California.</p>
           </div>
-
-      <div class="card">
-
-        <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/BMMS/images/BMMSLogo100.png?ext=.png" alt="BMMS Logo">
-
-        <div class="card-body">
-          <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/MS/BMMS/Home">Black Mountain Middle School </h6></a>
-          <p class="card-text">Primary middle school for students in San Diego. Located in San Diego, California.</p>
         </div>
-      </div>
 
-      <div class="card">
+        <div class="card">
 
-        <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/D39C/images/D39Clogo.png?ext=.png" alt="D39 Logo">
+          <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/BMMS/images/BMMSLogo100.png?ext=.png" alt="BMMS Logo">
 
-        <div class="card-body">
-          <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/TK-8/D39C/Home">Design39Campus </h6></a>
-          <p class="card-text">Primary K-8 school for students in San Diego. Located in 4S Ranch, California.</p>
+          <div class="card-body">
+            <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/MS/BMMS/Home">Black Mountain Middle School </h6></a>
+            <p class="card-text">Primary middle school for students in San Diego. Located in San Diego, California.</p>
+          </div>
         </div>
-      </div>
+
+        <div class="card">
+
+          <img class="card-img-top" src="https://www.powayusd.com/PUSD/media/D39C/images/D39Clogo.png?ext=.png" alt="D39 Logo">
+
+          <div class="card-body">
+            <h6 class="card-title"><a href = "https://www.powayusd.com/en-US/Schools/TK-8/D39C/Home">Design39Campus </h6></a>
+            <p class="card-text">Primary K-8 school for students in San Diego. Located in 4S Ranch, California.</p>
+          </div>
+        </div>
 
         <div class="card">
           <div class="card-body">
             <h6 class="card-title">Thymeleaf String/Number Methods </h6>
-              <input name="stringLength" id="stringLengthInput">
+            <input name="stringLength" id="stringLengthInput">
             <button onclick="getString()">Generate String</button>
             <p id="stringResult"></p>
-</div>
           </div>
-</div>
-</div>
-</div>
-
-
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
   <!-- End of body content specific to page -->
 </div></body>
 
