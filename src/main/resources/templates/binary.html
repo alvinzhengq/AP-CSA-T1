@@ -11,15 +11,15 @@
 <!-- Hack 6: fix all warnings -->
 
 <!-- <head> -->
-<div layout:fragment="metadata" th:with="bits=8" th:remove="tag">
+<div layout:fragment="metadata" th:with="bits=8" th:remove="tag" th:inline="javascript">
   <title>Binary page</title>
-  <script>
+  <script th:inline="javascript">
     const BITS = [[${bits}]];
     const MAX = 2 ** BITS - 1;
     const MSG_ON = "Turn on";
-    const IMAGE_ON = "/images/bulb_on.gif";
+    const IMAGE_ON = [[${imageOnPath}]];
     const MSG_OFF = "Turn off";
-    const IMAGE_OFF = "/images/bulb_off.png"
+    const IMAGE_OFF = [[${imageOffPath}]];
 
     // return string with current value of each bit
     function getBits() {
