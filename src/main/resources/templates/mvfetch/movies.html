@@ -10,9 +10,76 @@
 
 <body><div layout:fragment="content" th:remove="tag">
   <!-- Start of body content specific to page -->
-  <div style="text-align: center; margin: 10px">
-    <h1>Placeholder for movies page</h1>
+  <style>
+
+    .lab-container{
+      margin-top: 4vh;
+      width: 50vw;
+      border: 1px solid #E3DDF4;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #313131;
+
+      flex-direction: column;
+      align-items: center;
+    }
+    .quadInputs input{
+      margin: 8px;
+    }
+    .quadInputs button{
+      margin: 8px;
+    }
+
+    .topRightCornerLab{
+      position:absolute;
+      top:55px;
+      right:0px;
+      margin-top: 4vh;
+      width: 50vw;
+      border: 1px solid #4E5B69;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #4E5B69;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .card {
+      width: 100vw;
+      display: flex;
+
+    }
+    .card-title {
+      font-size: 20px;
+    }
+    .wrapper {
+      display: grid;
+      grid-template-columns: 400px 400px 400px;
+      grid-gap: 10px;
+      background-color: #fff;
+      color: #444;
+    }
+
+
+  </style>
+</div></head>
+
+<div class="row justify-content-center topRightCornerLab">
+<div class="row justify-content-center lab-container">
+
+  <center>
+    <h1 style="color: #FFFFFF">Upcoming</h1><br>
+  </center>
+
+
+
+  <div class="card">
+    <h2 style="color: #FFFFFF">Upcoming Movies</h2><br>
+
+    <h3 style = "color: #FB6E52">Shangi-Chi and The Legend of the Ten Rings</h3>
+
   </div>
+</div>
   <!-- End of body content specific to page -->
 </div></body>
 
