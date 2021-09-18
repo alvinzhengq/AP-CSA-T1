@@ -38,6 +38,8 @@ commits:
 - https://github.com/alvinzhengq/AP-CSA/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
 - https://github.com/alvinzhengq/AP-CSA/commit/9b6781cad6fb79702834f5faff1326d88370c088
 
+Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA/projects/1#card-68379017
+
 ![Home Page](public/Home_Page_Iteration_1.png)
 ![Movie Page](public/Movies_Page_Iteration_2.png)
 
