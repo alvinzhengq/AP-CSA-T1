@@ -2,17 +2,20 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
+    <div th:replace="fragments/head :: header"></div>
     <div th:replace="fragments/mvhead :: header"></div>
     <div layout:fragment="metadata">...</div>
 </head>
 
-<body>
+<body style="overflow-x: hidden">
     
-    <div th:replace="fragments/nav :: header"></div>
+    <div style="display: flex; min-height: 100vh; flex-direction: column; justify-content: flex-start;">
+        <div th:replace="fragments/nav :: header"></div>
 
-    <div layout:fragment="content">...</div>
+        <div layout:fragment="content">...</div>
 
-    <div th:replace="fragments/footer :: footer"></div>
+        <div th:replace="fragments/footer :: footer"></div>
+    </div>
 </body>
 
 
