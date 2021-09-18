@@ -16,4 +16,5 @@ public class Binary {
         model.addAttribute("imageOnPath", imageOnPath);
         return "binary";
     }
+
 }
