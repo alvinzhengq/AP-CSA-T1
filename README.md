@@ -47,7 +47,7 @@ commits:
 | Akshay R. | Akshay-Rohatgi | Hack 1 for Binary Math  + HTML Prototyping | [Hack 1 Commit 1](https://github.com/alvinzhengq/AP-CSA/commit/63d0ae589bcc7824a2d3de759282814665454588), [Hack 1 Commit 2](https://github.com/alvinzhengq/AP-CSA/commit/073bf156982aaf9a6a5ec2e92a9d4b03ed15fc5e), [HTML Prototyping](https://github.com/alvinzhengq/AP-CSA/commit/9b6781cad6fb79702834f5faff1326d88370c088) |
 | Alvin Z. | alvinzhengq | HTML Prototyping | [CSS Fix](https://github.com/alvinzhengq/AP-CSA/commit/8aedee5b42fccbb2e742fbab37e2ecfb27606863) |
 | Nolan P. | nolanplatt | |
-| Sami D. | SamiDeshatty | HTML Prototyping | [Home Page](https://github.com/alvinzhengq/AP-CSA/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc), [Movies Page](https://github.com/alvinzhengq/AP-CSA/commit/ff97a32cfd70be894d112b827c5fcf04ab0f2355)  |
+| Sami D. | SamiDeshatty | HTML Prototyping | [Home Page](https://github.com/alvinzhengq/AP-CSA/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc), [Movies Page](https://github.com/alvinzhengq/AP-CSA/commit/94466db24c2b08baf310fdf3602ee217699a2fbd)  |
 | Prisha M. | PrishaMaiti |  |
 
 
