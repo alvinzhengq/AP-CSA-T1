@@ -39,7 +39,7 @@ commits:
 - https://github.com/alvinzhengq/AP-CSA/commit/9b6781cad6fb79702834f5faff1326d88370c088
 
 ![Home Page](public/Home_Page_Iteration_1.png)
-![Movie Page](public/Movies_Page_Iteration_1.png)
+![Movie Page](public/Movies_Page_Iteration_2.png)
 
 ### Week 4 Individual Technicals
 | Team Member | Github Username | Technical Task | Contribution Links |
