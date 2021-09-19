@@ -56,8 +56,6 @@ public class Minilabs {
     @ResponseBody
     public String stringAPI(@RequestParam(name="stringLength", required=false, defaultValue="5") int stringLength) {
         String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
-        int availableLetters = 26;
         String generatedString = "";
         for(int i = 0; i <= stringLength - 1; i++) {
             Random random = new Random();
@@ -65,7 +63,5 @@ public class Minilabs {
             generatedString += alphabet.charAt(randomNumber);
         }
             return generatedString;
-
-
     }
 }
