@@ -11,7 +11,7 @@
 <!-- Hack 6: fix all warnings -->
 
 <!-- <head> -->
-<div layout:fragment="metadata" th:with="bits=8" th:remove="tag" th:inline="javascript">
+<div layout:fragment="metadata" th:with="bits=${bits}" th:remove="tag" th:inline="javascript">
   <title>Binary page</title>
   <script th:inline="javascript">
     const BITS = [[${bits}]];
@@ -20,6 +20,10 @@
     const IMAGE_ON = [[${imageOnPath}]];
     const MSG_OFF = "Turn off";
     const IMAGE_OFF = [[${imageOffPath}]];
+
+    function changeBits(bits) {
+        window.location.replace("binary?bits=" + document.getElementById("bitCustomInput").value)
+    }
 
     // return string with current value of each bit
     function getBits() {
@@ -109,7 +113,7 @@
 <!-- </head> -->
 
 <!-- <body> -->
-<div layout:fragment="content" th:with="bits=8" th:remove="tag">
+<div layout:fragment="content" th:with="bits=${bits}" th:remove="tag">
   <h1 class="text-center">Binary Math with Conversions</h1>
   <div class="container">
     <div class="row justify-content-md-center">
@@ -117,6 +121,7 @@
       <div class="col-8">
         <table class="table">
           <tr id="table">
+            <th>Customize Bit Count</th>
             <th>Plus</th>
             <th>Binary</th>
             <th>Octal</th>
@@ -124,8 +129,17 @@
             <th>Decimal</th>
             <th>Minus</th>
           </tr>
+
+
           <tr style="color: white">
-            <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
+
+            <td> <input id="bitCustomInput" type="number" value="Desired Bits">
+                <button type="button" id="submitBitCustomization" onclick="changeBits()">Customize Bits</button></td>
+
+
+
+              <td><button type="button" id="add1" onclick="add(1)">+1</button></td>
+
             <td id="binary">00000000</td>
             <td id="octal">0</td>
             <td id="hexadecimal">0</td>
