@@ -4,11 +4,11 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
-public class SamiRGBLab {
+public class SamiMiniLabs {
 
-    @GetMapping("/SamiRGBLab")
-    public String getSamiRGBLab() {
-        return "SamiRGBLab";
+    @GetMapping("/SamiMiniLabs")
+    public String getSamiMiniLabs() {
+        return "SamiMiniLabs";
     }
 }
 
