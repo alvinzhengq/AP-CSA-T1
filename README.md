@@ -1,4 +1,4 @@
-# Team Pokemon Trainers - Unit 1-2 PBL
+# Team Pokemon Trainers - README.md
 
 - [Team Scrum Board](https://github.com/alvinzhengq/AP-CSA/projects/1)
 - [All Team Commits](https://github.com/alvinzhengq/AP-CSA/commits/master)
