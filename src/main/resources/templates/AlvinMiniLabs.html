@@ -1,17 +1,71 @@
 <!DOCTYPE HTML>
+<!DOCTYPE HTML>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
 <head><div layout:fragment="metadata" th:remove="tag">
-
-  <!-- Stylesheets -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-  <!-- Start of head content specific to page -->
   <title>Minilabs</title>
-  <!-- End of head content specific to page -->
 
-</div> </head>
+  <style>
+    .lab-container {
+      width: 50vw;
+      border: 1px solid #E3DDF4;
+      padding: 15px;
+      border-radius: 8px;
+      background-color: #313131;
+
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      margin: auto !important;
+      margin-top: 4vh !important;
+    }
+    h4 {
+      color: white;
+    }
+
+  </style>
+</div></head>
+
 <body><div layout:fragment="content" th:remove="tag">
-  <h1>RGB Minilab</h1>
+  <div class="contact" style="min-height: 100vh;">
+    <div class="row justify-content-center lab-container">
+      <h4>Alvin Z: Individual Minilabs</h4>
+    </div>
+
+    <div class="contact" style="min-height: 100vh;">
+      <div class="row justify-content-center lab-container">
+        <h4>RGB Minilab</h4><br>
+
+        <div style="display: flex; flex-direction: row;">
+          <button onclick="testButton()" style="margin-left: 1em"> Lorem lipsum!</button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div></body>
+
+
+<div layout:fragment="script" th:remove="tag">
+  <!-- Start of custom script specific to page -->
+  <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    VANTA.NET({
+      el: "body",
+      color: "#E3DDF4",
+      backgroundColor: "#1E1F1F",
+      points: 10,
+      maxDistance: 20,
+      spacing: 15,
+      showDots: true
+    })
+
+  </script>
 </div>
-</body>
+
+</html>
