@@ -24,7 +24,13 @@
         h4 {
             color: white;
         }
-
+        .wrapper {
+            display: grid;
+            grid-template-columns: 33% 33% 33%;
+            grid-gap: 4px;
+            background-color: #fff;
+            color: #444;
+        }
     </style>
 </div></head>
 
@@ -37,9 +43,20 @@
         <div class="contact" style="min-height: 100vh;">
             <div class="row justify-content-center lab-container">
                 <h4>RGB Minilab</h4><br>
-
+                <div class="wrapper">
+                    <img height="250" width="250" id="img1" />
+                    <img height="250" width="250" id="img2" />
+                    <img height="250" width="250" id="img3" />
+                    <img height="250" width="250" id="img4" />
+                    <img height="250" width="250" id="img5" />
+                    <img height="250" width="250" id="img6" />
+                    <img height="250" width="250" id="img7" />
+                    <img height="250" width="250" id="img8" />
+                    <img height="250" width="250" id="img9" />
+                    <img height="250" width="250" id="img10" />
+                </div>
                 <div style="display: flex; flex-direction: row;">
-                    <button onclick="testButton()" style="margin-left: 1em"> Lorem lipsum!</button>
+                    <button onclick="testButton()" style="margin-left: 1em"> Grayscale Images</button>
                 </div>
 
             </div>
@@ -64,6 +81,16 @@
             spacing: 15,
             showDots: true
         })
+        let count = 1;
+        while(count <= 10) {
+            console.log(count);
+            document.getElementById('img' + count).src = "https://source.unsplash.com/random/" + (300+randomNumb())+'x' + (200 + randomNumb() + "/");
+        count++
+        }
+        function randomNumb(){
+        return Math.floor(Math.random() * 200)
+    }
+
 
     </script>
 </div>
