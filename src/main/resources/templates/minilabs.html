@@ -90,6 +90,19 @@
     </div>
 
     <div class="row justify-content-center lab-container">
+      <h4>GCD Calculator</h4><br>
+
+      <div style="text-align: center;" class="quadInputs">
+        <input placeholder="a" id="gcdA"><br>
+        <input placeholder="b" id="gcdB"><br>
+
+        <button onclick="getGCD()">Get Answer</button><br>
+      </div>
+
+      <p id="GCDAns" style="color:#FFFFFF;"></p>
+    </div>
+
+    <div class="row justify-content-center lab-container">
 
       <h4>Pair Prototyping / Thymeleaf</h4><br>
 
@@ -241,6 +254,18 @@
         url: "/minilab-string-api?stringLength=" + stringLength,
       }).then(resp => {
         document.getElementById("stringResult").innerText = "Generated String:" + (resp.data);
+      });
+    }
+
+    function getGCD() {
+      let gcdA = "a=" + document.getElementById("gcdA").value;
+      let gcdB = "b=" + document.getElementById("gcdB").value;
+
+      axios({
+        method: "get",
+        url: "/minilab-gcd-api?" + gcdA + "&" + gcdB
+      }).then(resp => {
+        document.getElementById("GCDAns").innerText = resp.data
       });
     }
   </script>

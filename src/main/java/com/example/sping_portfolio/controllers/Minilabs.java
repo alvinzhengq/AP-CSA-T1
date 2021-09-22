@@ -64,4 +64,16 @@ public class Minilabs {
         }
             return generatedString;
     }
+
+    @GetMapping("/minilab-gcd-api")
+    @ResponseBody
+    public String gcdAPI(@RequestParam(name="a", required=false, defaultValue="1") int a,
+                             @RequestParam(name="b", required=false, defaultValue="1") int b) {
+        int guess = Integer.min(a,b);
+        while((a%guess != 0 || b%guess != 0) && guess >= 1) {
+            guess--;
+        }
+
+        return Integer.toString(guess);
+    }
 }
