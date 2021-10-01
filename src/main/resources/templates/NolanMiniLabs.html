@@ -3,74 +3,98 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
-<head><div layout:fragment="metadata" th:remove="tag">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <title>Minilabs</title>
+<head>
+    <div layout:fragment="metadata" th:remove="tag">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+              integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+              crossorigin="anonymous">
+        <title>Minilabs</title>
 
-    <style>
-        .lab-container {
-            width: 50vw;
-            border: 1px solid #E3DDF4;
-            padding: 15px;
-            border-radius: 8px;
-            background-color: #313131;
+        <style>
+            .lab-container {
+                width: 50vw;
+                border: 1px solid #E3DDF4;
+                padding: 15px;
+                border-radius: 8px;
+                background-color: #313131;
 
-            flex-direction: column;
-            align-items: center;
-            overflow: hidden;
-            margin: auto !important;
-            margin-top: 4vh !important;
-        }
-        h4 {
-            color: white;
-        }
-        .wrapper {
-            display: grid;
-            grid-template-columns: 33% 33% 33%;
-            grid-gap: 4px;
-            background-color: #fff;
-            color: #444;
-        }
-    </style>
-</div></head>
+                flex-direction: column;
+                align-items: center;
+                overflow: hidden;
+                margin: auto !important;
+                margin-top: 4vh !important;
+            }
 
-<body><div layout:fragment="content" th:remove="tag">
+            h4 {
+                color: white;
+            }
+
+            p {
+                color: white;
+            }
+
+            .button {
+                display: inline-block;
+                margin-top: 20px;
+            }
+            .wrapper {
+                display: grid;
+                grid-template-columns: 33% 33% 33%;
+                grid-gap: 4px;
+                background-color: #fff;
+                color: #444;
+            }
+
+
+        </style>
+    </div>
+</head>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
     <div class="contact" style="min-height: 100vh;">
         <div class="row justify-content-center lab-container">
-          <h4>Nolan P: Individual Minilabs</h4>
+            <h4><u>Nolan P: Individual Minilabs</u></h4>
         </div>
 
         <div class="contact" style="min-height: 100vh;">
             <div class="row justify-content-center lab-container">
-                <h4>RGB Minilab</h4><br>
+                <h4>Individual Minilab 1: 4 ways to build a <strong>Lucas Series</strong></h4><br>
+                <p>Lucas Numbers/Series are defined as the sum of the previous two terms.</p>
+                <p>Enter the nth term below to find the corresponding Lucas Number that goes for that value.</p>
+                <img src="/images/lucasSpiral.svg" width="250" height="250">
+                <p>
+                    <strong>Enter the nth number in the Lucas Series</strong>
+                </p>
+                <input class="clear" name="name" id="or">
+                <button class="button" onclick="testButton()" style="margin-left: 1em"> Find Number</button>
+                <p>
+                    <strong>Algorithm Results</strong>
+                </p>
                 <div class="wrapper">
-                    <img height="250" width="250" id="img1" />
-                    <img height="250" width="250" id="img2" />
-                    <img height="250" width="250" id="img3" />
-                    <img height="250" width="250" id="img4" />
-                    <img height="250" width="250" id="img5" />
-                    <img height="250" width="250" id="img6" />
-                    <img height="250" width="250" id="img7" />
-                    <img height="250" width="250" id="img8" />
-                    <img height="250" width="250" id="img9" />
-                    <img height="250" width="250" id="img10" />
-                </div>
-                <div style="display: flex; flex-direction: row;">
-                    <button onclick="testButton()" style="margin-left: 1em"> Grayscale Images</button>
-                </div>
 
+                    <div class="card">
+                        <div class="card-body">
+                            <h6 class="card-title">For Loop</h6>
+                            <p class="card-text">Time: <br>Number: <br>List: </p>
+                        </div>
+                    </div>
+
+                    </div>
             </div>
-
         </div>
     </div>
-</div></body>
+</div>
+</body>
 
 
 <div layout:fragment="script" th:remove="tag">
     <!-- Start of custom script specific to page -->
     <script src="/static/vanta/three.r119.min.js" th:src="@{/vanta/three.r119.min.js}"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.21/dist/vanta.net.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         VANTA.NET({
             el: "body",
@@ -81,15 +105,6 @@
             spacing: 15,
             showDots: true
         })
-        let count = 1;
-        while(count <= 10) {
-            console.log(count);
-            document.getElementById('img' + count).src = "https://source.unsplash.com/random/" + (300+randomNumb())+'x' + (200 + randomNumb() + "/");
-        count++
-        }
-        function randomNumb(){
-        return Math.floor(Math.random() * 200)
-    }
 
 
     </script>
