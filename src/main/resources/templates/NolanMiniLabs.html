@@ -37,6 +37,9 @@
                 display: inline-block;
                 margin-top: 20px;
             }
+            .card-title {
+                font-size: 20px;
+            }
             .wrapper {
                 display: grid;
                 grid-template-columns: 33% 33% 33%;
@@ -66,21 +69,63 @@
                 <p>
                     <strong>Enter the nth number in the Lucas Series</strong>
                 </p>
-                <input class="clear" name="name" id="or">
-                <button class="button" onclick="testButton()" style="margin-left: 1em"> Find Number</button>
+
+
+                <input id="lucasNum"><br>
+                <button onClick="getLucasSeries()">Submit</button>
                 <p>
                     <strong>Algorithm Results</strong>
                 </p>
-                <div class="wrapper">
 
+                <div>
+                    <p id="ans"></p>
+
+
+                </div>
+
+                <div class="wrapper">
                     <div class="card">
+                        <img class="card-img-top" src="https://blog.hubspot.com/hs-fs/hub/53/file-23117129-png/blog/images/closed-loop-marketing.png" alt="For Loop Image">
                         <div class="card-body">
-                            <h6 class="card-title">For Loop</h6>
-                            <p class="card-text">Time: <br>Number: <br>List: </p>
+                            <h6 class="card-title"><strong>For Loop</strong></h6>
+                            <h6 id="forLoopSeriesUpToIndex"  class="card-title">Series Up To Index:</h6>
+                            <h6 id="forLoopTimeTaken"  class="card-title">Time Taken:</h6>
+                            <h6 id="forLoopSumOfSeries"  class="card-title">Sum of Series:</h6>
+
+
                         </div>
                     </div>
 
+                    <div class="card">
+                        <img class="card-img-top" src="https://miro.medium.com/max/1200/1*gSHrSNZK0bx-X7m1RraA6A.jpeg" alt="Recursion Image">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>Recursion</strong></h6>
+                            <h6 id="recurseSeriesUpToIndex"  class="card-title">Series Up To Index:</h6>
+                            <h6 id="recurseTimeTaken"  class="card-title">Time Taken:</h6>
+                            <h6 id="recurseSumOfSeries"  class="card-title">Sum of Series:</h6>
+                        </div>
                     </div>
+                    <div class="card">
+                        <img class="card-img-top" src="https://mydeveloperplanet.files.wordpress.com/2020/08/nature-forest-waves-trees.jpg" alt="Stream Image">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>Stream</strong></h6>
+                            <h6 id="streamSeriesUpToIndex"  class="card-title">Series Up To Index:</h6>
+                            <h6 id="streamTimeTaken"  class="card-title">Time Taken:</h6>
+                            <h6 id="streamSumOfSeries"  class="card-title">Sum of Series:</h6>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img class="card-img-top" src="data:image/png;base64,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" alt="While Image">
+                        <div class="card-body">
+                            <h6 class="card-title"><strong>While Loop</strong></h6>
+                            <h6 id="whileLoopSeriesUpToIndex"  class="card-title">Series Up To Index:</h6>
+                            <h6 id="whileLoopTimeTaken"  class="card-title">Time Taken:</h6>
+                            <h6 id="whileLoopSumOfSeries"  class="card-title">Sum of Series:</h6>
+                        </div>
+                    </div>
+                    </div>
+
+
             </div>
         </div>
     </div>
@@ -96,6 +141,82 @@
             integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
+
+        function getLucasSeries() {
+
+            let lucasNumWanted = "lucasNumWanted=" + document.getElementById("lucasNum").value;
+
+            /*
+            var request = new Request("/lucasSeriesBackEnd?" + lucasNumWanted,
+                { method: 'GET',});
+            fetch(request)
+                .then(resp => {
+                    console.log(resp);
+                });
+*/
+
+            // Get seriesUpToIndex and sumOfSeries for entire Sequence as entirety:
+            axios({
+                method: "GET",
+                url: "/lucasSeriesCalcSeriesUpToIndex?" + lucasNumWanted
+            }).then(resp => {
+                document.getElementById("forLoopSeriesUpToIndex").innerText = "Series Up To Index: " + resp.data;
+                document.getElementById("whileLoopSeriesUpToIndex").innerText = "Series Up To Index: " + resp.data;
+                document.getElementById("recurseSeriesUpToIndex").innerText = "Series Up To Index: " + resp.data;
+                document.getElementById("streamSeriesUpToIndex").innerText = "Series Up To Index: " + resp.data;
+
+            });
+
+            axios({
+                method: "GET",
+                url: "/lucasSeriesFindSumOfSeries?" + lucasNumWanted
+            }).then(resp => {
+                document.getElementById("forLoopSumOfSeries").innerText = "Sum of Series " + resp.data;
+                document.getElementById("whileLoopSumOfSeries").innerText = "Sum of Series " + resp.data;
+                document.getElementById("recurseSumOfSeries").innerText = "Sum of Series " + resp.data;
+                document.getElementById("streamSumOfSeries").innerText = "Sum of Series " + resp.data;
+
+            });
+
+
+            // Find Time Taken of Each Individual:
+            axios({
+                method: "GET",
+                url: "/lucasSeriesGetForTime?" + lucasNumWanted
+            }).then(resp => {
+
+                document.getElementById("forLoopTimeTaken").innerText = "Time Taken: " + resp.data;
+            });
+
+            axios({
+                method: "GET",
+                url: "/lucasSeriesGetRecurseTime?" + lucasNumWanted
+            }).then(resp => {
+
+                document.getElementById("recurseTimeTaken").innerText = "Time Taken: " + resp.data;
+
+            });
+
+            axios({
+                method: "GET",
+                url: "/lucasSeriesGetStreamTime?" + lucasNumWanted
+            }).then(resp => {
+
+                document.getElementById("streamTimeTaken").innerText = "Time Taken: " + resp.data;
+
+            });
+
+            axios({
+                method: "GET",
+                url: "/lucasSeriesGetWhileTime?" + lucasNumWanted
+            }).then(resp => {
+
+                document.getElementById("whileLoopTimeTaken").innerText = "Time Taken: " + resp.data;
+
+
+            });
+        }
+
         VANTA.NET({
             el: "body",
             color: "#E3DDF4",
