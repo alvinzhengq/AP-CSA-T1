@@ -171,10 +171,10 @@
                 method: "GET",
                 url: "/lucasSeriesFindSumOfSeries?" + lucasNumWanted
             }).then(resp => {
-                document.getElementById("forLoopSumOfSeries").innerText = "Sum of Series " + resp.data;
-                document.getElementById("whileLoopSumOfSeries").innerText = "Sum of Series " + resp.data;
-                document.getElementById("recurseSumOfSeries").innerText = "Sum of Series " + resp.data;
-                document.getElementById("streamSumOfSeries").innerText = "Sum of Series " + resp.data;
+                document.getElementById("forLoopSumOfSeries").innerText = "Sum of Series: " + resp.data;
+                document.getElementById("whileLoopSumOfSeries").innerText = "Sum of Series: " + resp.data;
+                document.getElementById("recurseSumOfSeries").innerText = "Sum of Series: " + resp.data;
+                document.getElementById("streamSumOfSeries").innerText = "Sum of Series: " + resp.data;
 
             });
 
