@@ -36,11 +36,20 @@
 
         <div class="contact" style="min-height: 100vh;">
             <div class="row justify-content-center lab-container">
-                <h4>RGB Minilab</h4><br>
+                <h4>Algorithm Extend Lab (Geometric Sequence)</h4><br>
 
                 <div style="display: flex; flex-direction: row;">
-                    <button onclick="testButton()" style="margin-left: 1em"> Lorem lipsum!</button>
+                    <div style="text-align: center;" class="geoInputs">
+                        <input placeholder="Initial Number" id="initial"><br>
+                        <input placeholder="Constant Multiplier" id="constant"><br>
+                        <input placeholder="Iteration Number/Nth Term" id="multiplier"><br>
+
+                        <button onclick="getGeo()">Get Answer</button><br>
+                    </div>
+                    <p id="ans" style="color:#FFFFFF;"></p>
                 </div>
+
+
 
             </div>
 
@@ -64,6 +73,18 @@
             spacing: 15,
             showDots: true
         })
+        function getGeo() {
+            let a = "a=" + document.getElementById("initial").value;
+            let b = "b=" + document.getElementById("constant").value;
+            let c = "c=" + document.getElementById("multiplier").value;
+
+            axios({
+                method: "get",
+                url: "/akshay-abstraction-minilab-api?" + a + "&" + b + "&" + c,
+            }).then(resp => {
+                document.getElementById("ans").innerText = resp.data
+            });
+        }
 
     </script>
 </div>
