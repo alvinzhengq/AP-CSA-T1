@@ -36,18 +36,19 @@
 
     <div class="contact" style="min-height: 100vh;">
       <div class="row justify-content-center lab-container">
-        <h4>RGB Minilab</h4><br>
+        <h4>Algorithms Lab</h4><br>
 
-        <div style="display: flex; flex-direction: row;">
-          <button onclick="testButton()" style="margin-left: 1em"> Lorem lipsum!</button>
+        <div style="display: flex; flex-direction: row; margin-top: 20px">
+          <input type="number" id="size" value="8">
+          <button onclick="getSeq()" style="margin-left: 1em"> Get Sequences</button>
         </div>
 
+        <p id="result"></p>
       </div>
 
     </div>
   </div>
 </div></body>
-
 
 <div layout:fragment="script" th:remove="tag">
   <!-- Start of custom script specific to page -->
@@ -65,6 +66,16 @@
       showDots: true
     })
 
+    function getSeq() {
+      let size = document.getElementById('size').value;
+
+      axios({
+        method: "get",
+        url: "/AlvinMiniLabs-api?size=" + size,
+      }).then(resp => {
+        document.getElementById("result").innerText = resp.data
+      });
+    }
   </script>
 </div>
 
