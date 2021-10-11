@@ -1,10 +1,5 @@
 package com.example.sping_portfolio.controllers;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -76,15 +71,4 @@ class ImageInfo {
 
     public void addWatermark() {
     }
-}
-
-@Controller
-public class RGBLab {
-
-    @GetMapping("/rgblab-api")
-    @ResponseBody
-    public String getImages() {
-        return "";
-    }
-
 }
