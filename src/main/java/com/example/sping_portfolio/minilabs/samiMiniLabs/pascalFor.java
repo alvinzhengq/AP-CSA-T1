@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.samiMiniLabs;
+package com.example.sping_portfolio.minilabs.samiMiniLabs;
 
 public class pascalFor extends _pascal{
     public pascalFor(int nth) {

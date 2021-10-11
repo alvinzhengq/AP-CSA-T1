@@ -1,5 +1,6 @@
-package com.example.sping_portfolio.samiMiniLabs;
+package com.example.sping_portfolio.minilabs.samiMiniLabs;
 
+import com.example.sping_portfolio.minilabs.samiMiniLabs.consoleUI.consoleMethods;
 import lombok.Getter;
 
 import java.time.Duration;

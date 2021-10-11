@@ -1,5 +1,9 @@
-package com.example.sping_portfolio.samiMiniLabs;
+package com.example.sping_portfolio.controllers;
 
+import com.example.sping_portfolio.minilabs.samiMiniLabs._pascal;
+import com.example.sping_portfolio.minilabs.samiMiniLabs.pascalFor;
+import com.example.sping_portfolio.minilabs.samiMiniLabs.pascalRecurse;
+import com.example.sping_portfolio.minilabs.samiMiniLabs.pascalWhile;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.List;
+
+@Controller
 
 public class pascalController {
 
@@ -16,15 +22,16 @@ public class pascalController {
             //Fibonacci objects created with different initializers
             List<_pascal> pascalList = new ArrayList<>();
             pascalList.add(new pascalFor(nth));
+            pascalList.add(new pascalFor(nth));
             pascalList.add(new pascalWhile(nth));
             pascalList.add(new pascalRecurse(nth));
-            pascalList.add(new pascalStream(nth));
+
 
             return pascalList;
         }
 
         // GET request,, parameters are passed within the URI
-        @GetMapping("/fib")
+        @GetMapping("/samiMiniLab")
         public String fib(@RequestParam(name="pascalseq", required=false,  defaultValue="2") String pascalseq, Model model) {
             //nth is fibonacci request
             int nth = Integer.parseInt(pascalseq);
@@ -32,7 +39,7 @@ public class pascalController {
             //MODEL attributes are passed back html
             model.addAttribute("pascalList", pascalInit(nth));
 
-            return "algorithm/pascal"; //HTML render fibonacci results
+            return "samiMiniLab"; //HTML render fibonacci results
 
         }
 
@@ -44,5 +51,13 @@ public class pascalController {
             for (_pascal pascal : pascalList)
                 pascal.print();  //Console output fibonacci results
         }
+
+    public static class samiMiniLab {
+        @GetMapping("/samiMiniLab")
+        public String samiMiniLab() {
+
+            return "samiMiniLab";
+        }
     }
+}
 

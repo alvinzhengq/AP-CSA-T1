@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.samiMiniLabs;
+package com.example.sping_portfolio.minilabs.samiMiniLabs;
 
 import java.util.stream.Stream;
 

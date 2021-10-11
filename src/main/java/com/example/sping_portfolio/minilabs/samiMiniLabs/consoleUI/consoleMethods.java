@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.samiMiniLabs;
+package com.example.sping_portfolio.minilabs.samiMiniLabs.consoleUI;
 
 public class consoleMethods {
         //Method to make sure no data is available in the

@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.samiMiniLabs;
+package com.example.sping_portfolio.minilabs.samiMiniLabs;
 
 public class pascalWhile extends _pascal{
     public pascalWhile(int nth) {
