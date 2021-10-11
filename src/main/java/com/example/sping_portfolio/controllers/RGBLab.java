@@ -1,10 +1,15 @@
 package com.example.sping_portfolio.controllers;
 
+import org.apache.tomcat.util.codec.binary.Base64;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.awt.image.DataBufferByte;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.StringJoiner;
 
 class ImagePropertyRGB {
     public int[][][] rgbBinary;
@@ -50,13 +55,27 @@ class ImageProperty {
 
     int height, width;
 
-    public ImageProperty(String fileUrl) {
+    public ImageProperty(BufferedImage _img) {
         try {
-            img = ImageIO.read(new URL(fileUrl));
+            img = _img;
+            rgbProperties = new ImagePropertyRGB(img);
+            base64Img = toBase64();
         } catch (Exception ignore) {}
     }
 
-    public void toBase64() {
+    public byte[] image_to_pixels(BufferedImage img) throws IOException {
+        return ((DataBufferByte) img.getRaster().getDataBuffer()).getData();
+    }
+
+    public String toBase64() {
+        try {
+            width = img.getWidth();
+            height = img.getHeight();
+            byte[] pixels = image_to_pixels(img);
+
+            return Base64.encodeBase64String(pixels);
+        } catch (Exception ignored) {}
+        return "";
     }
 }
 
