@@ -11,18 +11,17 @@ import java.util.List;
 @Controller
 public class RGB_Controller {
 
-        @GetMapping("/RGB_Lab")
-        public String getRGB_Lab(Model model) {
+        @GetMapping("/rgb-lab")
+        public String getRGB_lab(Model model) {
             List<ImageInfo> imageInfoList = new ArrayList<>();
 
-            String image0 = "http://localhost:8080/images/sunflowerRGB.PNG";
+            String image0 = "http://localhost:8080/images/plant.jpg";
             ImageInfo if0 = new ImageInfo(image0); if0.getOriginalImg(); if0.getGrayscaleImg();
             imageInfoList.add(if0);
 
-            String image1 = "http://localhost:8080/images/cityRGB.jpg";
+            String image1 = "http://localhost:8080/images/morning.jpg";
             ImageInfo if1 = new ImageInfo(image1); if1.getOriginalImg(); if1.getGrayscaleImg();
             imageInfoList.add(if1);
-
 
             model.addAttribute("iiList", imageInfoList);
 
