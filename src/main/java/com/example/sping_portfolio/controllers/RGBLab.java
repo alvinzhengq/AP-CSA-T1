@@ -1,15 +1,14 @@
 package com.example.sping_portfolio.controllers;
 
-import org.apache.tomcat.util.codec.binary.Base64;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.awt.image.DataBufferByte;
-import java.io.IOException;
+import java.io.*;
+import java.util.Base64;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.StringJoiner;
+import java.util.List;
 
 class ImagePropertyRGB {
     public int[][][] rgbBinary;
@@ -20,8 +19,8 @@ class ImagePropertyRGB {
 
     public ImagePropertyRGB(BufferedImage img) {
         try{
-            width = img.getWidth();
-            height = img.getHeight();
+            width = img.getWidth()/10;
+            height = img.getHeight()/10;
 
             this.rgbBinary = new int[this.height][this.width][3];
             this.rgbDecimal = new int[this.height][this.width][3];
@@ -49,74 +48,85 @@ class ImagePropertyRGB {
 }
 
 class ImageProperty {
-    String base64Img;
-    BufferedImage img;
-    ImagePropertyRGB rgbProperties;
+    public String base64Img;
+    public BufferedImage img;
+    public ImagePropertyRGB rgbProperties;
 
-    int height, width;
+    public int height, width;
 
     public ImageProperty(BufferedImage _img) {
         try {
             img = _img;
             rgbProperties = new ImagePropertyRGB(img);
+            width = img.getWidth();
+            height = img.getHeight();
+
             base64Img = toBase64();
         } catch (Exception ignore) {}
     }
 
-    public byte[] image_to_pixels(BufferedImage img) throws IOException {
-        return ((DataBufferByte) img.getRaster().getDataBuffer()).getData();
+    public byte[] imageToPixels() throws IOException {
+        return ((DataBufferByte) this.img.getRaster().getDataBuffer()).getData();
     }
 
     public String toBase64() {
         try {
-            width = img.getWidth();
-            height = img.getHeight();
-            byte[] pixels = image_to_pixels(img);
+            ByteArrayOutputStream os = new ByteArrayOutputStream();
+            OutputStream b64 = Base64.getEncoder().wrap(os);
+            ImageIO.write(img, "png", b64);
 
-            return Base64.encodeBase64String(pixels);
+            return os.toString("UTF-8");
         } catch (Exception ignored) {}
         return "";
     }
 }
 
 class ImageInfo {
-    String imageFileUrl;
-    ArrayList<Object> imgVariations;
-    ImageProperty imgProperties;
-    BufferedImage img;
+    public String imageFileUrl;
+    public List<ImageProperty> imgVariationList;
+
     public ImageInfo(String imageFileUrl) {
         try {
             this.imageFileUrl = imageFileUrl;
-            this.img = ImageIO.read(new URL(imageFileUrl));
-            this.imgProperties = new ImageProperty(img);
+            this.imgVariationList = new ArrayList<>();
         } catch (Exception ignore) {}
     }
 
-    public void toGrayscale() {
+    public void getOriginalImg() {
         try {
-         //   BufferedImage img = ImageIO.read(new URL(imageFileUrl));
-            ImageProperty ip = new ImageProperty(img);
-            byte[] pixels = ip.image_to_pixels(img);
-            String base64Original = toBase64(pixels);
+            imgVariationList.add(new ImageProperty(ImageIO.read(new URL(this.imageFileUrl))));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
+    public void getGrayscaleImg() {
+        try {
+            BufferedImage img = ImageIO.read(new URL(this.imageFileUrl));
+            for (int x = 0; x < img.getWidth(); ++x){
+                for (int y = 0; y < img.getHeight(); ++y)
+                {
+                    int rgb = img.getRGB(x, y);
+                    int r = (rgb >> 16) & 0xFF;
+                    int g = (rgb >> 8) & 0xFF;
+                    int b = (rgb & 0xFF);
 
-            byte[] grayedPixels = pixelGrayScale(pixels);
-            String base64Grayed = toBase64(grayedPixels);
+                    // Normalize and gamma correct:
+                    float rr = (float) Math.pow(r / 255.0, 2.2);
+                    float gg = (float) Math.pow(g / 255.0, 2.2);
+                    float bb = (float) Math.pow(b / 255.0, 2.2);
 
-            // General Link
-            imgVariations.add(imageFileUrl);
+                    // Calculate luminance:
+                    float lum = (float) (0.2126 * rr + 0.7152 * gg + 0.0722 * bb);
 
-            // Original Image (No GrayScale):
-            imgVariations.add(ip);
-            imgVariations.add(ip.toBase64());
-            imgVariations.add(ip.image_to_pixels(img));
-            imgVariations.add("data:image/jpg;base64,"+base64Original);
+                    // Gamma compand and rescale to byte range:
+                    int grayLevel = (int) (255.0 * Math.pow(lum, 1.0 / 2.2));
+                    int gray = (grayLevel << 16) + (grayLevel << 8) + grayLevel;
+                    img.setRGB(x, y, gray);
+                }
+            }
 
-            // Altered Image (Grayed):
-            imgVariations.add(base64Grayed);
-            imgVariations.add(grayedPixels);
-            imgVariations.add("data:image/jpg;base64,"+base64Grayed);
-
+            imgVariationList.add(new ImageProperty(img));
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -136,19 +146,8 @@ class ImageInfo {
         }
         return newPixelsByte;
     }
-    public String toBase64(byte[] pixels) {
-        try {
-            return Base64.encodeBase64String(pixels);
-        } catch (Exception ignored) {}
-        return "";
-    }
 
-    public ArrayList<Object> getImgVariations() {
-        return imgVariations;
-    }
-
-
-
-    public void addWatermark() {
+    public List<ImageProperty> getImgVariations() {
+        return imgVariationList;
     }
 }
