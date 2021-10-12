@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers.nolanMiniLabs;
+package com.example.sping_portfolio.minilabs.LoopMinilabs.NolanMiniLabs;
 import java.util.ArrayList;
 
 import org.springframework.stereotype.Controller;

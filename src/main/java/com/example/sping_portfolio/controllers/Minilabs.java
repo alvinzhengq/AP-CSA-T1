@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Random;
 import java.util.Map;
-import java.nio.charset.Charset;
 
 @Controller  // HTTP requests are handled as a controller, using the @Controller annotation
 public class Minilabs {

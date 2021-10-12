@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers.nolanMiniLabs;
+package com.example.sping_portfolio.minilabs.LoopMinilabs.NolanMiniLabs;
 
 public class lucasWhile extends lucasNum {
     public lucasWhile() {
