@@ -15,20 +15,20 @@
 <body>
 <div layout:fragment="content" th:remove="tag">
     <div class="container">
-        <h1 class="text-center">About Us</h1>
+        <h1 class="text-center">RGB GrayScale Lab</h1>
         <div class="row justify-content-md-center">
             <table class="table">
                 <thead>
                 <tr>
-                    <th>Image</th>
-                    <th>Grayscale Image</th>
-                    <th>Samples of Data</th>
+                    <th style="font-color:#FFFFFF">Image</th>
+                    <th style="font-color:#FFFFFF">Grayscale Image</th>
+                    <th style="font-color:#FFFFFF">Samples of Data</th>
                 </tr>
                 </thead>
                 <tbody>
                 <tr >
                     <td>
-                        <img class="img-responsive py-3" src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwallpaperaccess.com%2Fsunflower-aesthetic&psig=AOvVaw0CWfUlre1MAke418h2xN4W&ust=1634103625374000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCOCYgsSUxPMCFQAAAAAdAAAAABAK" alt=""
+                        <img class="img-responsive py-3" th:src="@{'/images/sunflowerRGB.png'}" alt=""
                              width="175" height="200">
                     </td>
 
@@ -42,128 +42,12 @@
                             <table class="table">
                                 <thead>
                                 <tr>
-                                    <th>Row</th>
-                                    <th>Column</th>
-                                    <th>RGB</th>
-                                    <th>Decimal</th>
-                                    <th>Hex Code</th>
-                                    <th>Binary</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-
-                </tr>
-                <tr >
-                    <td>
-                        <img class="img-responsive py-3" src=" https://i.pinimg.com/originals/5c/c4/37/5cc4376397168770dcd287e4bb1e2d25.jpg" alt=""  width="175" height="AUTO" >
-                    </td>
-                    <td>
-                        <img class="img-responsive py-3"  th:src="@{'data:image/jpg;base64,'+${row2}}" />" alt=""
-                        width="175" height="200">
-                    </td>
-                    <td>
-                        <div class="overflow-auto" style="height: 256px">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Row</th>
-                                    <th>Column</th>
-                                    <th>RGB</th>
-                                    <th>Decimal</th>
-                                    <th>Hex Code</th>
-                                    <th>Binary</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-
-                </tr>
-                <tr >
-                    <td>
-                        <img class="img-responsive py-3" src="https://static.wikia.nocookie.net/aesthetics/images/8/8c/Darknature6.jpg/revision/latest?cb=20201002185100" alt=""  width="175" height="AUTO">
-                    </td>
-                    <td>
-                        <img class="img-responsive py-3"  th:src="@{'data:image/jpg;base64,'+${row3}}" />" alt=""
-                        width="175" height="200">
-                    </td>
-                    <td>
-                        <div class="overflow-auto" style="height: 256px">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Row</th>
-                                    <th>Column</th>
-                                    <th>RGB</th>
-                                    <th>Decimal</th>
-                                    <th>Hex Code</th>
-                                    <th>Binary</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-
-                </tr>
-                <tr >
-                    <td>
-                        <img class="img-responsive py-3" src="https://i.pinimg.com/originals/22/42/76/224276c5e0eb9ebd7cd4c93f56155a6e.png" alt=""  width="175" height="AUTO">
-                    </td>
-                    <td>
-                        <img class="img-responsive py-3"  th:src="@{'data:image/jpg;base64,'+${row4}}" />" alt=""
-                        width="175" height="200">
-                    </td>
-                    <td>
-                        <div class="overflow-auto" style="height: 256px">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Row</th>
-                                    <th>Column</th>
-                                    <th>RGB</th>
-                                    <th>Decimal</th>
-                                    <th>Hex Code</th>
-                                    <th>Binary</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </td>
-
-                </tr>
-                <tr >
-                    <td>
-                        <img class="img-responsive py-3"  th:src="https://images.unsplash.com/photo-1531279550271-23c2a77a765c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y2l0eSUyMGFlc3RoZXRpY3xlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt=""  width="175" height="AUTO">
-                    </td>
-                    <td>
-                        <img class="img-responsive py-3"  th:src="@{'data:image/jpg;base64,'+${row5}}" />" alt=""
-                        width="175" height="200">
-                    </td>
-                    <td>
-                        <div class="overflow-auto" style="height: 256px">
-                            <table class="table">
-                                <thead>
-                                <tr>
-                                    <th>Row</th>
-                                    <th>Column</th>
-                                    <th>RGB</th>
-                                    <th>Decimal</th>
-                                    <th>Hex Code</th>
-                                    <th>Binary</th>
+                                    <th style="font-color:#FFFFFF">Row</th>
+                                    <th style="font-color:#FFFFFF">Column</th>
+                                    <th style="font-color:#FFFFFF">RGB</th>
+                                    <th style="font-color:#FFFFFF">Decimal</th>
+                                    <th style="font-color:#FFFFFF">Hex Code</th>
+                                    <th style="font-color:#FFFFFF">Binary</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -173,15 +57,8 @@
                         </div>
                     </td>
                 </tr>
-
-
                 </tbody>
             </table>
-
         </div>
-
     </div>
 </div>
-</body>
-
-</html>
