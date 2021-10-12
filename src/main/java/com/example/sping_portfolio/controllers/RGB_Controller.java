@@ -9,4 +9,11 @@ public class RGB_Controller {
         public String getRGB_lab() {
             return "RGB_Lab";
         }
+
+        @GetMapping("/RGB_LabGRAY")
+        public String getRGB_LabGRAY() {
+            return "RGB_LabGRAY";
+        }
     }
+
+

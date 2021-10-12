@@ -12,15 +12,16 @@
 
 <body>
 <div layout:fragment="content" th:remove="tag">
-    <div class="container" style="margin-top: 2vh">
-        <h1 class="text-center">RGB Lab</h1>
+    <div class="container">
+        <h1 class="text-center">RGB values within an Image</h1>
+        <p><small><a href="/image/grayscale">Grayscale</a></small></p>
         <div class="row justify-content-md-center">
-            <table class="table" style="color: white">
+            <table class="table">
                 <thead>
                 <tr>
-                    <th class="text-center" style="width: 100px">Image</th>
-                    <th class="text-center" style="width: 100px">Meta Data</th>
-                    <th class="text-center" style="width: 100px">Image Property</th>
+                    <th>Meta Data</th>
+                    <th>Image</th>
+                    <th>Samples of Data</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -30,8 +31,7 @@
                         <div th:text="'(' + ${ii.getHeight()} + ',' + ${ii.getWidth()} + ')'">Height,Width</div>
                     </td>
                     <td>
-                        <img class="img-responsive py-3" th:src="@{${ii.getFile()}}" alt="" src="${ii.getFile()}"
-                             width=128 height="Auto">
+                        <img class="img-responsive py-3" th:src="@{${ii.getFile()}}" alt="" src="${ii.getFile()}" width=128 height="Auto">
                     </td>
                     <td>
                         <div class="overflow-auto" style="height: 256px">
@@ -47,14 +47,14 @@
                                 </thead>
                                 <tbody>
                                 <span th:each="row: ${#numbers.sequence(0, ii.getScaled_height()-1)}">
-                                            <tr th:each="col: ${#numbers.sequence(0, ii.getScaled_width()-1)}">
-                                                <td th:text="${ii.getScaled_height(row)}">row</td>
-                                                <td th:text="${ii.getScaled_width(col)}">column</td>
-                                                <td th:text="${ii.getRGB(row,col)}">cell</td>
-                                                <td th:text="${ii.getHexCode(row,col)}">cell</td>
-                                                <td th:text="${ii.getBinary(row,col)}">cell</td>
-                                            </tr>
-                                        </span>
+                                        <tr th:each="col: ${#numbers.sequence(0, ii.getScaled_width()-1)}">
+                                            <td th:text="${ii.getScaled_height(row)}">row</td>
+                                            <td th:text="${ii.getScaled_width(col)}">column</td>
+                                            <td th:text="${ii.getRGB(row,col)}">cell</td>
+                                            <td th:text="${ii.getHexCode(row,col)}">cell</td>
+                                            <td th:text="${ii.getBinary(row,col)}">cell</td>
+                                        </tr>
+                                    </span>
                                 </tbody>
                             </table>
                         </div>
