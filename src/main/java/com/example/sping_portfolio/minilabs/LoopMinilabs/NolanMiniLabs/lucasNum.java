@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers.nolanMiniLabs;
+package com.example.sping_portfolio.minilabs.LoopMinilabs.NolanMiniLabs;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.ArrayList;

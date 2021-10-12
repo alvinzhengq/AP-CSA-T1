@@ -1,4 +1,4 @@
-package com.example.sping_portfolio.controllers;
+package com.example.sping_portfolio.minilabs.LoopMinilabs;
 
 import com.example.sping_portfolio.minilabs.samiMiniLabs._pascal;
 import com.example.sping_portfolio.minilabs.samiMiniLabs.pascalFor;
@@ -14,7 +14,7 @@ import java.util.List;
 
 @Controller
 
-public class pascalController {
+public class SamiMiniLabs {
 
     // HTTP requests are handled as a controller, using the @Controller annotation
 
@@ -47,7 +47,7 @@ public class pascalController {
         public void main(String[] args) {
             int nth = 20; //!!!make dynamic using consoleUI inputInt!!! 92 is max for long
 
-            List<_pascal> pascalList = new pascalController().pascalInit(nth);
+            List<_pascal> pascalList = new SamiMiniLabs().pascalInit(nth);
             for (_pascal pascal : pascalList)
                 pascal.print();  //Console output fibonacci results
         }
