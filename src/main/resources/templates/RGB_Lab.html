@@ -6,7 +6,7 @@
 <!-- layout::fragment="content" is heart of ThymeLeaf layout -->
 <head>
     <div layout:fragment="metadata" th:remove="tag">
-        <title>About Us</title>
+        <title>RGB LAb</title>
     </div>
 </head>
 
@@ -85,13 +85,14 @@
         }
     </script>
     <div class="container">
-        <h1 class="text-center">About Us</h1>
+
         <div class="row justify-content-md-center">
             <table class="table">
 
                 <input type="button"  onclick="changeImageWatermark();" value="Watermark">
                 <input type="button"  onclick="changeImageWatermarkGrey();" value="Watermark+Greyscale">
                 <thead>
+
                 <tr style="color: white">
                     <th>Image</th>
                     <th>Grayscale Image</th>
@@ -124,17 +125,7 @@
                                 </tr>
                                 </thead>
 
-                                <tbody>
-                                <span th:each="row: ${#numbers.sequence(0, imgProp.rgbProperties.height-1)}">
-                                        <tr th:each="col: ${#numbers.sequence(0, imgProp.rgbProperties.width-1)}" style="color: white">
-                                            <td th:text="${row}">row</td>
-                                            <td th:text="${col}">column</td>
-                                            <td th:text="${imgProp.rgbProperties.rgbDecimal[row][col][0]} + ', ' + ${imgProp.rgbProperties.rgbDecimal[row][col][1]} + ', ' + ${imgProp.rgbProperties.rgbDecimal[row][col][2]}">cell</td>
-                                            <td th:text="${imgProp.rgbProperties.rgbHex[row][col]}">cell</td>
-                                            <td th:text="${imgProp.rgbProperties.rgbBinary[row][col][0]} + ', ' + ${imgProp.rgbProperties.rgbBinary[row][col][1]} + ', ' + ${imgProp.rgbProperties.rgbBinary[row][col][2]}">cell</td>
-                                        </tr>
-                                    </span>
-                                </tbody>
+
                             </table>
                         </div>
                     </td>
@@ -162,17 +153,8 @@
                                     <th>Binary</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <span th:each="row: ${#numbers.sequence(0, imgProp.rgbProperties.height-1)}">
-                                        <tr th:each="col: ${#numbers.sequence(0, imgProp.rgbProperties.width-1)}" style="color: white">
-                                            <td th:text="${row}">row</td>
-                                            <td th:text="${col}">column</td>
-                                            <td th:text="${imgProp.rgbProperties.rgbDecimal[row][col][0]} + ', ' + ${imgProp.rgbProperties.rgbDecimal[row][col][1]} + ', ' + ${imgProp.rgbProperties.rgbDecimal[row][col][2]}">cell</td>
-                                            <td th:text="${imgProp.rgbProperties.rgbHex[row][col]}">cell</td>
-                                            <td th:text="${imgProp.rgbProperties.rgbBinary[row][col][0]} + ', ' + ${imgProp.rgbProperties.rgbBinary[row][col][1]} + ', ' + ${imgProp.rgbProperties.rgbBinary[row][col][2]}">cell</td>
-                                        </tr>
-                                    </span>
-                                </tbody>
+
+
                             </table>
                         </div>
                     </td>
@@ -186,6 +168,13 @@
             </table>
         </div>
     </div>
+
+
+                </thead>
+            </table>
+        </div>
+    </div>
 </div>
 </body>
 </html>
+
