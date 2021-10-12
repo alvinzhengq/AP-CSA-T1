@@ -28,8 +28,11 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 
 ## Modeling Checkpoint [Week 7 Review]
 [Video detailing lab components](https://drive.google.com/file/d/1FLMJnccPXYb98PAh6K-nwliK4-4gZFJ_/view?usp=sharing)
+<br>
 [RGBLab.java](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/java/com/example/sping_portfolio/controllers/RGBLab.java)
+<br>
 [RGBLab Controller](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/java/com/example/sping_portfolio/controllers/RGB_Controller.java)
+<br>
 [RGBLab HTML View](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/resources/templates/RGB_Lab.html)
 
 ## Week 4 Updates
