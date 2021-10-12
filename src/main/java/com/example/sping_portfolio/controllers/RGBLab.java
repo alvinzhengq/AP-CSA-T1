@@ -81,12 +81,73 @@ class ImageProperty {
 
 class ImageInfo {
     String imageFileUrl;
-    ArrayList<ImageInfo> imgVariations;
-
-    public ImageInfo() {}
+    ArrayList<Object> imgVariations;
+    ImageProperty imgProperties;
+    BufferedImage img;
+    public ImageInfo(String imageFileUrl) {
+        try {
+            this.imageFileUrl = imageFileUrl;
+            this.img = ImageIO.read(new URL(imageFileUrl));
+            this.imgProperties = new ImageProperty(img);
+        } catch (Exception ignore) {}
+    }
 
     public void toGrayscale() {
+        try {
+         //   BufferedImage img = ImageIO.read(new URL(imageFileUrl));
+            ImageProperty ip = new ImageProperty(img);
+            byte[] pixels = ip.image_to_pixels(img);
+            String base64Original = toBase64(pixels);
+
+
+            byte[] grayedPixels = pixelGrayScale(pixels);
+            String base64Grayed = toBase64(grayedPixels);
+
+            // General Link
+            imgVariations.add(imageFileUrl);
+
+            // Original Image (No GrayScale):
+            imgVariations.add(ip);
+            imgVariations.add(ip.toBase64());
+            imgVariations.add(ip.image_to_pixels(img));
+            imgVariations.add("data:image/jpg;base64,"+base64Original);
+
+            // Altered Image (Grayed):
+            imgVariations.add(base64Grayed);
+            imgVariations.add(grayedPixels);
+            imgVariations.add("data:image/jpg;base64,"+base64Grayed);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+    public byte[] pixelGrayScale(byte[] pixelsIn){
+        byte[] newPixelsByte = new byte[pixelsIn.length];
+        for(int i=0;i<pixelsIn.length;i+=4) {
+            float val = 0;
+            for(int y=1;y<4;y++) {
+                val += (pixelsIn[i+y] & 0xFF)/3.0;
+            }
+            newPixelsByte[i] = pixelsIn[i];
+            newPixelsByte[i+1] = (byte)val;
+            newPixelsByte[i+2] = (byte)val;
+            newPixelsByte[i+3] = (byte)val;
+        }
+        return newPixelsByte;
+    }
+    public String toBase64(byte[] pixels) {
+        try {
+            return Base64.encodeBase64String(pixels);
+        } catch (Exception ignored) {}
+        return "";
+    }
+
+    public ArrayList<Object> getImgVariations() {
+        return imgVariations;
+    }
+
+
 
     public void addWatermark() {
     }
