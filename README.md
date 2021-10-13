@@ -41,7 +41,7 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 Week 5 was a journal review. We shifted from RGB lab to a journal review at end of week. Mr. Mortensen decided to postpone the RGB lab as it was deemed too difficiult. Hence, our group took the time ot polish our journals. See below.
 ### Week 5 Individual Technicals (Timebox)
 | Team Member | Github Username | Journal |
-| ----------- | --------------- | -------------- | ------------------ | 
+| ----------- | --------------- | -------------- |
 | Akshay R. | Akshay-Rohatgi | [Journal](https://docs.google.com/document/d/1ukhc3TYFyQycQntN6MXiD803b-iatn8rK7GAcw4ClwI/edit?usp=sharing) |
 | Alvin Z. | alvinzhengq | [Journal](https://docs.google.com/document/d/1FoO8QKsZUOCzHh7b27waq3N_TLW-fYjU-do8X5dhx_c/edit?usp=sharing) |
 | Nolan P. | nolanplatt | [Journal](https://docs.google.com/document/d/1Y6ZQuGgpZF3kwam8YsPOEtXlX7DfSDX-jLqJXDqh1u0/edit?usp=sharing) |
