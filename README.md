@@ -35,6 +35,18 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 <br>
 [RGBLab HTML View](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/resources/templates/RGB_Lab.html)
 
+## Week 6 Updates
+In week six, we each created an algorithm and implemented it four different ways. 
+### Project Updates
+### Week 6 Individual Technicals (Timebox)
+| Team Member | Github Username | Technical Task | Contribution Links |
+| ----------- | --------------- | -------------- | ------------------ | 
+| Akshay R. | Akshay-Rohatgi | Geometric Series | [Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/61fa6523beb2d662c031f1de091b62b9699ad5b8)|
+| Alvin Z. | alvinzhengq | OEIS A034175 | [Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/7917d020ff79af38e70b7a64819479e4ad898d3e) |
+| Nolan P. | nolanplatt | Lucas Numbers |[Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/6b2ebd84fc217d90dd71a55de751c081e8de3954) |
+| Sami D. | SamiDeshatty | Pascal's Triangle | [Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/882839f74f2f4fd8817d6a3c17f9881bc82641c0) |
+| Prisha M. | PrishaMaiti |  |
+
 ## Week 5 Updates
 
 ### Project Updates
