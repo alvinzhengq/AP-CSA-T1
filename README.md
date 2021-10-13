@@ -35,6 +35,32 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 <br>
 [RGBLab HTML View](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/resources/templates/RGB_Lab.html)
 
+## Week 6 Updates
+In week six, we each created an algorithm and implemented it four different ways. 
+### Project Updates
+### Week 6 Individual Technicals (Timebox)
+| Team Member | Github Username | Technical Task | Contribution Links |
+| ----------- | --------------- | -------------- | ------------------ | 
+| Akshay R. | Akshay-Rohatgi | Geometric Series | [Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/61fa6523beb2d662c031f1de091b62b9699ad5b8)|
+| Alvin Z. | alvinzhengq | OEIS A034175 | [Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/7917d020ff79af38e70b7a64819479e4ad898d3e) |
+| Nolan P. | nolanplatt | Lucas Numbers |[Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/6b2ebd84fc217d90dd71a55de751c081e8de3954) |
+| Sami D. | SamiDeshatty | Pascal's Triangle | [Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/882839f74f2f4fd8817d6a3c17f9881bc82641c0) |
+| Prisha M. | PrishaMaiti |  |
+
+## Week 5 Updates
+
+### Project Updates
+Week 5 was a journal review. We shifted from RGB lab to a journal review at end of week. Mr. Mortensen decided to postpone the RGB lab as it was deemed too difficiult. Hence, our group took the time ot polish our journals. See below.
+### Week 5 Individual Technicals (Timebox)
+| Team Member | Github Username | Journal |
+| ----------- | --------------- | -------------- |
+| Akshay R. | Akshay-Rohatgi | [Journal](https://docs.google.com/document/d/1ukhc3TYFyQycQntN6MXiD803b-iatn8rK7GAcw4ClwI/edit?usp=sharing) |
+| Alvin Z. | alvinzhengq | [Journal](https://docs.google.com/document/d/1FoO8QKsZUOCzHh7b27waq3N_TLW-fYjU-do8X5dhx_c/edit?usp=sharing) |
+| Nolan P. | nolanplatt | [Journal](https://docs.google.com/document/d/1Y6ZQuGgpZF3kwam8YsPOEtXlX7DfSDX-jLqJXDqh1u0/edit?usp=sharing) |
+| Sami D. | SamiDeshatty | [Journal](https://padlet.com/samantadanvers/fje6b94iwjnjwg7y1630177436) |
+| Prisha M. | PrishaMaiti | [Journal](https://padlet.com/prishamaiti/v5cwhihorrhhgnp5) |
+
+
 ## Week 4 Updates
 
 ### Project Updates
@@ -52,7 +78,7 @@ Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA/projects/1#
 ![Home Page](public/Home_Page_Iteration_1.png)
 ![Movie Page](public/Movies_Page_Iteration_2.png)
 
-### Week 4 Individual Technicals
+### Week 4 Individual Technicals (Timebox)
 | Team Member | Github Username | Technical Task | Contribution Links |
 | ----------- | --------------- | -------------- | ------------------ | 
 | Akshay R. | Akshay-Rohatgi | Hack 1 for Binary Math  + HTML Prototyping | [Hack 1 Commit 1](https://github.com/alvinzhengq/AP-CSA/commit/63d0ae589bcc7824a2d3de759282814665454588), [Hack 1 Commit 2](https://github.com/alvinzhengq/AP-CSA/commit/073bf156982aaf9a6a5ec2e92a9d4b03ed15fc5e), [HTML Prototyping](https://github.com/alvinzhengq/AP-CSA/commit/9b6781cad6fb79702834f5faff1326d88370c088) |
