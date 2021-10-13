@@ -1,17 +1,17 @@
 # Team Pokemon Trainers - README.md
 
-- [Team Scrum Board](https://github.com/alvinzhengq/AP-CSA/projects/1)
-- [All Team Commits](https://github.com/alvinzhengq/AP-CSA/commits/master)
-- [Team Insight Graphs](https://github.com/alvinzhengq/AP-CSA/graphs/contributors)
+- [Team Scrum Board](https://github.com/alvinzhengq/AP-CSA-T1/projects/1)
+- [All Team Commits](https://github.com/alvinzhengq/AP-CSA-T1/commits/master)
+- [Team Insight Graphs](https://github.com/alvinzhengq/AP-CSA-T1/graphs/contributors)
 
 ## Team Members:
 | Team Member | Github Username | Github Profile | Journal Link | Github Contributions | Issues | Scrum Board Tasks | 
 | ----------- | --------------- | -------------- | ------------ | -------------------- | ------ | ----------------- |
-| Akshay R. | Akshay-Rohatgi | [Akshay's Profile](https://github.com/Akshay-Rohatgi) | [Akshay's Journal](https://docs.google.com/document/d/1ukhc3TYFyQycQntN6MXiD803b-iatn8rK7GAcw4ClwI/edit?usp=sharing) | [Akshay's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=Akshay-Rohatgi) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/Akshay-Rohatgi) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aakshay-rohatgi) | 
-| Alvin Z. | alvinzhengq | [Alvin's Profile](https://github.com/alvinzhengq) | [Alvin's Journal](https://docs.google.com/document/d/1FoO8QKsZUOCzHh7b27waq3N_TLW-fYjU-do8X5dhx_c/edit?usp=sharing) | [Alvin's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=alvinzhengq) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/alvinzhengq) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aalvinzhengq) |
-| Nolan P. | nolanplatt | [Nolan's Profile](https://github.com/nolanplatt) | [Nolan's Journal](https://docs.google.com/document/d/1Y6ZQuGgpZF3kwam8YsPOEtXlX7DfSDX-jLqJXDqh1u0/edit?usp=sharing) | [Nolan's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=nolanplatt) |  [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/nolanplatt) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Anolanplatt) |
-| Sami D. | SamiDeshatty | [Sami's Profile](https://github.com/SamiDeshatty) | [Sami's Journal](https://padlet.com/samantadanvers/fje6b94iwjnjwg7y1630177436) | [Sami's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=SamiDeshatty) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/SamiDeshatty) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Asamideshatty) |
-| Prisha M. | PrishaMaiti | [Prisha's Profile](https://github.com/PrishaMaiti) | [Prisha's Journal](https://padlet.com/prishamaiti/v5cwhihorrhhgnp5) | [Prisha's Contributions](https://github.com/alvinzhengq/AP-CSA/commits?author=PrishaMaiti) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/PrishaMaiti) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aprishamaiti) |
+| Akshay R. | Akshay-Rohatgi | [Akshay's Profile](https://github.com/Akshay-Rohatgi) | [Akshay's Journal](https://docs.google.com/document/d/1ukhc3TYFyQycQntN6MXiD803b-iatn8rK7GAcw4ClwI/edit?usp=sharing) | [Akshay's Contributions](https://github.com/alvinzhengq/AP-CSA-T1/commits?author=Akshay-Rohatgi) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/Akshay-Rohatgi) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aakshay-rohatgi) | 
+| Alvin Z. | alvinzhengq | [Alvin's Profile](https://github.com/alvinzhengq) | [Alvin's Journal](https://docs.google.com/document/d/1FoO8QKsZUOCzHh7b27waq3N_TLW-fYjU-do8X5dhx_c/edit?usp=sharing) | [Alvin's Contributions](https://github.com/alvinzhengq/AP-CSA-T1/commits?author=alvinzhengq) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/alvinzhengq) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aalvinzhengq) |
+| Nolan P. | nolanplatt | [Nolan's Profile](https://github.com/nolanplatt) | [Nolan's Journal](https://docs.google.com/document/d/1Y6ZQuGgpZF3kwam8YsPOEtXlX7DfSDX-jLqJXDqh1u0/edit?usp=sharing) | [Nolan's Contributions](https://github.com/alvinzhengq/AP-CSA-T1/commits?author=nolanplatt) |  [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/nolanplatt) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Anolanplatt) |
+| Sami D. | SamiDeshatty | [Sami's Profile](https://github.com/SamiDeshatty) | [Sami's Journal](https://padlet.com/samantadanvers/fje6b94iwjnjwg7y1630177436) | [Sami's Contributions](https://github.com/alvinzhengq/AP-CSA-T1/commits?author=SamiDeshatty) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/SamiDeshatty) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Asamideshatty) |
+| Prisha M. | PrishaMaiti | [Prisha's Profile](https://github.com/PrishaMaiti) | [Prisha's Journal](https://padlet.com/prishamaiti/v5cwhihorrhhgnp5) | [Prisha's Contributions](https://github.com/alvinzhengq/AP-CSA-T1/commits?author=PrishaMaiti) | [Issues](https://github.com/alvinzhengq/AP-CSA/issues/assigned/PrishaMaiti) | [Scrum Board Tasks](https://github.com/alvinzhengq/AP-CSA/projects/1?card_filter_query=assignee%3Aprishamaiti) |
 
 ## Project Idea: Distraction
 We decided to make a full-stack application showing the latest upcoming music and movies. Users can select a variety of different preferences for genres and they can find the songs and movies that match those preferences; that way, they can find the movies and songs that are best suited for their own interests in a short amount of time. Our app will use APIs such as IMDB, Spotify, and Apple Music to fetch the latest upcoming movies and songs.
@@ -22,18 +22,18 @@ We decided to make a full-stack application showing the latest upcoming music an
 **Runtime Link**: TBD
 
 ## Team Minilabs
-All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-CSA/tree/master/src/main/java/com/example/sping_portfolio/minilabs).
+All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-CSA-T1/tree/master/src/main/java/com/example/sping_portfolio/minilabs).
 ## Scrum Board:
-The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA/projects/1).
+The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA-T1/projects/1).
 
 ## Modeling Checkpoint [Week 7 Review]
 [Video detailing lab components](https://drive.google.com/file/d/1FLMJnccPXYb98PAh6K-nwliK4-4gZFJ_/view?usp=sharing)
 <br>
-[RGBLab.java](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/java/com/example/sping_portfolio/controllers/RGBLab.java)
+[RGBLab.java](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/java/com/example/sping_portfolio/controllers/RGBLab.java)
 <br>
-[RGBLab Controller](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/java/com/example/sping_portfolio/controllers/RGB_Controller.java)
+[RGBLab Controller](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/java/com/example/sping_portfolio/controllers/RGB_Controller.java)
 <br>
-[RGBLab HTML View](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/resources/templates/RGB_Lab.html)
+[RGBLab HTML View](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/resources/templates/RGB_Lab.html)
 
 ## Week 6 Updates
 In week six, we each created an algorithm and implemented it four different ways. 
@@ -67,13 +67,13 @@ Week 5 was a journal review. We shifted from RGB lab to a journal review at end 
 
 ##### 2 More HTML templates completed:
 commits:
-- https://github.com/alvinzhengq/AP-CSA/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc
-- https://github.com/alvinzhengq/AP-CSA/commit/ff97a32cfd70be894d112b827c5fcf04ab0f2355
-- https://github.com/alvinzhengq/AP-CSA/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
-- https://github.com/alvinzhengq/AP-CSA/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
-- https://github.com/alvinzhengq/AP-CSA/commit/9b6781cad6fb79702834f5faff1326d88370c088
+- https://github.com/alvinzhengq/AP-CSA-T1/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc
+- https://github.com/alvinzhengq/AP-CSA-T1/commit/ff97a32cfd70be894d112b827c5fcf04ab0f2355
+- https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
+- https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
+- https://github.com/alvinzhengq/AP-CSA-T1/commit/9b6781cad6fb79702834f5faff1326d88370c088
 
-Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA/projects/1#card-68379017
+Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA-T1/projects/1#card-68379017
 
 ![Home Page](public/Home_Page_Iteration_1.png)
 ![Movie Page](public/Movies_Page_Iteration_2.png)
@@ -81,10 +81,10 @@ Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA/projects/1#
 ### Week 4 Individual Technicals (Timebox)
 | Team Member | Github Username | Technical Task | Contribution Links |
 | ----------- | --------------- | -------------- | ------------------ | 
-| Akshay R. | Akshay-Rohatgi | Hack 1 for Binary Math  + HTML Prototyping | [Hack 1 Commit 1](https://github.com/alvinzhengq/AP-CSA/commit/63d0ae589bcc7824a2d3de759282814665454588), [Hack 1 Commit 2](https://github.com/alvinzhengq/AP-CSA/commit/073bf156982aaf9a6a5ec2e92a9d4b03ed15fc5e), [HTML Prototyping](https://github.com/alvinzhengq/AP-CSA/commit/9b6781cad6fb79702834f5faff1326d88370c088) |
-| Alvin Z. | alvinzhengq | HTML Prototyping | [CSS Fix](https://github.com/alvinzhengq/AP-CSA/commit/8aedee5b42fccbb2e742fbab37e2ecfb27606863), [Hack 2, 3, 4](https://github.com/alvinzhengq/AP-CSA/commit/7b11212cb573a37aae2281f1c0ebb64258ac13ba) |
-| Nolan P. | nolanplatt | Hack 2 for Binary Math |[Hack 2 Commit](https://github.com/alvinzhengq/AP-CSA/commit/a984d425de80878829f4a7719ca91560c8bae5ce) |
-| Sami D. | SamiDeshatty | HTML Prototyping | [Home Page](https://github.com/alvinzhengq/AP-CSA/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc), [Movies Page](https://github.com/alvinzhengq/AP-CSA/commit/94466db24c2b08baf310fdf3602ee217699a2fbd), [Webpage Organization](https://github.com/alvinzhengq/AP-CSA/commit/14be82862deea4e0c2f1d4e4c4d8f0e6f840d301) |
+| Akshay R. | Akshay-Rohatgi | Hack 1 for Binary Math  + HTML Prototyping | [Hack 1 Commit 1](https://github.com/alvinzhengq/AP-CSA-T1/commit/63d0ae589bcc7824a2d3de759282814665454588), [Hack 1 Commit 2](https://github.com/alvinzhengq/AP-CSA/commit/073bf156982aaf9a6a5ec2e92a9d4b03ed15fc5e), [HTML Prototyping](https://github.com/alvinzhengq/AP-CSA/commit/9b6781cad6fb79702834f5faff1326d88370c088) |
+| Alvin Z. | alvinzhengq | HTML Prototyping | [CSS Fix](https://github.com/alvinzhengq/AP-CSA-T1/commit/8aedee5b42fccbb2e742fbab37e2ecfb27606863), [Hack 2, 3, 4](https://github.com/alvinzhengq/AP-CSA/commit/7b11212cb573a37aae2281f1c0ebb64258ac13ba) |
+| Nolan P. | nolanplatt | Hack 2 for Binary Math |[Hack 2 Commit](https://github.com/alvinzhengq/AP-CSA-T1/commit/a984d425de80878829f4a7719ca91560c8bae5ce) |
+| Sami D. | SamiDeshatty | HTML Prototyping | [Home Page](https://github.com/alvinzhengq/AP-CSA-T1/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc), [Movies Page](https://github.com/alvinzhengq/AP-CSA/commit/94466db24c2b08baf310fdf3602ee217699a2fbd), [Webpage Organization](https://github.com/alvinzhengq/AP-CSA/commit/14be82862deea4e0c2f1d4e4c4d8f0e6f840d301) |
 | Prisha M. | PrishaMaiti |  |
 
 
@@ -92,18 +92,18 @@ Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA/projects/1#
 
 We started working on the login page for our project idea:
 <br>
-[Link to commit](https://github.com/alvinzhengq/AP-CSA/commit/774576c87d2f15c76f8395c6d5149b3c7054bb5f)
+[Link to commit](https://github.com/alvinzhengq/AP-CSA-T1/commit/774576c87d2f15c76f8395c6d5149b3c7054bb5f)
 ![Mini Lab Page](public/loginpage_iteration1.png)
 
 We created a minilab with 3x3 Bootstrap Cards. This shows 9(3x3) different logos, names, and short descriptions of some PUSD schools:
 <br>
-[Link to commit](https://github.com/alvinzhengq/AP-CSA/commit/fc8625f6b170bddaa52cbb1525f3bf5c34913542)
+[Link to commit](https://github.com/alvinzhengq/AP-CSA-T1/commit/fc8625f6b170bddaa52cbb1525f3bf5c34913542)
 <br>
 ![Bootstrap Cards](public/bootstrapCards.png)
 
 We created a minilab that generates a string given the length of the string by the user. Includes frontend, backend, and API development.
 <br>
-[Link to commit](https://github.com/alvinzhengq/AP-CSA/commit/effa0427a0faf984ebb7a9b81a4d978f6ad6870e)
+[Link to commit](https://github.com/alvinzhengq/AP-CSA-T1/commit/effa0427a0faf984ebb7a9b81a4d978f6ad6870e)
 <br>
 ![Bootstrap Cards](public/stringGenerator.png)
 
