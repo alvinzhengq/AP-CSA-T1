@@ -50,7 +50,6 @@ In week seven, we were tasked as a team to create the RGB minilab. We all contri
 
 ## Week 6 Updates
 In week six, we each created an algorithm and implemented it four different ways. 
-### Project Updates
 ### Week 6 Individual Technicals (Timebox)
 | Team Member | Github Username | Technical Task | Contribution Links |
 | ----------- | --------------- | -------------- | ------------------ | 
@@ -62,7 +61,6 @@ In week six, we each created an algorithm and implemented it four different ways
 
 ## Week 5 Updates
 
-### Project Updates
 Week 5 was a journal review. We shifted from RGB lab to a journal review at end of week. Mr. Mortensen decided to postpone the RGB lab as it was deemed too difficiult. Hence, our group took the time ot polish our journals. See below.
 ### Week 5 Individual Technicals (Timebox)
 | Team Member | Github Username | Journal |
@@ -76,7 +74,6 @@ Week 5 was a journal review. We shifted from RGB lab to a journal review at end 
 
 ## Week 4 Updates
 
-### Project Updates
 
 ##### 2 More HTML templates completed:
 commits:
