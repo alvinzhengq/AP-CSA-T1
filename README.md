@@ -26,7 +26,11 @@ All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA/projects/1).
 
-## Modeling Checkpoint [Week 7 Review]
+## Week 7 Updates
+In week seven, we were tasked as a team to create the RGB minilab. We all contributed in different ways. See modeling checkpoint and timebox below.
+### Project Updates
+
+## Modeling Checkpoint 
 [Video detailing lab components](https://drive.google.com/file/d/1FLMJnccPXYb98PAh6K-nwliK4-4gZFJ_/view?usp=sharing)
 <br>
 [RGBLab.java](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/java/com/example/sping_portfolio/controllers/RGBLab.java)
@@ -34,6 +38,15 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 [RGBLab Controller](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/java/com/example/sping_portfolio/controllers/RGB_Controller.java)
 <br>
 [RGBLab HTML View](https://github.com/alvinzhengq/AP-CSA/blob/master/src/main/resources/templates/RGB_Lab.html)
+
+### Week 7 Individual Technicals (Timebox)
+| Team Member | Github Username | Technical Task | Contribution Links |
+| ----------- | --------------- | -------------- | ------------------ | 
+| Akshay R. | Akshay-Rohatgi | Backend: ImageProperty | [Commit 1](https://github.com/alvinzhengq/AP-CSA-T1/commit/148f00536c908dff38849c9fea5cde9fcb5ee6e6), [Commit 2](https://github.com/alvinzhengq/AP-CSA-T1/commit/7f38e0e978423d4caec21679469af556ab2fa5ec) |
+| Alvin Z. | alvinzhengq | Backend: ImagePropertyRGB | [Commit 1](https://github.com/alvinzhengq/AP-CSA-T1/commit/1027d4c89718c28a297c555fdbf2fdd2b6292bcb), [Commit 2](https://github.com/alvinzhengq/AP-CSA-T1/commit/5cf7b0d167d610f9de173a7e09ae76646c8d37b3) |
+| Nolan P. | nolanplatt | Backend: ImageInfo |[Commit 1](https://github.com/alvinzhengq/AP-CSA-T1/commit/a7b447a73e49f606440204312c971116f44a46be), [Commit 2](https://github.com/alvinzhengq/AP-CSA-T1/commit/e659e84da8e6d5c4112f110c738f8577ea3d2c0b) |
+| Sami D. | SamiDeshatty | Frontend: HTML Homepage | [Commit 1](https://github.com/alvinzhengq/AP-CSA-T1/commit/2db4a1c4dcec728ed7413d621c4cbec3bb3b6d24), [Commit 2](https://github.com/alvinzhengq/AP-CSA-T1/commit/5b8d4d54c82f3f8ef6114ed410c9423e3fbcf8a9) |
+| Prisha M. | PrishaMaiti | Frontend: HTML Homepage | [Commit](https://github.com/alvinzhengq/AP-CSA-T1/commit/1b3382163837a369ca56f73739903c74244fbb9f) |
 
 ## Week 6 Updates
 In week six, we each created an algorithm and implemented it four different ways. 
