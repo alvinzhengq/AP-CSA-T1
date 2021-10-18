@@ -4,44 +4,63 @@
 
 <head><div layout:fragment="metadata" th:remove="tag">
   <!-- Start of head content specific to page -->
-  <title>Team</title>
-  <!-- End of head content specific to page -->
+  <title>Latest Music</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </div></head>
 
-<body><div layout:fragment="content" th:remove="tag">
-  <!-- Start of body content specific to page -->
-  <div> class="row"
-    <div class="col-sm-6">
-      <div class="card">
-        <h2 class="card-title" style= "color:#4E5B69;">Upcoming Music</h2><br>
-        <h3 class="card-text" style= "color:#FB6E52;">MONTERO (Call Me By Your Name) by Lil Nas X</h3><br>
-        <li style= "color:#4E5B69;">MONTERO is the lead single of Lil Nas X's new album named after the song. It gives the message that people who think being gay is a sin judge too quickly.</li><br>
-        <h3 class="card-text" style= "color:#FB6E52;">positions by Ariana Grande</h3><br>
-        <li style= "color:#4E5B69;">Ariana Grande wrote a new album about her life during the COVID-19 pandemic spent with her husband. One of the songs, positions, was the lead single for it, representing an element of empowerment. It was her husband himself that came up with the idea for the positions music video: Ariana Grande is the president.</li><br>
-        <h3 class="card-text" style= "color:#FB6E52;">Take My Breath by The Weeknd</h3><br>
-        <li style= "color:#4E5B69;">Take My Breath is the latest single by The Weeknd. Its lyrics imply that Abel (actual name of The Weeknd) wants to be amazed.</li>
-        <h3 class="card-text" style= "color:#FB6E52;">Somebody by Justin Bieber</h3><br>
-        <li style= "color:#4E5B69;">Somebody is a song on Justin Bieber's latest album JUSTICE which addresses social justice issues. Somebody in particular gives the message that no one is alone and everyone should have someone to remind them about that.</li>
-        <h3 class="card-text" style= "color:#FB6E52;">STAY by The Kid LAROI and Justin Bieber</h3><br>
-        <li style= "color:#4E5B69;">In this duet song, Bieber and Charlton Howard (actual name of The Kid LAROI) both express their longing love interest to stay.</li><br>
-        <h3 class="card-text" style= "color:#FB6E52;">Play Date by Melanie Martinez</h3><br>
-        <li style= "color:#4E5B69;">This song was released in 2015 off of Martinez's album Cry Baby.</li><br>
-        <h3 class="card-text" style= "color:#FB6E52;">Easy On Me by Adele</h3><br>
-        <li style= "color:#4E5B69;">Released on October 14, 2021, Adele drops this comeback song as part of "30," her first album in a little less than 6 years.</li><br>
-        <h3 class="card-text" style= "color:#FB6E52;">SCREAM - Disco Fries Remix by Jenny March ft. Disco Fries</h3><br>
-        <li style= "color:#4E5B69;">The Disco Fries made a remix of Jenny March's song SCREAM, from her EP "Madness."</li><br>
-        <h3 class="card-text" style= "color:#FB6E52;">2002 by Anne-Marie</h3><br>
+<body><div layout:fragment="content" th:remove="tag" style="margin: 0; text-align: center">
 
+  <div style="text-align: center; margin-top: 4vh">
+    <h2><b>Top New Music Releases of the Week</b></h2>
   </div>
-      </div>
+
+  <div class="row" style="margin: 0;">
+    <div class="col-sm mx-auto" id="cardList1" style="padding-right:4px; padding-left:88px;">
     </div>
-  <!-- End of body content specific to page -->
+
+    <div class="col-sm mx-auto" id="cardList2" style="padding-right:4px; padding-left:4px;">
+    </div>
+
+    <div class="col-sm mx-auto" id="cardList3" style="padding-right:88px; padding-left:4px;">
+    </div>
+  </div>
+
 </div></body>
 
 <div layout:fragment="script" th:remove="tag">
-  <!-- Start of custom script specific to page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <!-- End of custom script specific to page -->
+  <script>
+    $(document).ready(function(){
+      axios({
+        method: "get",
+        url: "/mvfetch/music-api"
+      }).then(resp => {
+        let data = resp.data;
+        for(let i = 0; i < data.items.length; i += 3) {
+          for(let j = i; j < i+3; j++) {
+            if(j >= data.items.length) break
+
+            let cardList = $('#cardList' + (j-i+1))
+            let curItem = data.items[j].track;
+            let artistList = curItem.artists.map(i => i.name).join(", ")
+
+            cardList.append(`
+            <div class="card d-flex" style="width: 26rem; height: 21rem; margin: auto; margin-top: 2vh; margin-bottom: 2vh; text-align: center; background-color: #212424">
+              <div class="card-body align-items-center d-flex justify-content-center flex-column">
+                <h4 class="card-title"><b>${curItem.name}</b></h4>
+                <p class="card-text">Author: ${artistList}</p>
+                <p class="card-text">Release Date: ${curItem.album.release_date}</p>
+
+                <iframe src="https://open.spotify.com/embed/track/${curItem.id}" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+              </div>
+            </div>
+          `)
+          }
+        }
+      });
+    });
+  </script>
 </div>
 
 </html>
