@@ -1,6 +1,6 @@
 # Team Pokemon Trainers - README.md
 
-- [Runtime Link (Running Project)](https://apcsat1.herokuapp.com/)
+- [Runtime Link (Running Project)](https://csa-t1.herokuapp.com/)
 - [Team Scrum Board](https://github.com/alvinzhengq/AP-CSA-T1/projects/1)
 - [All Team Commits](https://github.com/alvinzhengq/AP-CSA-T1/commits/master)
 - [Team Insight Graphs](https://github.com/alvinzhengq/AP-CSA-T1/graphs/contributors)
