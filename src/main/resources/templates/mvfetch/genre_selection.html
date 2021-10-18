@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <!-- Start of head content specific to page -->
+    <title>Select Genre</title>
+    <!-- End of head content specific to page -->
+</div></head>
+
+
+<body><div layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+    <div class="container d-flex h-100 mvfetch" style="margin-top: 1vh">
+        <div class="row align-self-center w-100">
+            <div class="col-6 mx-auto">
+                <div class="jumbotron">
+                    <h1 class="row justify-content-center align-self-center display-4">List Genres</h1>
+                    <div class="row justify-content-center align-self-center">
+                        <label style="color: var(--orange)" for="list">List:</label>
+                        <br>
+                        <input type="text" id="list" name="list">
+                    </div>
+                    <div class="row justify-content-center align-self-center">
+                        <input type="submit" value="Genres" onclick="GetGenres()">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of body content specific to page -->
+</div></body>
+
+<div layout:fragment="script" th:remove="tag">
+    <!-- Start of custom script specific to page -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+    function GetGenres() {
+            let GenresRaw = "GenresRaw=" + document.getElementById("list").value;
+
+            axios({
+                method: "get",
+                url: "/genre-select-api?" + GenresRaw
+            }).then(resp => {
+                console.log(resp.data);
+            });
+        }
+    </script>
+    <!-- End of custom script specific to page -->
+</div>
+
+</html>
