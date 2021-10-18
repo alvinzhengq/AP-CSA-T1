@@ -26,6 +26,9 @@
                         <input type="submit" value="Genres" onclick="GetGenres()">
                     </div>
                 </div>
+
+                <p id="confirmation"></p>
+
             </div>
         </div>
     </div>
@@ -47,6 +50,7 @@
                 method: "get",
                 url: "/genre-select-api?" + GenresRaw
             }).then(resp => {
+                document.getElementById("confirmation").innerHTML =  "Selected Genres: " + resp.data;
                 console.log(resp.data);
             });
         }
