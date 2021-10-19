@@ -27,6 +27,27 @@ All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA-T1/projects/1).
 
+## Week 8 Updates
+In week eight we completed features for our N@TM Project. We also completed the ASCII Minilab
+### Project Updates
+[Project Presentation](https://docs.google.com/presentation/d/1kWHEpBN9ECS83AXJ4RdohwvjDW8IjF2hh27yYia99CI/edit?usp=sharing)
+[Successfully deployed project (updated everytime someone commits on Github)](https://csa-t1.herokuapp.com/)
+
+## ASCII Lab (Akshay and Alvin pair)
+[ASCII Controller with Methods](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/java/com/example/sping_portfolio/controllers/ASCII.java)
+<br>
+[ASCII HTML View](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/resources/templates/ascii.html)
+
+### Week 8 Individual Technicals (Timebox)
+| Team Member | Github Username | Technical Task | Contribution Links |
+| ----------- | --------------- | -------------- | ------------------ | 
+| Akshay R. | Akshay-Rohatgi | Backend: Genre Select, ASCII Minilab <br> Frontend: Genre Selection HTML View, ASCII Minilab View  | [Genre Select + Genre Selection HTML View](https://github.com/alvinzhengq/AP-CSA-T1/commit/ed3a8bf7eacc6e472595d1c7fd46ee520b61281f), [ASCII Minilab + HTML View](https://github.com/alvinzhengq/AP-CSA-T1/commit/d7ecb042d506bedd629a6845de013757a1b02231) |
+| Alvin Z. | alvinzhengq | Backend: Music Backend, ASCII Backend <br> Frontend: Music Frontend| [Music Frontend + Backend](https://github.com/alvinzhengq/AP-CSA-T1/commit/0c5663bc6cd8ad91a5dd34c171524677276f944f), [ASCII Backend](https://github.com/alvinzhengq/AP-CSA-T1/commit/135bebe94989d685080eac615f63146c80510309) |
+| Nolan P. | nolanplatt | Backend:  |  |
+| Sami D. | SamiDeshatty | Frontend:  |  |
+| Prisha M. | PrishaMaiti | Frontend:  |  |
+
+
 ## Week 7 Updates
 In week seven, we were tasked as a team to create the RGB minilab. We all contributed in different ways. See modeling checkpoint and timebox below.
 ### Project Updates
