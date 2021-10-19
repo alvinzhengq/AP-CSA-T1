@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.imageio.ImageIO;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -29,10 +31,10 @@ public class ASCII {
 
         int poolSize = 2;
 
-        for (int y = 0; y < width; y += poolSize){
-            for(int x=0; x < height; x += poolSize){
-                int avgGrayLevel = 0;
-                int cnt = 0;
+        for (int y = 0; y < height; y += poolSize){
+            for(int x=0; x < width; x += poolSize){
+                double avgGrayLevel = 0;
+                double cnt = 0;
 
                 for(int xx = x; xx < x+poolSize; xx++) {
                     for(int yy = y; yy < y+poolSize; yy++) {
@@ -40,27 +42,20 @@ public class ASCII {
 
                         cnt++;
 
-                        int rgb = img.getRGB(xx, yy);
-                        int r = (rgb >> 16) & 0xFF;
-                        int g = (rgb >> 8) & 0xFF;
-                        int b = (rgb & 0xFF);
+                        float avgColor = 0;
+                        int color = img.getRGB(xx, yy);
 
-                        // Normalize and gamma correct:
-                        float rr = (float) Math.pow(r / 255.0, 2.2);
-                        float gg = (float) Math.pow(g / 255.0, 2.2);
-                        float bb = (float) Math.pow(b / 255.0, 2.2);
+                        avgColor += ((color >> 16) & 0xFF);
+                        avgColor += ((color >> 8) & 0xFF);
+                        avgColor += (color & 0xFF);
 
-                        // Calculate luminance:
-                        float lum = (float) (0.2126 * rr + 0.7152 * gg + 0.0722 * bb);
-
-                        // Gamma compand and rescale to byte range:
-                        int grayLevel = (int) (70.0 * Math.pow(lum, 1.0 / 2.2));
-                        avgGrayLevel += grayLevel;
+                        avgGrayLevel += (double)(avgColor/3.0);
                     }
                 }
 
-                avgGrayLevel /= (cnt == 0 ? 1 : cnt);
-                output.append(characterSet.charAt(avgGrayLevel));
+                avgGrayLevel /= (cnt == 0.0 ? 1.0 : cnt);
+                avgGrayLevel = (69) * ((avgGrayLevel - 0) / (255)) + 0;
+                output.append(characterSet.charAt((int) Math.floor(avgGrayLevel))).append("  ");
             }
             output.append("\n");
         }
@@ -70,12 +65,9 @@ public class ASCII {
 
     @GetMapping("/ascii-api")
     @ResponseBody
-    public String asciiAPI() throws IOException {
-        return getArt("http://localhost:8080/images/cat.png");
-    }
+    public String asciiAPI(HttpServletRequest req) throws IOException {
+//        return getArt(req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() + "/images/download.jfif");
+        return getArt(req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() + "/images/cat.png");
 
-    public static void main(String[] args) throws IOException {
-        String ASCIIArt = getArt("http://localhost:8080/images/cat.png");
-        System.out.println(ASCIIArt);
     }
 }

@@ -20,17 +20,18 @@
 
 </div></head>
 
-<body><div style="width: 100vw;" layout:fragment="content" th:remove="tag">
+<body><div style="width: 100vw; text-align: center" layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
 
-    <div class="align-self-center">
-        <input type="submit" value="Get ASCII Art!" onclick="GetASCIIArt()">
-    </div>
+    <div style="text-align: center; margin-top: 8vh">
+        <div class="align-self-center">
+            <input type="submit" value="Get ASCII Art!" onclick="GetASCIIArt()">
+        </div>
 
-    <div style="width: 3400px;" id="mid" class="container">
-        <pre id="aaa" style="font-size: 2px; color: white;"></pre>
+        <div style="margin-top: 8vh">
+            <pre id="aaa" style="font-size: 2px; color: white;"></pre>
+        </div>
     </div>
-
 
 </div></body>
 
@@ -47,7 +48,7 @@
                 method: "get",
                 url: "/ascii-api"
             }).then(resp => {
-                document.getElementById("aaa").innerHTML = resp.data;
+                document.getElementById("aaa").innerText = resp.data;
             });
         }
     </script>
