@@ -1,5 +1,6 @@
 package com.example.sping_portfolio.controllers;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -8,14 +9,20 @@ import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
 
+@Controller
 public class ASCII {
+    @GetMapping("/ascii")
+    public String ascii() {
+        return  "ascii";
+    }
+
     static String characterSet = "$@B%8&WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\\|()1{}[]?-_+~<>i!lI;:,\"^`'. ";
 
-    public String getArt() throws IOException {
+    public static String getArt(String urlForFile) throws IOException {
         StringBuilder output = new StringBuilder();
-        File f = new File("images/cat.jpg");
-        BufferedImage img = ImageIO.read(f);
+        BufferedImage img = ImageIO.read(new URL(urlForFile));
 
         int width = img.getWidth();
         int height = img.getHeight();
@@ -64,6 +71,11 @@ public class ASCII {
     @GetMapping("/ascii-api")
     @ResponseBody
     public String asciiAPI() throws IOException {
-        return getArt();
+        return getArt("http://localhost:8080/images/cat.png");
+    }
+
+    public static void main(String[] args) throws IOException {
+        String ASCIIArt = getArt("http://localhost:8080/images/cat.png");
+        System.out.println(ASCIIArt);
     }
 }

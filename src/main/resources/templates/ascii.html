@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout}" lang="en">
+
+<head><div layout:fragment="metadata" th:remove="tag">
+    <!-- Start of head content specific to page -->
+    <title>ASCII</title>
+    <!-- End of head content specific to page -->
+
+    <style>
+        .container {
+            font-family: arial;
+            font-size: 24px;
+            margin: 25px;
+            height: 200px;
+            outline: dashed 1px black;
+        }
+
+    </style>
+
+</div></head>
+
+<body><div style="width: 100vw;" layout:fragment="content" th:remove="tag">
+    <!-- Start of body content specific to page -->
+
+    <div class="align-self-center">
+        <input type="submit" value="Get ASCII Art!" onclick="GetASCIIArt()">
+    </div>
+
+    <div style="width: 3400px;" id="mid" class="container">
+        <pre id="aaa" style="font-size: 2px; color: white;"></pre>
+    </div>
+
+
+</div></body>
+
+<div layout:fragment="script" th:remove="tag">
+    <!-- Start of custom script specific to page -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+            integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+            crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+
+        function GetASCIIArt() {
+            // let GenresRaw = "GenresRaw=" + document.getElementById("list").value;
+            axios({
+                method: "get",
+                url: "/ascii-api"
+            }).then(resp => {
+                document.getElementById("aaa").innerHTML = resp.data;
+            });
+        }
+    </script>
+    <!-- End of custom script specific to page -->
+</div>
+
+</html>
