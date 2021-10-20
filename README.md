@@ -31,9 +31,10 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 In week eight we completed features for our N@TM Project. We also completed the ASCII Minilab
 ### Project Updates
 [Project Presentation](https://docs.google.com/presentation/d/1kWHEpBN9ECS83AXJ4RdohwvjDW8IjF2hh27yYia99CI/edit?usp=sharing)
+<br>
 [Successfully deployed project (updated everytime someone commits on Github)](https://csa-t1.herokuapp.com/)
 
-## ASCII Lab (Akshay and Alvin pair)
+### ASCII Lab (Akshay and Alvin pair)
 [ASCII Controller with Methods](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/java/com/example/sping_portfolio/controllers/ASCII.java)
 <br>
 [ASCII HTML View](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/resources/templates/ascii.html)
