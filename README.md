@@ -44,7 +44,7 @@ In week eight we completed features for our N@TM Project. We also completed the 
 | ----------- | --------------- | -------------- | ------------------ | 
 | Akshay R. | Akshay-Rohatgi | Backend: Genre Select, ASCII Minilab <br> Frontend: Genre Selection HTML View, ASCII Minilab View  | [Genre Select + Genre Selection HTML View](https://github.com/alvinzhengq/AP-CSA-T1/commit/ed3a8bf7eacc6e472595d1c7fd46ee520b61281f), [ASCII Minilab + HTML View](https://github.com/alvinzhengq/AP-CSA-T1/commit/d7ecb042d506bedd629a6845de013757a1b02231) |
 | Alvin Z. | alvinzhengq | Backend: Music Backend, ASCII Backend <br> Frontend: Music Frontend| [Music Frontend + Backend](https://github.com/alvinzhengq/AP-CSA-T1/commit/0c5663bc6cd8ad91a5dd34c171524677276f944f), [ASCII Backend](https://github.com/alvinzhengq/AP-CSA-T1/commit/135bebe94989d685080eac615f63146c80510309) |
-| Nolan P. | nolanplatt | Backend:  |  |
+| Nolan P. | nolanplatt | Backend:  | [Deployment](https://github.com/alvinzhengq/AP-CSA-T1/commit/213c5d8b986a43853c9423b73ee50fbeccd0852b) |
 | Sami D. | SamiDeshatty | Frontend:  |  |
 | Prisha M. | PrishaMaiti | Frontend:  |  |
 
