@@ -100,11 +100,11 @@ Week 5 was a journal review. We shifted from RGB lab to a journal review at end 
 
 ##### 2 More HTML templates completed:
 commits:
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/ff97a32cfd70be894d112b827c5fcf04ab0f2355
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/9b6781cad6fb79702834f5faff1326d88370c088
+- [1](https://github.com/alvinzhengq/AP-CSA-T1/commit/213c5d8b986a43853c9423b73ee50fbeccd0852b)
+- [2](https://github.com/alvinzhengq/AP-CSA-T1/commit/ff97a32cfd70be894d112b827c5fcf04ab0f2355)
+- [3](https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd)
+- [4](https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd)
+- [5](https://github.com/alvinzhengq/AP-CSA-T1/commit/9b6781cad6fb79702834f5faff1326d88370c088)
 
 Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA-T1/projects/1#card-68379017
 
