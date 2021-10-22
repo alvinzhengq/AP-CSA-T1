@@ -20,20 +20,32 @@ We decided to make a full-stack application showing the latest upcoming music an
 **Design Document**: [Link](https://docs.google.com/document/d/1t3b-dTNCqT75uGsQIaGnzfyZC241PK1lPWHXTy1kiRI/edit?usp=sharing)  
  Note: All applicable designs (such as Wireframe screenshots and links) are available in the document above.
 
-**Runtime Link**: TBD
-
 ## Team Minilabs
 All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-CSA-T1/tree/master/src/main/java/com/example/sping_portfolio/minilabs).
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA-T1/projects/1).
 
+## Week 9 Updates
+In week nine, we each created a video detailing two technical features. Scrum Team reviewed each person's respective video and we averaged grades.
+Our ticket with everyone's video and scrum team review/feedback [here](https://github.com/alvinzhengq/AP-CSA-T1/issues/33).
+
+### Week 9 Individual Technicals (Timebox)
+| Team Member | Github Username | Video Link | Grade(s) |
+| ----------- | --------------- | -------------- | ------------------ | 
+| Akshay R. | Akshay-Rohatgi | [TODO](https://google.com) | TODO |
+| Alvin Z. | alvinzhengq |[TODO](https://google.com)| TODO |
+| Nolan P. | nolanplatt | [TODO](https://google.com) | TODO |
+| Sami D. | SamiDeshatty | [TODO](https://google.com) | TODO |
+| Prisha M. | PrishaMaiti | [TODO](https://google.com) | TODO |
+
 ## Week 8 Updates
 In week eight we completed features for our N@TM Project. We also completed the ASCII Minilab
 ### Project Updates
 [Project Presentation](https://docs.google.com/presentation/d/1kWHEpBN9ECS83AXJ4RdohwvjDW8IjF2hh27yYia99CI/edit?usp=sharing)
+<br>
 [Successfully deployed project (updated everytime someone commits on Github)](https://csa-t1.herokuapp.com/)
 
-## ASCII Lab (Akshay and Alvin pair)
+### ASCII Lab (Akshay and Alvin pair)
 [ASCII Controller with Methods](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/java/com/example/sping_portfolio/controllers/ASCII.java)
 <br>
 [ASCII HTML View](https://github.com/alvinzhengq/AP-CSA-T1/blob/master/src/main/resources/templates/ascii.html)
@@ -43,9 +55,9 @@ In week eight we completed features for our N@TM Project. We also completed the 
 | ----------- | --------------- | -------------- | ------------------ | 
 | Akshay R. | Akshay-Rohatgi | Backend: Genre Select, ASCII Minilab <br> Frontend: Genre Selection HTML View, ASCII Minilab View  | [Genre Select + Genre Selection HTML View](https://github.com/alvinzhengq/AP-CSA-T1/commit/ed3a8bf7eacc6e472595d1c7fd46ee520b61281f), [ASCII Minilab + HTML View](https://github.com/alvinzhengq/AP-CSA-T1/commit/d7ecb042d506bedd629a6845de013757a1b02231) |
 | Alvin Z. | alvinzhengq | Backend: Music Backend, ASCII Backend <br> Frontend: Music Frontend| [Music Frontend + Backend](https://github.com/alvinzhengq/AP-CSA-T1/commit/0c5663bc6cd8ad91a5dd34c171524677276f944f), [ASCII Backend](https://github.com/alvinzhengq/AP-CSA-T1/commit/135bebe94989d685080eac615f63146c80510309) |
-| Nolan P. | nolanplatt | Backend:  |  |
+| Nolan P. | nolanplatt | Backend: Deployment on Heroku | [Deployment](https://github.com/alvinzhengq/AP-CSA-T1/commit/213c5d8b986a43853c9423b73ee50fbeccd0852b) |
 | Sami D. | SamiDeshatty | Frontend:  |  |
-| Prisha M. | PrishaMaiti | Frontend:  |  |
+| Prisha M. | PrishaMaiti | Frontend: Distraction Music Page HTML | [Frontend](https://github.com/alvinzhengq/AP-CSA-T1/commit/e9402b2a85e2e280a1d4c7d69cb38361a00e05b2) |
 
 
 ## Week 7 Updates
@@ -99,11 +111,11 @@ Week 5 was a journal review. We shifted from RGB lab to a journal review at end 
 
 ##### 2 More HTML templates completed:
 commits:
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/ff97a32cfd70be894d112b827c5fcf04ab0f2355
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd
-- https://github.com/alvinzhengq/AP-CSA-T1/commit/9b6781cad6fb79702834f5faff1326d88370c088
+- [1](https://github.com/alvinzhengq/AP-CSA-T1/commit/213c5d8b986a43853c9423b73ee50fbeccd0852b)
+- [2](https://github.com/alvinzhengq/AP-CSA-T1/commit/ff97a32cfd70be894d112b827c5fcf04ab0f2355)
+- [3](https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd)
+- [4](https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd)
+- [5](https://github.com/alvinzhengq/AP-CSA-T1/commit/9b6781cad6fb79702834f5faff1326d88370c088)
 
 Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA-T1/projects/1#card-68379017
 
