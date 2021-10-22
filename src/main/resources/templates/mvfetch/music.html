@@ -37,6 +37,7 @@
         url: "/mvfetch/music-api"
       }).then(resp => {
         let data = resp.data;
+        console.log(resp.data);
         for(let i = 0; i < data.items.length; i += 3) {
           for(let j = i; j < i+3; j++) {
             if(j >= data.items.length) break

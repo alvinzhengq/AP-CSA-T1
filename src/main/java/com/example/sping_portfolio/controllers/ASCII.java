@@ -68,6 +68,7 @@ public class ASCII {
     public String asciiAPI(HttpServletRequest req) throws IOException {
 //        return getArt(req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() + "/images/download.jfif");
         return getArt(req.getScheme() + "://" + req.getServerName() + ":" + req.getServerPort() + "/images/cat.png");
+//        return getArt("https://wallpaperaccess.com/full/526285.jpg");
 
     }
 }

@@ -15,7 +15,7 @@ public class GenreSelect {
     @GetMapping("/genre-select-api")
     @ResponseBody
     public String[] GenreSort(@RequestParam(name="GenresRaw", required=false, defaultValue="test,best,rest") String GenresRaw) {
-        // GenresSorted will be used for later things, that's why we have redundant variable here.
+        // GenresSorted will be used for later things, that's why we have a redundant variable here.
         String[] GenresSorted = GenresRaw.split(",");
         int i;
         for (i = 0; i < GenresSorted.length; i++) {
