@@ -27,6 +27,17 @@ All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA-T1/projects/1).
 
+## Week 9 Updates
+In week nine, we each created a video detailing two technical features. Scrum Team reviewed each person's respective video and we averaged grades.
+### Week 9 Individual Technicals (Timebox)
+| Team Member | Github Username | Video Link | Grade(s) |
+| ----------- | --------------- | -------------- | ------------------ | 
+| Akshay R. | Akshay-Rohatgi | [TODO](https://google.com) | TODO |
+| Alvin Z. | alvinzhengq |[TODO](https://google.com)| TODO |
+| Nolan P. | nolanplatt | [TODO](https://google.com) | TODO |
+| Sami D. | SamiDeshatty | [TODO](https://google.com) | TODO |
+| Prisha M. | PrishaMaiti | [TODO](https://google.com) | TODO |
+
 ## Week 8 Updates
 In week eight we completed features for our N@TM Project. We also completed the ASCII Minilab
 ### Project Updates
