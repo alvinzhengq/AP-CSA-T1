@@ -20,8 +20,6 @@ We decided to make a full-stack application showing the latest upcoming music an
 **Design Document**: [Link](https://docs.google.com/document/d/1t3b-dTNCqT75uGsQIaGnzfyZC241PK1lPWHXTy1kiRI/edit?usp=sharing)  
  Note: All applicable designs (such as Wireframe screenshots and links) are available in the document above.
 
-**Runtime Link**: TBD
-
 ## Team Minilabs
 All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-CSA-T1/tree/master/src/main/java/com/example/sping_portfolio/minilabs).
 ## Scrum Board:
@@ -29,6 +27,8 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 
 ## Week 9 Updates
 In week nine, we each created a video detailing two technical features. Scrum Team reviewed each person's respective video and we averaged grades.
+Our ticket with everyone's video and scrum team review/feedback [here](https://github.com/alvinzhengq/AP-CSA-T1/issues/33).
+
 ### Week 9 Individual Technicals (Timebox)
 | Team Member | Github Username | Video Link | Grade(s) |
 | ----------- | --------------- | -------------- | ------------------ | 
