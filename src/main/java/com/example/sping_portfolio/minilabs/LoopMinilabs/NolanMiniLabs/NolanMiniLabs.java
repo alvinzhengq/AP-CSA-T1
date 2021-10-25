@@ -1,20 +1,69 @@
 package com.example.sping_portfolio.minilabs.LoopMinilabs.NolanMiniLabs;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+
+
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.FirebaseOptions;
+import com.google.auth.oauth2.GoogleCredentials;
+import com.google.firebase.database.*;
+
 @Controller
 public class NolanMiniLabs {
+    FileInputStream serviceAccount = new FileInputStream("serviceAccount.json");
+    FirebaseOptions options = FirebaseOptions.builder()
+            .setCredentials(GoogleCredentials.fromStream(serviceAccount))
+            .setDatabaseUrl("https://nolan-4b453.firebaseio.com/")
+            .build();
+
+    String result = "";
+
+    public NolanMiniLabs() throws IOException {
+        FirebaseApp.initializeApp(options);
+
+    }
+
+    @GetMapping("/fetchFromFirebase")
+    @ResponseBody
+    public String fetchFromFirebase(@RequestParam(name = "reference", required = false, defaultValue = "dnhs") String reference) throws IOException, InterruptedException {
+        String[] referenceSplit = reference.split(",");
+
+
+        DatabaseReference ref = FirebaseDatabase.getInstance()
+                .getReference(reference);
+
+        System.out.println("ref:" + reference);
+        ref.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                 result+= dataSnapshot.getValue(String.class);
+                System.out.println("Value: " + result);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                System.out.println("Failed to read value: " + error.toException());
+            }
+        });
+        Thread.sleep(1500);
+        return result;
+    }
 
     @GetMapping("/create2DArray")
     @ResponseBody
-    public String create2DArray(@RequestParam(name = "dimension", required = false, defaultValue = "null") String dimension,@RequestParam(name = "data", required = false, defaultValue = "null") String data ) {
+    public String create2DArray(@RequestParam(name = "dimension", required = false, defaultValue = "null") String dimension,@RequestParam(name = "data", required = false, defaultValue = "null") String data ) throws IOException {
         String[] dataSplit = data.split(",");
         String[] dimensionSplit = dimension.split(",");
+
 
 
         String[][]Arr = new String[Integer.parseInt(dimensionSplit[0])][Integer.parseInt(dimensionSplit[1])];

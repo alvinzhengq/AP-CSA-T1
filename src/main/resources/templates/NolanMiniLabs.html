@@ -53,7 +53,7 @@
     </div>
 </head>
 
-<body>
+<body onload="fetchCourses()">
 <div layout:fragment="content" th:remove="tag">
     <div class="contact" style="min-height: 100vh;">
         <div class="row justify-content-center lab-container">
@@ -61,6 +61,8 @@
             <h4><strong>Table of Contents</strong></h4><br>
             <a href="#algorithmMiniLab">Minilab 1: Algorithm Minilab</a>
             <a href="#2dArrayMiniLab">Minilab 2: 2D Array Minilab</a>
+            <a href="#firebaseDataBaseLab">Minilab 3: Firebase Database Lab</a>
+
 
         </div>
 
@@ -133,6 +135,38 @@
                     <button onClick="generate2DArray()">Create 2-Dimensional Array</button>
                     <p id="result"></p>
 
+                </div>
+
+                <div id="firebaseDataBaseLab" class="row justify-content-center lab-container">
+                    <h4><strong>Minilab 3: Firebase Database Lab | Individual Final 2</strong></h4><br>
+                    <p><strong>Teacher View | Course Overview</strong></p>
+                    <button onClick="fetchCourses()">Reload Course Overview</button>
+
+                    <div class="wrapper">
+                        <div class="card">
+                            <img id="courseOneImage" class="card-img-top">
+                            <div class="card-body">
+                                <h6 id="courseOneName" class="card-title"><strong>Course Name</strong></h6>
+                                <h6 id="courseOneInstructor" class="card-title"><strong>Course Instructor</strong></h6>
+                                <h6 id="courseOnePeriod"  class="card-title">Course Period</h6>
+                                <h6 id="courseOneAverageGrade"  class="card-title">Course Average Grade</h6>
+                                <h6 id="courseOneStudents"  class="card-title">Course Students</h6>
+                                <h6 id="courseOneClassType"  class="card-title">Course Class Type</h6>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img id="courseTwoImage" class="card-img-top">
+                            <div class="card-body">
+                                <h6 id="courseTwoName" class="card-title"><strong>Course Name</strong></h6>
+                                <h6 id="courseTwoInstructor" class="card-title"><strong>Course Instructor</strong></h6>
+                                <h6 id="courseTwoPeriod"  class="card-title">Course Period</h6>
+                                <h6 id="courseTwoAverageGrade"  class="card-title">Course Average Grade</h6>
+                                <h6 id="courseTwoStudents"  class="card-title">Course Students</h6>
+                                <h6 id="courseTwoClassType"  class="card-title">Course Class Type</h6>
+                            </div>
+                        </div>
+                        </div>
                 </div>
 
 
@@ -235,7 +269,6 @@
             let dimension = "dimension=" + document.getElementById("dimensionInput").value;
             let data = "data=" + document.getElementById("dataInput").value;
 
-            // Get seriesUpToIndex and sumOfSeries for entire Sequence as entirety:
             axios({
                 method: "GET",
                 url: "/create2DArray?" + dimension + "&" + data
@@ -246,6 +279,52 @@
             });
 
 
+
+        }
+
+        function fetchCourses() {
+
+// Course One Data
+
+            // Course 1 Image
+            axios({
+                method: "GET",
+                url: "/fetchFromFirebase?reference=dnhs/AP-CSA-T1/cardImage,dnhs/AP-CSA-T1/instructor,dnhs/AP-CSA-T1/period1/averageGrade,dnhs/AP-CSA-T1/period1/totalStudents,dnhs/AP-CSA-T1/period1/classType"
+            }).then(resp => {
+                document.getElementById("courseOneImage").src = resp.data;
+            })
+                // Course 1 Instructor
+                axios({
+                    method: "GET",
+                    url: "/fetchFromFirebase?reference=dnhs/AP-CSA-T1/instructor"
+                }).then(resp => {
+                    document.getElementById("courseOneName").innerText = "AP Computer Science A";
+                    document.getElementById("courseOneInstructor").innerText = resp.data;
+                    document.getElementById("courseOnePeriod").innerText = "Period 1";
+                })
+                    // Course 1 Average Grade
+                    axios({
+                        method: "GET",
+                        url: "/fetchFromFirebase?reference=dnhs/AP-CSA-T1/period1/averageGrade"
+                    }).then(resp => {
+                        document.getElementById("courseOneAverageGrade").innerText = "Average Grade: " + resp.data;
+                    });
+
+                    // Course 1 Students
+                    axios({
+                        method: "GET",
+                        url: "/fetchFromFirebase?reference=dnhs/AP-CSA-T1/period1/totalStudents"
+                    }).then(resp => {
+                        document.getElementById("courseOneStudents").innerText = "Total Students: " + resp.data;
+                    });
+
+                    // Course 1 Class Type
+                    axios({
+                        method: "GET",
+                        url: "/fetchFromFirebase?reference=dnhs/AP-CSA-T1/period1/classType"
+                    }).then(resp => {
+                        document.getElementById("courseOneClassType").innerText = "Class Type: " + resp.data;
+                    });
 
         }
         VANTA.NET({
