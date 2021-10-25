@@ -10,54 +10,42 @@
 
 <body><div layout:fragment="content" th:remove="tag">
   <!-- Start of body content specific to page -->
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title" style= "color:#4E5B69;">Upcoming Movies</h2><br>
-          <h3 class="card-text" style= "color:#FB6E52;">Shang-Chi and The Legend of The Ten Rings</h3><br>
-          <li style= "color:#4E5B69;">Martial-arts master Shang-Chi confronts the past he thought he left behind when he's drawn into the web of the mysterious Ten Rings organization.</li><br>
-          <h3 class="card-text" style= "color:#FB6E52;">Eternals</h3><br>
-          <li style= "color:#4E5B69;">The Eternals, a race of immortal beings with superhuman powers who have secretly lived on Earth for thousands of years, reunite to battle the evil Deviants.</li><br>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title" style= "color:#4E5B69;">Upcoming Music</h2><br>
-          <h3 class="card-text" style= "color:#FB6E52;">Play Date</h3><br>
-          <li style= "color:#4E5B69;">Artist: Melanie Martinez; Album: Cry Baby; Released: 2015</li><br>
-          <h3 class="card-text" style= "color:#FB6E52;">2002</h3><br>
-          <li style= "color:#4E5B69;">Artist: Anne-Marie; Album: Speak Your Mind; Released: 2018</li><br>
-        </div>
-      </div>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title" style= "color:#4E5B69;">Upcoming Shows</h2><br>
-          <h3 class="card-text" style= "color:#FB6E52;">Riverdale</h3><br>
-          <li style= "color:#4E5B69;">Archie Andrews starts the school year with the world weighing on his shoulders. He's decided he wants to pursue a future in the music business, but his recently ended clandestine relationship with the music teacher has left him without a mentor, and his friendship with Jughead Jones is in a bad place. Things look like they might be turning around when Veronica Lodge, a new girl, arrives. Despite the instant chemistry, Veronica is hesitant to risk a friendship with Betty -- who has a crush on Archie -- to pursue anything. Amidst all the small-town banality lurks a mystery: the recent tragic death of Jason Blossom, the twin brother of beautiful and popular troublemaker, Cheryl.</li><br>
-          <h3 class="card-text" style= "color:#FB6E52;">SuperGirl</h3><br>
-          <li style= "color:#4E5B69;">At 12 years old, Kara Zor-El escapes doom on planet Krypton to find protection on Earth with the Danver family, where she grows up in the shadow of her foster sister, Alex, and learns to hide the extraordinary powers she shares with her cousin, Superman. Now an adult living in National City and working for media mogul Cat Grant, Kara finds her days of keeping her abilities a secret are over when super-secret agency head Hank Henshaw enlists her to help protect the city's citizens from threats. Finally coming into her own, Kara must juggle her new responsibilities with her very human relationships.</li><br>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h2 class="card-title" style= "color:#4E5B69;">Upcoming Games</h2><br>
-          <h3 class="card-text" style= "color:#FB6E52;">Pokemon Go!</h3><br>
-          <li style= "color:#4E5B69;">Pokémon Go is a 2016 augmented reality mobile game developed and published by Niantic in collaboration with Nintendo and The Pokémon Company for iOS and Android devices</li><br>
-          <h3 class="card-text" style= "color:#FB6E52;">Valorant</h3><br>
-          <li style= "color:#4E5B69;">Valorant is a free-to-play first-person hero shooter developed and published by Riot Games, for Microsoft Windows.</li><br>
-        </div>
-      </div>
-    </div>
-</div>
+  <ol id="demo"></ol>
+
 </div></body>
+
+
+<div layout:fragment="script" th:remove="tag">
+  <!-- Start of custom script specific to page -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"
+          integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
+          crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script>
+    $(document).ready(function(){
+      var list =  document.getElementById("demo");
+      // var b = document.createElement("li");
+      // b.appendChild(document.createTextNode("BROASHJK"))
+      // a.appendChild(b);
+
+      // document.getElementById("p_").innerHTML = "adadfsfd";
+      axios({
+        method: "get",
+        url: "/mvfetch/movies-api"
+      }).then(resp => {
+        // document.getElementById("bbb").innerText = resp.data;
+        console.log(resp.data);
+        var list = document.getElementById('demo');
+        for(let i = 0; i < resp.data.length; i++) {
+          console.log(resp.data[i]);
+          var item = document.createElement("li");
+          item.appendChild(document.createTextNode(resp.data[i]));
+          list.appendChild(item);
+        }
+      });
+    });
+  </script>
+  <!-- End of custom script specific to page -->
+</div>
+
 </html>
