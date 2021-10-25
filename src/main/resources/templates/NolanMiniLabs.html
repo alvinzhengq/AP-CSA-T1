@@ -60,6 +60,8 @@
             <h4><u>Nolan Platt: Individual Minilabs</u></h4>
             <h4><strong>Table of Contents</strong></h4><br>
             <a href="#algorithmMiniLab">Minilab 1: Algorithm Minilab</a>
+            <a href="#2dArrayMiniLab">Minilab 2: 2D Array Minilab</a>
+
         </div>
 
             <div id="algorithmMiniLab" class="row justify-content-center lab-container">
@@ -123,13 +125,23 @@
                         </div>
                     </div>
                     </div>
+                <div id="2dArrayMiniLab" class="row justify-content-center lab-container">
+                    <h4><strong>Minilab 2: 2D Array Minilab | Individual Final 1</strong></h4><br>
+                    <p>To create a 2-Dimensional (2D) Array, enter the values for the length (row, column) & the data for the rows and columns below and a 2D Array will be returned. Use commas to separate data.</p>
+                    <input id="dimensionInput"><br>
+                    <input id="dataInput"><br>
+                    <button onClick="generate2DArray()">Create 2-Dimensional Array</button>
+                    <p id="result"></p>
+
+                </div>
 
 
             </div>
         </div>
     </div>
+</div>
 
-        </div>
+
 
 </body>
 
@@ -218,6 +230,24 @@
             });
         }
 
+        function generate2DArray() {
+
+            let dimension = "dimension=" + document.getElementById("dimensionInput").value;
+            let data = "data=" + document.getElementById("dataInput").value;
+
+            // Get seriesUpToIndex and sumOfSeries for entire Sequence as entirety:
+            axios({
+                method: "GET",
+                url: "/create2DArray?" + dimension + "&" + data
+            }).then(resp => {
+                document.getElementById("result").innerText = "Result: " + resp.data;
+
+
+            });
+
+
+
+        }
         VANTA.NET({
             el: "body",
             color: "#E3DDF4",

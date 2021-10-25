@@ -1,5 +1,6 @@
 package com.example.sping_portfolio.minilabs.LoopMinilabs.NolanMiniLabs;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -8,6 +9,29 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class NolanMiniLabs {
+
+    @GetMapping("/create2DArray")
+    @ResponseBody
+    public String create2DArray(@RequestParam(name = "dimension", required = false, defaultValue = "null") String dimension,@RequestParam(name = "data", required = false, defaultValue = "null") String data ) {
+        String[] dataSplit = data.split(",");
+        String[] dimensionSplit = dimension.split(",");
+
+
+        String[][]Arr = new String[Integer.parseInt(dimensionSplit[0])][Integer.parseInt(dimensionSplit[1])];
+
+        for (int i = 0; i < dataSplit.length; i++) {
+            Arr[i][i] = dataSplit[i];
+        }
+
+        String matrix = "";
+        for (int j = 0 ; j < Arr.length; j++)
+        {
+            System.out.println(Arrays.toString(Arr[j]));
+            matrix += (Arrays.toString(Arr[j]));
+        }
+
+        return matrix;
+    }
 
     @GetMapping("/lucasSeriesCalcSeriesUpToIndex")
     @ResponseBody
