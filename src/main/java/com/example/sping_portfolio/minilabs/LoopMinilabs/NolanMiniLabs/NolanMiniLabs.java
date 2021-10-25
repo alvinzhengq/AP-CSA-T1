@@ -25,8 +25,8 @@ public class NolanMiniLabs {
             .setDatabaseUrl("https://nolan-4b453.firebaseio.com/")
             .build();
 
-    String result = "";
-
+    String resultCombined = "";
+    int z;
     public NolanMiniLabs() throws IOException {
         FirebaseApp.initializeApp(options);
 
@@ -35,27 +35,28 @@ public class NolanMiniLabs {
     @GetMapping("/fetchFromFirebase")
     @ResponseBody
     public String fetchFromFirebase(@RequestParam(name = "reference", required = false, defaultValue = "dnhs") String reference) throws IOException, InterruptedException {
-        String[] referenceSplit = reference.split(",");
+        String[] referenceSplit = reference.split("---");
+        for (z = 0; z <= referenceSplit.length - 1; z++) {
+            DatabaseReference ref = FirebaseDatabase.getInstance()
+                    .getReference(referenceSplit[z]);
 
+            ref.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(DataSnapshot dataSnapshot) {
 
-        DatabaseReference ref = FirebaseDatabase.getInstance()
-                .getReference(reference);
+                        resultCombined+= (dataSnapshot.getValue(String.class)) + "---";
 
-        System.out.println("ref:" + reference);
-        ref.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                 result+= dataSnapshot.getValue(String.class);
-                System.out.println("Value: " + result);
+                }
+                @Override
+                public void onCancelled(DatabaseError error) {
+                    System.out.println("Failed to read value: " + error.toException());
+                }
+            });
             }
 
-            @Override
-            public void onCancelled(DatabaseError error) {
-                System.out.println("Failed to read value: " + error.toException());
-            }
-        });
-        Thread.sleep(1500);
-        return result;
+       Thread.sleep(10000);
+        System.out.println("RESULT COMBINED: " + resultCombined);
+        return resultCombined;
     }
 
     @GetMapping("/create2DArray")
