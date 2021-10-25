@@ -25,6 +25,9 @@ All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA-T1/projects/1).
 
+### Individual Final
+[https://github.com/alvinzhengq/AP-CSA-T1/issues/33](Grading Ticket)
+
 ## Week 9 Updates
 In week nine, we each created a video detailing two technical features. Scrum Team reviewed each person's respective video and we averaged grades.
 Our ticket with everyone's video and scrum team review/feedback [here](https://github.com/alvinzhengq/AP-CSA-T1/issues/33).
