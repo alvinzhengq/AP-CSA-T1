@@ -36,7 +36,7 @@ Our ticket with everyone's video and scrum team review/feedback [here](https://g
 | Alvin Z. | alvinzhengq |[TODO](https://google.com)| TODO |
 | Nolan P. | nolanplatt | [TODO](https://google.com) | TODO |
 | Sami D. | SamiDeshatty | [TODO](https://google.com) | TODO |
-| Prisha M. | PrishaMaiti | [TODO](https://google.com) | TODO |
+| Prisha M. | PrishaMaiti | [Individual Final](https://www.youtube.com/watch?v=BLZR2OyGrGA) | TODO |
 
 ## Week 8 Updates
 In week eight we completed features for our N@TM Project. We also completed the ASCII Minilab
