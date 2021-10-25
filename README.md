@@ -25,6 +25,9 @@ All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA-T1/projects/1).
 
+## Individual Final
+[Grading Ticket](https://github.com/alvinzhengq/AP-CSA-T1/issues/33)
+
 ## Week 9 Updates
 In week nine, we each created a video detailing two technical features. Scrum Team reviewed each person's respective video and we averaged grades.
 Our ticket with everyone's video and scrum team review/feedback [here](https://github.com/alvinzhengq/AP-CSA-T1/issues/33).
@@ -36,7 +39,7 @@ Our ticket with everyone's video and scrum team review/feedback [here](https://g
 | Alvin Z. | alvinzhengq |[TODO](https://google.com)| TODO |
 | Nolan P. | nolanplatt | [TODO](https://google.com) | TODO |
 | Sami D. | SamiDeshatty | [TODO](https://google.com) | TODO |
-| Prisha M. | PrishaMaiti | [Individual Final](https://www.youtube.com/watch?v=BLZR2OyGrGA) | TODO |
+| Prisha M. | PrishaMaiti | [Individual Final](https://drive.google.com/file/d/16zEj3R3TtdlRqGifpg_QUBvSg1oSC8ul/view?usp=sharing) | TODO |
 
 ## Week 8 Updates
 In week eight we completed features for our N@TM Project. We also completed the ASCII Minilab
