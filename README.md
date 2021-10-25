@@ -25,7 +25,7 @@ All minilabs completed by team located [here](https://github.com/alvinzhengq/AP-
 ## Scrum Board:
 The Scrum board with all tasks and issues is located [here](https://github.com/alvinzhengq/AP-CSA-T1/projects/1).
 
-### Individual Final
+## Individual Final
 [Grading Ticket](https://github.com/alvinzhengq/AP-CSA-T1/issues/33)
 
 ## Week 9 Updates
