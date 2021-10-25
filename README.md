@@ -36,7 +36,7 @@ Our ticket with everyone's video and scrum team review/feedback [here](https://g
 | Team Member | Github Username | Video Link | Grade(s) |
 | ----------- | --------------- | -------------- | ------------------ | 
 | Akshay R. | Akshay-Rohatgi | [TODO](https://google.com) | TODO |
-| Alvin Z. | alvinzhengq |[TODO](https://google.com)| TODO |
+| Alvin Z. | alvinzhengq |[Individual Final](https://drive.google.com/file/d/18FhDKCXsbLqEcnQB8nvpyHcLyvOBHLkR/view?usp=sharing)| TODO |
 | Nolan P. | nolanplatt | [TODO](https://google.com) | TODO |
 | Sami D. | SamiDeshatty | [TODO](https://google.com) | TODO |
 | Prisha M. | PrishaMaiti | [Individual Final](https://drive.google.com/file/d/16zEj3R3TtdlRqGifpg_QUBvSg1oSC8ul/view?usp=sharing) | TODO |
