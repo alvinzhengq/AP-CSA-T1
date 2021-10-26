@@ -38,7 +38,7 @@ Our ticket with everyone's video and scrum team review/feedback [here](https://g
 | Akshay R. | Akshay-Rohatgi | [Individual Final](https://www.youtube.com/watch?v=6AKFXF9nbFM) | TODO |
 | Alvin Z. | alvinzhengq |[Individual Final](https://drive.google.com/file/d/18FhDKCXsbLqEcnQB8nvpyHcLyvOBHLkR/view?usp=sharing)| TODO |
 | Nolan P. | nolanplatt | [Individual Final](https://drive.google.com/file/d/1YRtqb12Ci4ZF20fkg23U4TrPepGv0Hp8/view?usp=sharing) | TODO |
-| Sami D. | SamiDeshatty | [TODO](https://google.com) | TODO |
+| Sami D. | SamiDeshatty | [Inidividual Final](https://drive.google.com/file/d/1zuspry8AYbZBu7suD6tX81ozcw_U0vKj/view) | TODO |
 | Prisha M. | PrishaMaiti | [Individual Final](https://drive.google.com/file/d/16zEj3R3TtdlRqGifpg_QUBvSg1oSC8ul/view?usp=sharing) | TODO |
 
 ## Week 8 Updates
