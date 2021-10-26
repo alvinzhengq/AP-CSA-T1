@@ -17,34 +17,74 @@ import com.google.firebase.FirebaseOptions;
 import com.google.auth.oauth2.GoogleCredentials;
 import com.google.firebase.database.*;
 
+
 @Controller
 public class NolanMiniLabs {
+
+
+
     FileInputStream serviceAccount = new FileInputStream("serviceAccount.json");
     FirebaseOptions options = FirebaseOptions.builder()
             .setCredentials(GoogleCredentials.fromStream(serviceAccount))
             .setDatabaseUrl("https://nolan-4b453.firebaseio.com/")
             .build();
 
-    String resultCombined = "";
-    int z;
+
     public NolanMiniLabs() throws IOException {
         FirebaseApp.initializeApp(options);
 
     }
 
-    @GetMapping("/fetchFromFirebase")
+
+
+    @GetMapping("/setToFirebaseCourse1")
+    @ResponseBody
+    public String setToFirebase(@RequestParam(name = "courseImage", required = false, defaultValue = "null") String courseImage,
+                                @RequestParam(name = "courseInstructor", required = false, defaultValue = "null") String courseInstructor,
+                                @RequestParam(name = "courseAverageGrade", required = false, defaultValue = "null") String courseAverageGrade,
+                                @RequestParam(name = "courseStudents", required = false, defaultValue = "null") String courseStudents,
+                                @RequestParam(name = "courseClassType", required = false, defaultValue = "null") String courseClassType)
+            throws IOException, InterruptedException {
+        String[] refArr = {"dnhs/AP-CSA-T1/cardImage", "dnhs/AP-CSA-T1/instructor", "dnhs/AP-CSA-T1/period1/averageGrade", "dnhs/AP-CSA-T1/period1/totalStudents", "dnhs/AP-CSA-T1/period1/classType"};
+        String[] refChildArr = {courseImage, courseInstructor, courseAverageGrade, courseStudents, courseClassType};
+        for (int i = 0; i <= refArr.length - 1; i++) {
+            DatabaseReference ref = FirebaseDatabase.getInstance()
+                    .getReference(refArr[i]);
+            ref.setValueAsync(refChildArr[i]);
+        }
+return "";
+    }
+    @GetMapping("/setToFirebaseCourse2")
+    @ResponseBody
+    public String setToFirebaseCourse2(@RequestParam(name = "courseImage", required = false, defaultValue = "null") String courseImage,
+                                @RequestParam(name = "courseInstructor", required = false, defaultValue = "null") String courseInstructor,
+                                @RequestParam(name = "courseAverageGrade", required = false, defaultValue = "null") String courseAverageGrade,
+                                @RequestParam(name = "courseStudents", required = false, defaultValue = "null") String courseStudents,
+                                @RequestParam(name = "courseClassType", required = false, defaultValue = "null") String courseClassType)
+            throws IOException, InterruptedException {
+        String[] refArr = {"dnhs/AP-CSP-T1/cardImage", "dnhs/AP-CSP-T1/instructor", "dnhs/AP-CSP-T1/period5/averageGrade", "dnhs/AP-CSP-T1/period5/totalStudents", "dnhs/AP-CSP-T1/period5/classType"};
+        String[] refChildArr = {courseImage, courseInstructor, courseAverageGrade, courseStudents, courseClassType};
+        for (int i = 0; i <= refArr.length - 1; i++) {
+            DatabaseReference ref = FirebaseDatabase.getInstance()
+                    .getReference(refArr[i]);
+            ref.setValueAsync(refChildArr[i]);
+        }
+        return "";
+    }
+        @GetMapping("/fetchFromFirebase")
     @ResponseBody
     public String fetchFromFirebase(@RequestParam(name = "reference", required = false, defaultValue = "dnhs") String reference) throws IOException, InterruptedException {
+             String[] resultCombined = {""};
+            int z;
         String[] referenceSplit = reference.split("---");
-        for (z = 0; z <= referenceSplit.length - 1; z++) {
+            for (z = 0; z <= referenceSplit.length - 1; z++) {
             DatabaseReference ref = FirebaseDatabase.getInstance()
                     .getReference(referenceSplit[z]);
-
             ref.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
 
-                        resultCombined+= (dataSnapshot.getValue(String.class)) + "---";
+                        resultCombined[0] += (dataSnapshot.getValue(String.class)) + "---";
 
                 }
                 @Override
@@ -55,9 +95,14 @@ public class NolanMiniLabs {
             }
 
        Thread.sleep(10000);
-        System.out.println("RESULT COMBINED: " + resultCombined);
-        return resultCombined;
-    }
+           // System.out.println(resultCombined[0].charAt(0));
+            if(resultCombined[0].charAt(0) == 'h') {
+               return fetchFromFirebase(reference);
+            }
+                System.out.println("RESULT COMBINED: " + resultCombined[0]);
+                return resultCombined[0];
+
+        }
 
     @GetMapping("/create2DArray")
     @ResponseBody

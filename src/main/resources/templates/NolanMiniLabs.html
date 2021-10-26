@@ -193,10 +193,8 @@
                         <div class="card-body">
                             <h6 class="card-title"><strong>Course #1</strong></h6>
                            <form action="javascript:updateCourse1()">
-                            <input required class="inputBox" id="teacherCourseOneName"  placeholder="AP Computer Science A">
                             <input required class="inputBox" id="teacherCourseOneImage" placeholder="Course Image">
                             <input required class="inputBox" id="teacherCourseOneInstructor" placeholder="Course Instructor">
-                            <input required class="inputBox" id="teacherCourseOnePeriod" placeholder="Course Period">
                             <input required class="inputBox" id="teacherCourseOneAverageGrade" placeholder="Course Average Grade">
                             <input required class="inputBox" id="teacherCourseOneStudents" placeholder="Course Students">
                             <input required class="inputBox" id="teacherCourseOneClassType" placeholder="Course Class Type">
@@ -214,10 +212,8 @@
                         <div class="card-body">
                             <h6 class="card-title"><strong>Course #2</strong></h6>
                             <form action="javascript:updateCourse2()">
-                            <input required class="inputBox" id="teacherCourseTwoName" placeholder="AP Computer Science Principles">
                             <input required class="inputBox" id="teacherCourseTwoImage" placeholder="Course Image">
                             <input required class="inputBox" id="teacherCourseTwoInstructor" placeholder="Course Instructor">
-                            <input required class="inputBox" id="teacherCourseTwoPeriod" placeholder="Course Period">
                             <input required class="inputBox" id="teacherCourseTwoAverageGrade" placeholder="Course Average Grade">
                             <input required class="inputBox" id="teacherCourseTwoStudents" placeholder="Course Students">
                             <input required class="inputBox" id="teacherCourseTwoClassType" placeholder="Course Class Type">
@@ -341,38 +337,66 @@
 
             axios({
                 method: "GET",
-                url: "/fetchFromFirebase?reference=---dnhs/AP-CSA-T1/period1/totalStudents---dnhs/AP-CSA-T1/cardImage---dnhs/AP-CSA-T1/instructor---dnhs/AP-CSA-T1/period1/averageGrade---dnhs/AP-CSA-T1/period1/classType---/fetchFromFirebase?reference=---dnhs/AP-CSP-T1/period5/totalStudents---dnhs/AP-CSP-T1/cardImage---dnhs/AP-CSP-T1/instructor---dnhs/AP-CSP-T1/period5/averageGrade---dnhs/AP-CSP-T1/period5/classType---dnhs/AP-CSP-T1/period5/totalStudents---"
+                url: "/fetchFromFirebase?reference=---dnhs/AP-CSA-T1/period1/totalStudents---dnhs/AP-CSA-T1/cardImage---dnhs/AP-CSA-T1/instructor---dnhs/AP-CSA-T1/period1/averageGrade---dnhs/AP-CSA-T1/period1/classType---dnhs/AP-CSP-T1/period5/totalStudents---dnhs/AP-CSP-T1/cardImage---dnhs/AP-CSP-T1/instructor---dnhs/AP-CSP-T1/period5/averageGrade---dnhs/AP-CSP-T1/period5/classType---dnhs/AP-CSP-T1/period5/totalStudents---"
             }).then(resp => {
                 var respArr = resp.data.split('---');
                 // Course One Data
 
+                document.getElementById("courseOneStudents").innerText = respArr[0];
+                document.getElementById("courseOneImage").src = respArr[1];
                 document.getElementById("courseOnePeriod").innerText = "Period: 1"
-                document.getElementById("courseOneImage").src = respArr[0];
-                document.getElementById("courseOneInstructor").innerText = "Instructor: " + respArr[1];
-                document.getElementById("courseOneAverageGrade").innerText = "Average Grade: " + respArr[2];
-                document.getElementById("courseOneClassType").innerText = "Class Type: " + respArr[3];
-                document.getElementById("courseOneStudents").innerText = respArr[4];
+                document.getElementById("courseOneInstructor").innerText = "Instructor: " + respArr[2];
+                document.getElementById("courseOneAverageGrade").innerText = "Average Grade: " + respArr[3];
+                document.getElementById("courseOneClassType").innerText = "Class Type: " + respArr[4];
 
-                document.getElementById("teacherCourseOnePeriod").placeholder = "Period: 1"
-                document.getElementById("teacherCourseOneImage").placeholder = "Image URL: " + respArr[0];
-                document.getElementById("teacherCourseOneInstructor").placeholder = "Instructor: " + respArr[1];
-                document.getElementById("teacherCourseOneAverageGrade").placeholder = "Average Grade: " + respArr[2];
-                document.getElementById("teacherCourseOneClassType").placeholder = "Class Type: " + respArr[3];
-                document.getElementById("teacherCourseOneStudents").placeholder = respArr[4];
-                // Course Two Data
-                document.getElementById("courseTwoPeriod").innerText = "Period: 5"
-                document.getElementById("courseTwoImage").src = respArr[5];
-                document.getElementById("courseTwoInstructor").innerText = "Instructor: " + respArr[6];
-                document.getElementById("courseTwoAverageGrade").innerText = "Average Grade: " + respArr[7];
-                document.getElementById("courseTwoClassType").innerText = "Class Type: " + respArr[8];
-                document.getElementById("courseTwoStudents").innerText = respArr[9];
+                document.getElementById("teacherCourseOneStudents").placeholder = respArr[0];
+                document.getElementById("teacherCourseOneImage").placeholder = "Image URL: " + respArr[1];
+                    document.getElementById("teacherCourseOneInstructor").placeholder = "Instructor: " + respArr[2];
+                    document.getElementById("teacherCourseOneAverageGrade").placeholder = "Average Grade: " + respArr[3];
+                    document.getElementById("teacherCourseOneClassType").placeholder = "Class Type: " + respArr[4];
+                    // Course Two Data
+                    document.getElementById("courseTwoPeriod").innerText = "Period: 5"
+                document.getElementById("courseTwoStudents").innerText = respArr[5];
+                document.getElementById("courseTwoImage").src = respArr[6];
+                    document.getElementById("courseTwoInstructor").innerText = "Instructor: " + respArr[7];
+                    document.getElementById("courseTwoAverageGrade").innerText = "Average Grade: " + respArr[8];
+                    document.getElementById("courseTwoClassType").innerText = "Class Type: " + respArr[9];
 
-                document.getElementById("teacherCourseTwoPeriod").placeholder = "Period: 5"
-                document.getElementById("teacherCourseTwoImage").placeholder = "Image URL: " +respArr[5];
-                document.getElementById("teacherCourseTwoInstructor").placeholder = "Instructor: " + respArr[6];
-                document.getElementById("teacherCourseTwoAverageGrade").placeholder = "Average Grade: " + respArr[7];
-                document.getElementById("teacherCourseTwoClassType").placeholder = "Class Type: " + respArr[8];
-                document.getElementById("teacherCourseTwoStudents").placeholder = respArr[9];
+                document.getElementById("teacherCourseTwoStudents").placeholder = respArr[5];
+                document.getElementById("teacherCourseTwoImage").placeholder = "Image URL: " + respArr[6];
+                    document.getElementById("teacherCourseTwoInstructor").placeholder = "Instructor: " + respArr[7];
+                    document.getElementById("teacherCourseTwoAverageGrade").placeholder = "Average Grade: " + respArr[8];
+                    document.getElementById("teacherCourseTwoClassType").placeholder = "Class Type: " + respArr[9];
+                })
+        }
+
+        function updateCourse1() {
+            let courseImage = "courseImage=" + document.getElementById("teacherCourseOneImage").value;
+            let courseInstructor = "courseInstructor=" + document.getElementById("teacherCourseOneInstructor").value;
+            let courseAverageGrade = "courseAverageGrade=" + document.getElementById("teacherCourseOneAverageGrade").value;
+            let courseStudents = "courseStudents=" + document.getElementById("teacherCourseOneStudents").value;
+            let courseClassType = "courseClassType=" + document.getElementById("teacherCourseOneClassType").value;
+
+            axios({
+                method: "GET",
+                url: "/setToFirebaseCourse1?" + courseImage + "&" + courseInstructor + "&" + courseAverageGrade + "&" + courseStudents + "&" + courseClassType
+            }).then(resp => {
+            })
+        }
+
+
+
+        function updateCourse2() {
+            let courseImage = "courseImage=" + document.getElementById("teacherCourseTwoImage").value;
+            let courseInstructor = "courseInstructor=" + document.getElementById("teacherCourseTwoInstructor").value;
+            let courseAverageGrade = "courseAverageGrade=" + document.getElementById("teacherCourseTwoAverageGrade").value;
+            let courseStudents = "courseStudents=" + document.getElementById("teacherCourseTwoStudents").value;
+            let courseClassType = "courseClassType=" + document.getElementById("teacherCourseTwoClassType").value;
+
+            axios({
+                method: "GET",
+                url: "/setToFirebaseCourse2?" + courseImage + "&" + courseInstructor + "&" + courseAverageGrade + "&" + courseStudents + "&" + courseClassType
+            }).then(resp => {
             })
         }
         VANTA.NET({
