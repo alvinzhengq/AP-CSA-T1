@@ -4,14 +4,24 @@
 
 <head><div layout:fragment="metadata" th:remove="tag">
   <!-- Start of head content specific to page -->
-  <title>Team</title>
+  <title>Latest Movies</title>
   <!-- End of head content specific to page -->
 </div></head>
 
 <body><div layout:fragment="content" th:remove="tag">
   <!-- Start of body content specific to page -->
 
-  <ol id="demo"></ol>
+ <!-- <ol id="demo"></ol> -->
+  <div class="row" style="margin: 0;">
+    <div class="col-sm mx-auto" id="cardList1" style="padding-right:4px; padding-left:88px;">
+    </div>
+
+    <div class="col-sm mx-auto" id="cardList2" style="padding-right:4px; padding-left:4px;">
+    </div>
+
+    <div class="col-sm mx-auto" id="cardList3" style="padding-right:88px; padding-left:4px;">
+    </div>
+  </div>
 
 </div></body>
 
@@ -23,7 +33,7 @@
           crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     $(document).ready(function(){
-      var list =  document.getElementById("demo");
+    //  var list =  document.getElementById("demo");
       // var b = document.createElement("li");
       // b.appendChild(document.createTextNode("BROASHJK"))
       // a.appendChild(b);
@@ -37,10 +47,20 @@
         console.log(resp.data);
         var list = document.getElementById('demo');
         for(let i = 0; i < resp.data.length; i++) {
-          console.log(resp.data[i]);
-          var item = document.createElement("li");
-          item.appendChild(document.createTextNode(resp.data[i]));
-          list.appendChild(item);
+            console.log(resp.data[i]);
+            //  var item = document.createElement("li");
+            //     item.appendChild(document.createTextNode(resp.data[i]));
+            //   list.appendChild(item);
+
+            console.log(cardListNum);
+            let cardList = $('#cardList' + (cardListNum))
+            cardList.append(`
+            <div class="card d-flex" style="width: 26rem; height: 21rem; margin: auto; margin-top: 2vh; margin-bottom: 2vh; text-align: center; background-color: #212424">
+              <div class="card-body align-items-center d-flex justify-content-center flex-column">
+                <h4 class="card-title"><b>#${i + 1}: ${resp.data[i]}</b></h4>
+              </div>
+            </div>
+          `)
         }
       });
     });
