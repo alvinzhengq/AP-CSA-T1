@@ -45,14 +45,17 @@
       }).then(resp => {
         // document.getElementById("bbb").innerText = resp.data;
         console.log(resp.data);
-        var list = document.getElementById('demo');
+      //  var list = document.getElementById('demo');
+        var cardListNum = 1;
         for(let i = 0; i < resp.data.length; i++) {
             console.log(resp.data[i]);
             //  var item = document.createElement("li");
             //     item.appendChild(document.createTextNode(resp.data[i]));
             //   list.appendChild(item);
-         var cardListNum = i;
             console.log(cardListNum);
+            if(cardListNum > 3) {
+              cardListNum = 1;
+            }
             let cardList = $('#cardList' + (cardListNum))
             cardList.append(`
             <div class="card d-flex" style="width: 26rem; height: 21rem; margin: auto; margin-top: 2vh; margin-bottom: 2vh; text-align: center; background-color: #212424">
@@ -61,6 +64,7 @@
               </div>
             </div>
           `)
+          cardListNum++;
         }
       });
     });
