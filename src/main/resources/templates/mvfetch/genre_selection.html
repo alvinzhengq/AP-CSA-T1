@@ -12,26 +12,46 @@
 
 <body><div layout:fragment="content" th:remove="tag">
     <!-- Start of body content specific to page -->
-    <div class="container d-flex h-100 mvfetch" style="margin-top: 1vh">
-        <div class="row align-self-center w-100">
-            <div class="col-6 mx-auto">
-                <div class="jumbotron">
-                    <h1 class="row justify-content-center align-self-center display-4">List Genres</h1>
-                    <div class="row justify-content-center align-self-center">
-                        <label style="color: var(--orange)" for="list">List:</label>
-                        <br>
-                        <input type="text" id="list" name="list">
-                    </div>
-                    <div class="row justify-content-center align-self-center">
-                        <input type="submit" value="Genres" onclick="GetGenres()">
-                    </div>
-                </div>
+<!--    <div class="container d-flex h-100 mvfetch" style="margin-top: 1vh">-->
+<!--        <div class="row align-self-center w-100">-->
+<!--            <div class="col-6 mx-auto">-->
+<!--                <div class="jumbotron">-->
+<!--                    <h1 class="row justify-content-center align-self-center display-4">List Genres</h1>-->
+<!--                    <div class="row justify-content-center align-self-center">-->
+<!--                        <label style="color: var(&#45;&#45;orange)" for="list">List:</label>-->
+<!--                        <br>-->
+<!--                        <input type="text" id="list" name="list">-->
+<!--                    </div>-->
+<!--                    <div class="row justify-content-center align-self-center">-->
+<!--                        <input type="submit" value="Genres" onclick="GetGenres()">-->
+<!--                    </div>-->
+<!--                </div>-->
 
-                <p id="confirmation"></p>
+<!--                <p id="confirmation"></p>-->
 
-            </div>
-        </div>
-    </div>
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+
+    <form>
+        <input type="checkbox" name="with_genres" value="28" />Action<br />
+        <input type="checkbox" name="with_genres" value="12" />Adventure<br />
+        <input type="checkbox" name="with_genres" value="16" />Animation<br />
+        <input type="checkbox" name="with_genres" value="35" />Comedy<br />
+        <input type="checkbox" name="with_genres" value="80" />Crime<br />
+        <input type="checkbox" name="with_genres" value="99" />Documentary<br />
+        <input type="checkbox" name="with_genres" value="18" />Drama<br />
+        <input type="checkbox" name="with_genres" value="10751" />Family<br />
+        <input type="checkbox" name="with_genres" value="36" />History<br />
+        <input type="checkbox" name="with_genres" value="27" />Horror<br />
+        <input type="checkbox" name="with_genres" value="10402" />Music<br />
+        <input type="checkbox" name="with_genres" value="9648" />Mystery<br />
+        <input type="checkbox" name="with_genres" value="10749" />Romance<br />
+        <input type="checkbox" name="with_genres" value="878" />Science Fiction<br />
+        <input type="checkbox" name="with_genres" value="10752" />War<br />
+        <input type="checkbox" name="with_genres" value="37" />Western<br />
+        <input type="button" value="Submit" onclick="getSelectedGenres()">
+    </form>
 
     <!-- End of body content specific to page -->
 </div></body>
@@ -43,17 +63,23 @@
             crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
 
-    function GetGenres() {
-            let GenresRaw = "GenresRaw=" + document.getElementById("list").value;
-
-            axios({
-                method: "get",
-                url: "/genre-select-api?" + GenresRaw
-            }).then(resp => {
-                document.getElementById("confirmation").innerHTML =  "Selected Genres: " + resp.data;
-                console.log(resp.data);
-            });
+    function getSelectedGenres() {
+        const form_data = document.querySelectorAll('input[name="with_genres"]:checked')
+        let genres = [];
+        var genreReqString = ""
+        for(var i = 0; i < form_data.length; i++) {
+            genreReqString = genreReqString + "&with_genres=" +  form_data[i].value;
+            console.log(form_data[i].value);
         }
+        axios({
+            method: "post",
+            url: "/genre-select-api?",
+            data: genreReqString,
+            headers: { "Content-Type": "text/plain" }
+        }).then(resp => {
+            console.log(resp.data);
+        });
+    }
     </script>
     <!-- End of custom script specific to page -->
 </div>

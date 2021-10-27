@@ -11,6 +11,26 @@
 <body><div layout:fragment="content" th:remove="tag">
   <!-- Start of body content specific to page -->
 
+  <form>
+    <input type="checkbox" name="with_genres" value="28" />Action<br />
+    <input type="checkbox" name="with_genres" value="12" />Adventure<br />
+    <input type="checkbox" name="with_genres" value="16" />Animation<br />
+    <input type="checkbox" name="with_genres" value="35" />Comedy<br />
+    <input type="checkbox" name="with_genres" value="80" />Crime<br />
+    <input type="checkbox" name="with_genres" value="99" />Documentary<br />
+    <input type="checkbox" name="with_genres" value="18" />Drama<br />
+    <input type="checkbox" name="with_genres" value="10751" />Family<br />
+    <input type="checkbox" name="with_genres" value="36" />History<br />
+    <input type="checkbox" name="with_genres" value="27" />Horror<br />
+    <input type="checkbox" name="with_genres" value="10402" />Music<br />
+    <input type="checkbox" name="with_genres" value="9648" />Mystery<br />
+    <input type="checkbox" name="with_genres" value="10749" />Romance<br />
+    <input type="checkbox" name="with_genres" value="878" />Science Fiction<br />
+    <input type="checkbox" name="with_genres" value="10752" />War<br />
+    <input type="checkbox" name="with_genres" value="37" />Western<br />
+    <input type="button" value="Submit" onclick="getSelectedGenres()">
+  </form>
+
   <div style="text-align: center; margin-top: 4vh">
     <h2><b>Top New Movie Releases of the Week</b></h2>
   </div>
@@ -36,20 +56,30 @@
           integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
           crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
-    $(document).ready(function(){
+    function getSelectedGenres() {
+      const form_data = document.querySelectorAll('input[name="with_genres"]:checked')
+      let genres = [];
+      var genreReqString = ""
+      for(var i = 0; i < form_data.length; i++) {
+        genreReqString = genreReqString + "&with_genres=" +  form_data[i].value;
+        console.log(form_data[i].value);
+      }
       axios({
-        method: "get",
-        url: "/mvfetch/movies-api"
+        method: "post",
+        url: "/mvfetch/movies-api?",
+        data: genreReqString,
+        headers: { "Content-Type": "text/plain" }
       }).then(resp => {
+        console.log(resp.data);
         var cardListNum = 1;
         for(let i = 0; i < resp.data.length; i++) {
-            console.log(resp.data[i]);
-            console.log(cardListNum);
-            if(cardListNum > 3) {
-              cardListNum = 1;
-            }
-            let cardList = $('#cardList' + (cardListNum))
-            cardList.append(`
+          console.log(resp.data[i]);
+          console.log(cardListNum);
+          if(cardListNum > 3) {
+            cardListNum = 1;
+          }
+          let cardList = $('#cardList' + (cardListNum))
+          cardList.append(`
             <div class="card d-flex" style="width: 26rem; height: 21rem; margin: auto; margin-top: 2vh; margin-bottom: 2vh; text-align: center; background-color: #212424">
               <div class="card-body align-items-center d-flex justify-content-center flex-column">
                 <h4 class="card-title"><b>#${i + 1}: ${resp.data[i]}</b></h4>
@@ -59,7 +89,7 @@
           cardListNum++;
         }
       });
-    });
+    }
   </script>
   <!-- End of custom script specific to page -->
 </div>
