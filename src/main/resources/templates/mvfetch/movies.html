@@ -41,22 +41,30 @@
         method: "get",
         url: "/mvfetch/movies-api"
       }).then(resp => {
+        var movieTitles = resp.data[0];
+        var movieOverviews = resp.data[1];
+
+
         var cardListNum = 1;
-        for(let i = 0; i < resp.data.length; i++) {
-            console.log(resp.data[i]);
+        for(let i = 0; i < movieTitles.length; i++) {
+          for(let j = 0; i < movieOverviews.length; j++) {
+
+            console.log(movieTitles[i]);
             console.log(cardListNum);
-            if(cardListNum > 3) {
+            if (cardListNum > 3) {
               cardListNum = 1;
             }
             let cardList = $('#cardList' + (cardListNum))
             cardList.append(`
             <div class="card d-flex" style="width: 26rem; height: 21rem; margin: auto; margin-top: 2vh; margin-bottom: 2vh; text-align: center; background-color: #212424">
               <div class="card-body align-items-center d-flex justify-content-center flex-column">
-                <h4 class="card-title"><b>#${i + 1}: ${resp.data[i]}</b></h4>
+                <h4 class="card-title"><b>#${i + 1}: ${movieTitles[i]}</b></h4>
+                <p class="card-text">Overview: ${movieOverviews[j]}</p>
               </div>
             </div>
           `)
-          cardListNum++;
+            cardListNum++;
+          }
         }
       });
     });
