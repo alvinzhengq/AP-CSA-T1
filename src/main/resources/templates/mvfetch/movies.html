@@ -11,6 +11,10 @@
 <body><div layout:fragment="content" th:remove="tag">
   <!-- Start of body content specific to page -->
 
+  <div style="text-align: center; margin-top: 4vh">
+    <h2><b>Top New Movie Releases of the Week</b></h2>
+  </div>
+
  <!-- <ol id="demo"></ol> -->
   <div class="row" style="margin: 0;">
     <div class="col-sm mx-auto" id="cardList1" style="padding-right:4px; padding-left:88px;">
@@ -33,25 +37,13 @@
           crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     $(document).ready(function(){
-    //  var list =  document.getElementById("demo");
-      // var b = document.createElement("li");
-      // b.appendChild(document.createTextNode("BROASHJK"))
-      // a.appendChild(b);
-
-      // document.getElementById("p_").innerHTML = "adadfsfd";
       axios({
         method: "get",
         url: "/mvfetch/movies-api"
       }).then(resp => {
-        // document.getElementById("bbb").innerText = resp.data;
-        console.log(resp.data);
-      //  var list = document.getElementById('demo');
         var cardListNum = 1;
         for(let i = 0; i < resp.data.length; i++) {
             console.log(resp.data[i]);
-            //  var item = document.createElement("li");
-            //     item.appendChild(document.createTextNode(resp.data[i]));
-            //   list.appendChild(item);
             console.log(cardListNum);
             if(cardListNum > 3) {
               cardListNum = 1;
