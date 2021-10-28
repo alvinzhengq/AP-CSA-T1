@@ -11,9 +11,8 @@ import java.io.FileReader;
 import java.io.StringReader;
 import java.lang.reflect.Array;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
+
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.*;
@@ -33,14 +32,12 @@ public class Movies {
 
     @PostMapping(value = "/mvfetch/movies-api", consumes = "text/plain")
     @ResponseBody
-    public String[] movieAPI(@RequestBody String genresToFilter) throws Exception {
-        System.out.println(genresToFilter);
-        ArrayList<String> titles = getTitles(genresToFilter);
+    public String movieAPI(@RequestBody String genresToFilter) throws Exception {
+        Map<String, String> moviesMap = getTitles(genresToFilter);
 
-        String[] titlesArray = new String[titles.size()];
-        titlesArray = titles.toArray(titlesArray);
+        Object[] objectArray = moviesMap.entrySet().toArray();
 
-        return titlesArray;
+        return Arrays.toString(objectArray);
     }
 
     @GetMapping("/mvfetch/movies-titles-api")
@@ -60,16 +57,29 @@ public class Movies {
         return new JSONObject(json);
     }
 
-    public ArrayList<String> getTitles(String genresToFilter) throws Exception {
-        ArrayList<String> titles = new ArrayList<String>();
+    public Map<String, String> getTitles(String genresToFilter) throws Exception {
+        Map<String, String> moviesMap = new HashMap<>();
+
         JSONObject data = reqResult(genresToFilter);
 
         for (int i = 0; i<data.getJSONArray("results").length(); i++) {
             JSONObject movieDetails = data.getJSONArray("results").getJSONObject(i);
-            titles.add(movieDetails.get("original_title").toString());
+            moviesMap.put(movieDetails.get("original_title").toString(), movieDetails.get("overview").toString());
         }
 
-        return titles;
+        return moviesMap;
+    }
+
+    public ArrayList<String> getOverviews(String genresToFilter) throws Exception {
+        ArrayList<String> overviews = new ArrayList<String>();
+        JSONObject data = reqResult(genresToFilter);
+
+        for (int i = 0; i<data.getJSONArray("results").length(); i++) {
+            JSONObject movieDetails = data.getJSONArray("results").getJSONObject(i);
+            overviews.add(movieDetails.get("overview").toString());
+        }
+
+        return overviews;
     }
 
     public ArrayList<String> getPosters(String genresToFilter) throws  Exception {

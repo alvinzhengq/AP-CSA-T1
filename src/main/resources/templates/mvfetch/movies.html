@@ -2,15 +2,16 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout}" lang="en">
 
+
 <head><div layout:fragment="metadata" th:remove="tag">
   <!-- Start of head content specific to page -->
-  <title>Latest Movies</title>
+  <title>Select Genre</title>
   <!-- End of head content specific to page -->
 </div></head>
 
-<body><div layout:fragment="content" th:remove="tag">
-  <!-- Start of body content specific to page -->
 
+<body><div layout:fragment="content" th:remove="tag">
+  <h1><b>Top New Movie Releases of the Week</b></h1>
   <form>
     <input type="checkbox" name="with_genres" value="28" />Action<br />
     <input type="checkbox" name="with_genres" value="12" />Adventure<br />
@@ -31,24 +32,18 @@
     <input type="button" value="Submit" onclick="getSelectedGenres()">
   </form>
 
-  <div style="text-align: center; margin-top: 4vh">
-    <h2><b>Top New Movie Releases of the Week</b></h2>
-  </div>
-
- <!-- <ol id="demo"></ol> -->
   <div class="row" style="margin: 0;">
     <div class="col-sm mx-auto" id="cardList1" style="padding-right:4px; padding-left:88px;">
     </div>
-
     <div class="col-sm mx-auto" id="cardList2" style="padding-right:4px; padding-left:4px;">
     </div>
-
     <div class="col-sm mx-auto" id="cardList3" style="padding-right:88px; padding-left:4px;">
     </div>
   </div>
 
-</div></body>
 
+  <!-- End of body content specific to page -->
+</div></body>
 
 <div layout:fragment="script" th:remove="tag">
   <!-- Start of custom script specific to page -->
@@ -56,10 +51,12 @@
           integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ=="
           crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
+
     function getSelectedGenres() {
       const form_data = document.querySelectorAll('input[name="with_genres"]:checked')
       let genres = [];
       var genreReqString = ""
+      var runningCount = 0;
       for(var i = 0; i < form_data.length; i++) {
         genreReqString = genreReqString + "&with_genres=" +  form_data[i].value;
         console.log(form_data[i].value);
@@ -70,43 +67,30 @@
         data: genreReqString,
         headers: { "Content-Type": "text/plain" }
       }).then(resp => {
-<<<<<<< HEAD
-        var movieTitles = resp.data[0];
-        var movieOverviews = resp.data[1];
+        var respSplitComma = resp.data.split(",");
+        for(let j = 0; j < respSplitComma.length; j++) {
+          const respSplitEquals = respSplitComma.toString().split("=");
+          console.log("Title: " + respSplitEquals[0]);
+          console.log("Description: "  + respSplitEquals[1]);
 
-
-        var cardListNum = 1;
-        for(let i = 0; i < movieTitles.length; i++) {
-          for(let j = 0; i < movieOverviews.length; j++) {
-
-            console.log(movieTitles[i]);
-            console.log(cardListNum);
-            if (cardListNum > 3) {
-              cardListNum = 1;
-            }
-            let cardList = $('#cardList' + (cardListNum))
-            cardList.append(`
-=======
-        console.log(resp.data);
-        var cardListNum = 1;
+        }
+          var cardListNum = 1;
         for(let i = 0; i < resp.data.length; i++) {
-          console.log(resp.data[i]);
-          console.log(cardListNum);
           if(cardListNum > 3) {
             cardListNum = 1;
           }
-          let cardList = $('#cardList' + (cardListNum))
-          cardList.append(`
->>>>>>> ecaf474c2fc1365bd75f2c719ef904507a34882c
+            let cardList = $('#cardList' + (cardListNum))
+            cardList.append(`
             <div class="card d-flex" style="width: 26rem; height: 21rem; margin: auto; margin-top: 2vh; margin-bottom: 2vh; text-align: center; background-color: #212424">
               <div class="card-body align-items-center d-flex justify-content-center flex-column">
-                <h4 class="card-title"><b>#${i + 1}: ${movieTitles[i]}</b></h4>
-                <p class="card-text">Overview: ${movieOverviews[j]}</p>
+                <h4 class="card-title"><b>#${runningCount}: ${resp.data[i]}</b></h4>
+                <p class="card-text">Overview: ${overviewResp.data[runningCount]}</p>
               </div>
             </div>
           `)
             cardListNum++;
-          }
+            runningCount++;
+
         }
       });
     }
