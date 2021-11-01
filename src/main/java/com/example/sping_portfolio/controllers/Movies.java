@@ -31,21 +31,22 @@ public class Movies {
         return "mvfetch/movies";
     }
 
+    // Recieve data and utilize it
     @PostMapping(value = "/mvfetch/movies-api", consumes = "text/plain")
     @ResponseBody
     public String[] movieAPI(@RequestBody String genresToFilter) throws Exception {
-        System.out.println(genresToFilter);
         ArrayList<String> titles = getTitles(genresToFilter);
 
+        // Set as an immutable array of titles
         String[] titlesArray = new String[titles.size()];
         titlesArray = titles.toArray(titlesArray);
 
         return titlesArray;
     }
 
-    @GetMapping("/mvfetch/movies-titles-api")
+    @GetMapping("/mvfetch/movies-posters-api")
     @ResponseBody
-    public String[] movieTitleAPI(String genresToFilter) throws Exception {
+    public String[] moviePosterAPI(String genresToFilter) throws Exception {
         ArrayList<String> posters = getPosters(genresToFilter);
 
         String[] postersArray = new String[posters.size()];
@@ -60,6 +61,7 @@ public class Movies {
         return new JSONObject(json);
     }
 
+    // Get titles for movies
     public ArrayList<String> getTitles(String genresToFilter) throws Exception {
         ArrayList<String> titles = new ArrayList<String>();
         JSONObject data = reqResult(genresToFilter);
@@ -72,6 +74,7 @@ public class Movies {
         return titles;
     }
 
+    // Get Poster links for movies
     public ArrayList<String> getPosters(String genresToFilter) throws  Exception {
         ArrayList<String> posters = new ArrayList<String>();
         JSONObject data = reqResult(genresToFilter);

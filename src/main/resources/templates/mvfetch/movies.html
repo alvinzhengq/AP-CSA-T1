@@ -57,20 +57,22 @@
           crossOrigin="anonymous" referrerpolicy="no-referrer"></script>
   <script>
     function getSelectedGenres() {
+      // Build genre selection parameters with user-selected genres
       const form_data = document.querySelectorAll('input[name="with_genres"]:checked')
-      let genres = [];
       var genreReqString = ""
       for(var i = 0; i < form_data.length; i++) {
         genreReqString = genreReqString + "&with_genres=" +  form_data[i].value;
         console.log(form_data[i].value);
       }
+      console.log(genreReqString);
       axios({
         method: "post",
         url: "/mvfetch/movies-api?",
-        data: genreReqString,
+        data: genreReqString, // Send to control
         headers: { "Content-Type": "text/plain" }
       }).then(resp => {
         console.log(resp.data);
+        // Display returned data as a set of cards on HTML View
         var cardListNum = 1;
         for(let i = 0; i < resp.data.length; i++) {
           console.log(resp.data[i]);
