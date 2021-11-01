@@ -64,19 +64,19 @@
         genreReqString = genreReqString + "&with_genres=" +  form_data[i].value;
         console.log(form_data[i].value);
       }
-      console.log(genreReqString);
       axios({
         method: "post",
         url: "/mvfetch/movies-api?",
         data: genreReqString, // Send to control
         headers: { "Content-Type": "text/plain" }
       }).then(resp => {
-        console.log(resp.data);
-        // Display returned data as a set of cards on HTML View
         var cardListNum = 1;
-        for(let i = 0; i < resp.data.length; i++) {
-          console.log(resp.data[i]);
-          console.log(cardListNum);
+        var restrictedCount = 1;
+        for(let j = 0; j < resp.data.length; j++ ) {
+          var respDataSplit = resp.data[j].split("$$$");
+          console.log("Title: " + respDataSplit[0]);
+          console.log("Description: "  + respDataSplit[1]);
+
           if(cardListNum > 3) {
             cardListNum = 1;
           }
@@ -84,10 +84,14 @@
           cardList.append(`
             <div class="card d-flex" style="width: 26rem; height: 21rem; margin: auto; margin-top: 2vh; margin-bottom: 2vh; text-align: center; background-color: #212424">
               <div class="card-body align-items-center d-flex justify-content-center flex-column">
-                <h4 class="card-title"><b>#${i + 1}: ${resp.data[i]}</b></h4>
+                <h4 class="card-title"><b>#${restrictedCount}: ${respDataSplit[0]}</b></h4>
+                <p class="card-text">Overview: ${respDataSplit[1]}</p>
+                <p class="card-text">Rating: ${respDataSplit[2]}/10</p>
+                <p class="card-text">Release Date: ${respDataSplit[3]}</p>
               </div>
             </div>
           `)
+          restrictedCount++;
           cardListNum++;
         }
       });

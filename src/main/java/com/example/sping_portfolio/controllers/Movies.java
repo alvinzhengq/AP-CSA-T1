@@ -1,22 +1,13 @@
 package com.example.sping_portfolio.controllers;
 
-import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.apache.tomcat.util.json.JSONParser;
-import org.springframework.ui.Model;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import java.io.FileReader;
-import java.io.StringReader;
-import java.lang.reflect.Array;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
-import org.json.JSONArray;
+import java.util.*;
+
 import org.json.JSONObject;
-import org.json.*;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -25,28 +16,52 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class Movies {
     private static ObjectMapper Json;
+    class Movie {
+        String title;
+        String overview;
+        String rating;
+        String releaseDate;
+        public Movie(String title, String overview, String rating, String releaseDate) {
+        this.title = title;
+        this.overview = overview;
+        this.rating = rating;
+        this.releaseDate = releaseDate;
+        }
+
+        public String getTitle() {
+            return title;
+        }
+        public String getOverview() {
+            return overview;
+        }
+        public String getRating() {
+            return rating;
+        }
+        public String getReleaseDate() {
+            return releaseDate;
+        }
+    }
 
     @GetMapping("/mvfetch/movies")
     public String movies() {
         return "mvfetch/movies";
     }
 
-    // Recieve data and utilize it
     @PostMapping(value = "/mvfetch/movies-api", consumes = "text/plain")
     @ResponseBody
     public String[] movieAPI(@RequestBody String genresToFilter) throws Exception {
-        ArrayList<String> titles = getTitles(genresToFilter);
+        ArrayList<String> moviesList = getTitles(genresToFilter);
 
-        // Set as an immutable array of titles
-        String[] titlesArray = new String[titles.size()];
-        titlesArray = titles.toArray(titlesArray);
+        String[] moviesArray = new String[moviesList.size()];
+        moviesArray = moviesList.toArray(moviesArray);
 
-        return titlesArray;
+
+        return moviesArray;
     }
 
-    @GetMapping("/mvfetch/movies-posters-api")
+    @GetMapping("/mvfetch/movies-titles-api")
     @ResponseBody
-    public String[] moviePosterAPI(String genresToFilter) throws Exception {
+    public String[] movieTitleAPI(String genresToFilter) throws Exception {
         ArrayList<String> posters = getPosters(genresToFilter);
 
         String[] postersArray = new String[posters.size()];
@@ -61,20 +76,32 @@ public class Movies {
         return new JSONObject(json);
     }
 
-    // Get titles for movies
     public ArrayList<String> getTitles(String genresToFilter) throws Exception {
-        ArrayList<String> titles = new ArrayList<String>();
+        ArrayList<String> movies = new ArrayList<>();
+
         JSONObject data = reqResult(genresToFilter);
 
         for (int i = 0; i<data.getJSONArray("results").length(); i++) {
             JSONObject movieDetails = data.getJSONArray("results").getJSONObject(i);
-            titles.add(movieDetails.get("original_title").toString());
+            Movie movie = new Movie(movieDetails.get("original_title").toString(), movieDetails.get("overview").toString(), movieDetails.get("vote_average").toString(), movieDetails.get("release_date").toString());
+            movies.add(i, movie.getTitle() + "$$$" + movie.getOverview() + "$$$" + movie.getRating() + "$$$" + movie.getReleaseDate());
         }
 
-        return titles;
+        return movies;
     }
 
-    // Get Poster links for movies
+    public ArrayList<String> getOverviews(String genresToFilter) throws Exception {
+        ArrayList<String> overviews = new ArrayList<String>();
+        JSONObject data = reqResult(genresToFilter);
+
+        for (int i = 0; i<data.getJSONArray("results").length(); i++) {
+            JSONObject movieDetails = data.getJSONArray("results").getJSONObject(i);
+            overviews.add(movieDetails.get("overview").toString());
+        }
+
+        return overviews;
+    }
+
     public ArrayList<String> getPosters(String genresToFilter) throws  Exception {
         ArrayList<String> posters = new ArrayList<String>();
         JSONObject data = reqResult(genresToFilter);
