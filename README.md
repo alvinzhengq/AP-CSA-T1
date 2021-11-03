@@ -94,7 +94,7 @@ In week six, we each created an algorithm and implemented it four different ways
 | Alvin Z. | alvinzhengq | OEIS A034175 | [Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/7917d020ff79af38e70b7a64819479e4ad898d3e) |
 | Nolan P. | nolanplatt | Lucas Numbers |[Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/6b2ebd84fc217d90dd71a55de751c081e8de3954) |
 | Sami D. | SamiDeshatty | Pascal's Triangle | [Algorithm Extend Lab](https://github.com/alvinzhengq/AP-CSA-T1/commit/882839f74f2f4fd8817d6a3c17f9881bc82641c0) |
-| Prisha M. | PrishaMaiti |  |
+| Prisha M. | PrishaMaiti | Arithmetic Sequence |
 
 ## Week 5 Updates
 
