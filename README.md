@@ -132,7 +132,7 @@ Completed Task on Scrum Board: https://github.com/alvinzhengq/AP-CSA-T1/projects
 | Alvin Z. | alvinzhengq | HTML Prototyping | [CSS Fix](https://github.com/alvinzhengq/AP-CSA-T1/commit/8aedee5b42fccbb2e742fbab37e2ecfb27606863), [Hack 2, 3, 4](https://github.com/alvinzhengq/AP-CSA-T1/commit/7b11212cb573a37aae2281f1c0ebb64258ac13ba) |
 | Nolan P. | nolanplatt | Hack 2 for Binary Math |[Hack 2 Commit](https://github.com/alvinzhengq/AP-CSA-T1/commit/a984d425de80878829f4a7719ca91560c8bae5ce) |
 | Sami D. | SamiDeshatty | HTML Prototyping | [Home Page](https://github.com/alvinzhengq/AP-CSA-T1/commit/3ed9194416c00929ac5ad11eba5e7455b5bdd7dc), [Movies Page](https://github.com/alvinzhengq/AP-CSA-T1/commit/94466db24c2b08baf310fdf3602ee217699a2fbd), [Webpage Organization](https://github.com/alvinzhengq/AP-CSA/commit/14be82862deea4e0c2f1d4e4c4d8f0e6f840d301) |
-| Prisha M. | PrishaMaiti |  |
+| Prisha M. | PrishaMaiti | Hack 3 |[Hack 3 Commit](https://github.com/alvinzhengq/AP-CSA-T1/commit/06615b2ffad25d0af4800fb5da91b6ba2b6c69d8) |
 
 
 ## Week 3 Updates
