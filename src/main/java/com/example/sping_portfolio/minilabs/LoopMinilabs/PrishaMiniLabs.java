@@ -20,7 +20,7 @@ public class PrishaMiniLabs {
     @GetMapping("/PrishaMiniLabs-api")
     @ResponseBody
     public String PrishaMiniLabsAPI(@RequestParam(name="seq_size", required=false, defaultValue="8") int size,
-                                    @RequestParam(name="seq_start", required=false, defaultValue="1") int first,
+                                    @RequestParam(name="seq_first", required=false, defaultValue="1") int first,
                                     @RequestParam(name="seq_diff", required=false, defaultValue="2") int diff,
                                     @RequestParam(name="seq_type", required=true) String type) {
         if(type.equals("ForLoop")) {
