@@ -76,7 +76,7 @@
       </table>
       <br>
       <div>
-        <button onclick="genArithSeq('ForLoop');" style="margin-left: 1em">For Loop</button>
+        <button onclick="genArithSeq();" style="margin-left: 1em">For Loop</button>
         <button onclick="genArithSeqWhile();" style="margin-left: 1em">While Loop</button>
         <button onclick="genArithSeqRecursion();" style="margin-left: 1em">Recursion</button>
       </div>
@@ -107,7 +107,8 @@
       showDots: true
     })
 
-    function genArithSeq(seq_type) {
+    function genArithSeq() {
+      let seq_type = 'ForLoop';
       let seq_size = document.getElementById('seq_size').value;
       let seq_first = document.getElementById('seq_first').value;
       let seq_diff = document.getElementById('seq_diff').value;
