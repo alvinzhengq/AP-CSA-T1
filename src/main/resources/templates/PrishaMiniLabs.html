@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <!DOCTYPE HTML>
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      xmlns="http://www.w3.org/1999/html"
       layout:decorate="~{layout}" lang="en">
 
 <head><div layout:fragment="metadata" th:remove="tag">
@@ -76,9 +77,9 @@
       </table>
       <br>
       <div>
-        <button onclick="genArithSeq();" style="margin-left: 1em">For Loop</button>
-        <button onclick="genArithSeqWhile();" style="margin-left: 1em">While Loop</button>
-        <button onclick="genArithSeqRecursion();" style="margin-left: 1em">Recursion</button>
+        <input type="button" value="For Loop" onClick="genArithSeq('ForLoop')" />
+        <input type="button" value="While Loop" onClick="genArithSeq('WhileLoop')" />
+        <input type="button" value="Recursion" onClick="genArithSeq('Recursion')" />
       </div>
       <br>
       <div class="result-container">
@@ -107,8 +108,7 @@
       showDots: true
     })
 
-    function genArithSeq() {
-      let seq_type = 'ForLoop';
+    function genArithSeq(seq_type) {
       let seq_size = document.getElementById('seq_size').value;
       let seq_first = document.getElementById('seq_first').value;
       let seq_diff = document.getElementById('seq_diff').value;

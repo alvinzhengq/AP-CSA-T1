@@ -1,22 +1,38 @@
 package com.example.sping_portfolio.controllers;
 
 public class ArithmeticRecursion {
-    static int first = 1;
-    static int diff = 2;
+    int first;
+    int diff;
+    int N;
+    String result;
 
-    public static int getNthElement(int n) {
+    // constructor
+    public ArithmeticRecursion(int N, int first, int diff) {
+        this.N = N;
+        this.first = first;
+        this.diff = diff;
+    }
+
+    public String genSeq() {
+        result = "";
+        getNthElement(N);
+        return result;
+    }
+
+    public int getNthElement(int n) {
         if (n == 1) {
-            System.out.print(first + " ");
+            result += first + " ";
             return first;
         }
         else {
             int x = getNthElement(n - 1) + diff;
-            System.out.print(x + " ");
+            result += x + " ";
             return x;
         }
     }
 
     public static void main (String[] args) {
-        getNthElement(5);
+        ArithmeticRecursion seq = new ArithmeticRecursion(6, 7, 1);
+        System.out.println(seq.genSeq());
     }
 }

@@ -27,9 +27,11 @@ public class PrishaMiniLabs {
             ArithmeticFor seq = new ArithmeticFor(size, first, diff);
             return seq.genSeq();
         } else if(type.equals("WhileLoop")) {
-            return "WhileLoop";
+            ArithmeticWhile seq = new ArithmeticWhile(size, first, diff);
+            return seq.genSeq();
         } else if(type.equals("Recursion")) {
-            return "Recursion";
+            ArithmeticRecursion seq = new ArithmeticRecursion(size, first, diff);
+            return seq.genSeq();
         } else {
             return "Error: Unknown sequence type requested!";
         }
