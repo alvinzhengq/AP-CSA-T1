@@ -49,25 +49,6 @@
 </div></head>
 
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script>
-  function genArithSeq(seq_type) {
-    let seq_size = document.getElementById('seq_size').value;
-    let seq_first = document.getElementById('seq_first').value;
-    let seq_diff = document.getElementById('seq_diff').value;
-
-    axios({
-      method: "get",
-      url: "/PrishaMiniLabs-api?" +
-            "seq_type=" + seq_type +
-            "&seq_size=" + seq_size +
-            "&seq_first=" + seq_first +
-            "&seq_diff=" + seq_diff ,
-    }).then(resp => {
-      document.getElementById("result").innerText = resp.data
-    });
-  }
-</script>
 
 <body>
 <div layout:fragment="content" th:remove="tag">
@@ -125,6 +106,23 @@
       spacing: 15,
       showDots: true
     })
+
+    function genArithSeq(seq_type) {
+      let seq_size = document.getElementById('seq_size').value;
+      let seq_first = document.getElementById('seq_first').value;
+      let seq_diff = document.getElementById('seq_diff').value;
+
+      axios({
+        method: "get",
+        url: "/PrishaMiniLabs-api?" +
+                "seq_type=" + seq_type +
+                "&seq_size=" + seq_size +
+                "&seq_first=" + seq_first +
+                "&seq_diff=" + seq_diff ,
+      }).then(resp => {
+        document.getElementById("result").innerText = resp.data
+      });
+    }
 
   </script>
 </div>
