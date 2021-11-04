@@ -1,11 +1,20 @@
 package com.example.sping_portfolio.controllers;
 
 public class ArithmeticFor {
-    public static void main(String[] args) {
-        int first = 7;
-        int diff = 1;
-        int N = 6;
 
+    int first;
+    int diff;
+    int N;
+
+    // constructor
+    public ArithmeticFor(int N, int first, int diff) {
+        this.N = N;
+        this.first = first;
+        this.diff = diff;
+    }
+
+    public String genSeq() {
+        String result = "";
         // let's first store all elements in an array
         int[] arr = new int[N];
         arr[0] = first;
@@ -14,7 +23,14 @@ public class ArithmeticFor {
         }
         // Now print all elements
         for (int i = 0; i < N; i++) {
-            System.out.print(arr[i] + " ");
+            result += arr[i] + " ";
         }
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        ArithmeticFor seq = new ArithmeticFor(6, 7, 1);
+        System.out.println(seq.genSeq());
     }
 }

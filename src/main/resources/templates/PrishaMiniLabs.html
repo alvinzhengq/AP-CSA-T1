@@ -24,30 +24,90 @@
     h4 {
       color: white;
     }
+    h5 {
+      color: gray;
+    }
+
+    .btn{display: inline-block; margin-right: 20px;}
+
+    .result-container {
+      color: gray;
+      width: 100%;
+      border: 1px solid #E3DDF4;
+      padding: 5px;
+      border-radius: 1px;
+      background-color: #313131;
+
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      margin: auto !important;
+      margin-top: 2vh !important;
+    }
 
   </style>
 </div></head>
 
-<body><div layout:fragment="content" th:remove="tag">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js" integrity="sha512-bZS47S7sPOxkjU/4Bt0zrhEtWx0y0CRkhEp8IckzK+ltifIIE9EMIMTuT/mEzoIMewUINruDBIR/jJnbguonqQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+  function genArithSeq(seq_type) {
+    let seq_size = document.getElementById('seq_size').value;
+    let seq_first = document.getElementById('seq_first').value;
+    let seq_diff = document.getElementById('seq_diff').value;
+
+    axios({
+      method: "get",
+      url: "/PrishaMiniLabs-api?" +
+            "seq_type=" + seq_type +
+            "&seq_size=" + seq_size +
+            "&seq_first=" + seq_first +
+            "&seq_diff=" + seq_diff ,
+    }).then(resp => {
+      document.getElementById("result").innerText = resp.data
+    });
+  }
+</script>
+
+<body>
+<div layout:fragment="content" th:remove="tag">
   <div class="contact" style="min-height: 100vh;">
+
     <div class="row justify-content-center lab-container">
       <h4>Prisha M: Individual Minilabs</h4>
     </div>
 
-    <div class="contact" style="min-height: 100vh;">
-      <div class="row justify-content-center lab-container">
-        <h4>RGB Minilab</h4><br>
-
-        <div style="display: flex; flex-direction: row;">
-          <button onclick="testButton()" style="margin-left: 1em"> Lorem lipsum!</button>
-        </div>
-
-      </div>
-      <h4>Algorithm Extend Lab</h4><br>
-
+    <div class="row justify-content-center lab-container">
+      <h4>RGB Minilab</h4><br>
+      <button onclick="alert('Hello! I am an alert box!!');" style="margin-left: 1em">Click Me For Fun!</button>
     </div>
+
+    <div class="row justify-content-center lab-container">
+      <h4>Algorithm Extend Lab</h4>
+      <h5>[ Arithmetic Sequence ]</h5>
+      <br>
+      <table style="align-items: center; color: white;">
+        <tr>
+          <th>Sequence Size:<input type="number" id="seq_size" value="8"></th>
+          <th>First Term:<input type="number" id="seq_first" value="3"></th>
+          <th>Common Diff:<input type="number" id="seq_diff" value="1"></th>
+        </tr>
+      </table>
+      <br>
+      <div>
+        <button onclick="genArithSeq('ForLoop');" style="margin-left: 1em">For Loop</button>
+        <button onclick="genArithSeqWhile();" style="margin-left: 1em">While Loop</button>
+        <button onclick="genArithSeqRecursion();" style="margin-left: 1em">Recursion</button>
+      </div>
+      <br>
+      <div class="result-container">
+        <p id="result">Result will be shown here...</p>
+      </div>
+    </div>
+
   </div>
-</div></body>
+</div>
+</body>
 
 
 <div layout:fragment="script" th:remove="tag">
