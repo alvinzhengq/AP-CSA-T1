@@ -1,5 +1,6 @@
 # Team Pokemon Trainers - README.md
 
+## Project Information
 - [Runtime Link (Running Project)](https://csa-t1.herokuapp.com/)
 - [Team Scrum Board](https://github.com/alvinzhengq/AP-CSA-T1/projects/2)
 - [All Team Commits](https://github.com/alvinzhengq/AP-CSA-T1/commits/master)
@@ -29,6 +30,9 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 
 ## Individual Final
 [Grading Ticket](https://github.com/alvinzhengq/AP-CSA-T1/issues/33)
+
+## Week 10 Updates (N@TM and Geekbot Reflections)
+- [Alvin](https://docs.google.com/document/d/1FoO8QKsZUOCzHh7b27waq3N_TLW-fYjU-do8X5dhx_c/edit?usp=sharing)
 
 ## Week 9 Updates
 In week nine, we each created a video detailing two technical features. Scrum Team reviewed each person's respective video and we averaged grades.
