@@ -33,6 +33,7 @@ The Scrum board with all tasks and issues is located [here](https://github.com/a
 
 ## Week 10 Updates (N@TM and Geekbot Reflections)
 - [Alvin](https://docs.google.com/document/d/1FoO8QKsZUOCzHh7b27waq3N_TLW-fYjU-do8X5dhx_c/edit?usp=sharing)
+- [Akshay](https://docs.google.com/document/d/1ukhc3TYFyQycQntN6MXiD803b-iatn8rK7GAcw4ClwI/edit#bookmark=kix.n8d08umvym6m)
 
 ## Week 9 Updates
 In week nine, we each created a video detailing two technical features. Scrum Team reviewed each person's respective video and we averaged grades.
